@@ -2,11 +2,10 @@
 
 - [x] ci/cd
 - [x] layout
-  - css path border
-  - nav
-  - sections
+  - [-] nav
+  - [-] lander
     - summary
-      - misc
+      - about me
       - top 10 skill set
     - exp
       - skill set
@@ -19,6 +18,7 @@
   - wicon
   - wimg
   - layout
+  - nav
   - summary
   - exp
   - edu
@@ -34,6 +34,7 @@
     - theme
     - title changer
   - utils
+    - anchor
     - favicon loader
     - ga
     - service worker
