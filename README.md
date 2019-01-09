@@ -1,3 +1,17 @@
+# TODO
+
+- ci/cd
+- layout
+  - sections
+- core
+  - lang
+  - data
+  - theme
+- utils
+  - favicon loader
+  - ga
+  - service worker
+
 # Waterfall
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
