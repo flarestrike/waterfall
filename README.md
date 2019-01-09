@@ -1,12 +1,13 @@
 # TODO
 
 - [x] ci/cd
-- [ ] layout
+- [x] layout
   - sections
 - core
   - lang
   - data
   - theme
+  - title changer
 - utils
   - favicon loader
   - ga
