@@ -1,7 +1,7 @@
 # TODO
 
-- ci/cd
-- layout
+- [x] ci/cd
+- [ ] layout
   - sections
 - core
   - lang
