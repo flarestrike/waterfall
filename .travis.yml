@@ -1,0 +1,20 @@
+sudo: required
+language: node_js
+node_js:
+    - "10.8.0"
+install:
+  - npm i
+script:
+  - npx ng lint
+  - npx ng test --watch=false
+  - npx ng build --prod --deploy-url /waterfall
+cache:
+    directories:
+      - node_modules
+deploy:
+  - provider: pages
+    local-dir: dist/waterfall
+    github-token: $github
+    skip-cleanup: true
+    keep-history: true
+
