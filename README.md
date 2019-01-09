@@ -2,16 +2,41 @@
 
 - [x] ci/cd
 - [x] layout
+  - css path border
+  - nav
   - sections
-- core
-  - lang
-  - data
-  - theme
-  - title changer
-- utils
-  - favicon loader
-  - ga
-  - service worker
+    - summary
+      - misc
+      - top 10 skill set
+    - exp
+      - skill set
+      - positions | projects
+    - educations
+      - skill set
+      - orgs | projects
+    - contacts
+- mods
+  - wicon
+  - wimg
+  - layout
+  - summary
+  - exp
+  - edu
+  - common
+    - skill
+    - positions
+    - orgs
+    - projects
+- services
+  - core
+    - lang
+    - data
+    - theme
+    - title changer
+  - utils
+    - favicon loader
+    - ga
+    - service worker
 
 # Waterfall
 
