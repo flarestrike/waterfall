@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
+import { Data } from '@mod/utils';
+
+class App {
+  top: object;
+  lander: object;
+}
 
 @Component({
   selector: 'app-root',
@@ -7,4 +15,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'waterfall';
+  top = {};
+  lander = {};
+  constructor(private data: Data) {
+    data.app<App>().subscribe(({ top, lander }) => {
+      this.top = top;
+      this.lander = lander;
+    });
+  }
 }

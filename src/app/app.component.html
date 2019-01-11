@@ -1,9 +1,9 @@
 <wl-app-layout>
   <ng-container class='top'>
-    <wn-top-nav></wn-top-nav>
+    <wn-top-nav [data]='data.top'></wn-top-nav>
   </ng-container>
   <wl-paper-layout>
-    <wl-lander></wl-lander>
+    <wl-lander [data]='data.lander'></wl-lander>
     <router-outlet></router-outlet>
   </wl-paper-layout>
 </wl-app-layout>

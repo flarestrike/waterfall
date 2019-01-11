@@ -3,6 +3,10 @@
 - [x] ci/cd
 - [x] layout
   - [-] nav
+    - avatar
+    - title
+    - subtitle
+    - links
   - [-] lander
     - summary
       - about me
@@ -29,15 +33,18 @@
     - projects
 - services
   - core
-    - lang
-    - data
-    - theme
+    - [x] data
+    - [x] config
+      - lang
+      - theme
     - title changer
-  - utils
-    - anchor
     - favicon loader
     - ga
     - service worker
+  - utils
+    - anchor
+- [ ] 12-factor app
+  - immutable app
 
 # Waterfall
 
