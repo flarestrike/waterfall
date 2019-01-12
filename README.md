@@ -19,13 +19,15 @@
       - orgs | projects
     - contacts
 - mods
-  - wicon
-  - wimg
   - layout
   - nav
   - summary
   - exp
   - edu
+  - better
+    - img
+    - icon
+    - anchor
   - common
     - skill
     - positions

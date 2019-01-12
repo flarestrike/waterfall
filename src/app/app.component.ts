@@ -15,8 +15,8 @@ class App {
 })
 export class AppComponent {
   title = 'waterfall';
-  top = {};
-  lander = {};
+  top;
+  lander;
   constructor(private data: Data) {
     data.app<App>().subscribe(({ top, lander }) => {
       this.top = top;

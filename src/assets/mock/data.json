@@ -1,0 +1,13 @@
+{
+  "top": {
+    "avatar": "/assets/img/avatar.png",
+    "title": "bmVsc29u",
+    "subtitle": "lorem ipsum",
+    "links": [
+      { "text": "link1", "hash": "link1" },
+      { "text": "link -2", "hash": "link2" },
+      { "text": "long Link 333", "hash": "link3" },
+      { "text": "ohaiyo", "hash": "link-4" }
+    ]
+  }
+}

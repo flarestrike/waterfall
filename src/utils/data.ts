@@ -8,7 +8,6 @@ export class Data {
     private http: HttpClient,
     private pref: Preference) { }
   app<T>() {
-    // return this.http.get<T>(this.pref.all.dataUrl || '');
-    return this.http.get<T>('');
+    return this.http.get<T>(this.pref.all.dataUrl || '');
   }
 }

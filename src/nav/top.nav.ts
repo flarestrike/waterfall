@@ -9,10 +9,18 @@ class TopNav {
 
 @Component({
   selector: 'wn-top-nav',
-  template: 'top nav - b'
+  templateUrl: './top.nav.html',
+  styleUrls: ['./top.nav.sass']
 })
 export class WnTopNav {
   @Input() set data(v) {
-    const { avatar, title, subtitle, links } = v || new TopNav();
+    if (!v) { return; }
+    Object.assign(this, v || new TopNav());
+    this.ready = true;
   }
+  ready = false;
+  avatar: string;
+  title: string;
+  subtitle: string;
+  links: [];
 }
