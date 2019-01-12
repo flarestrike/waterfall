@@ -1,0 +1,1 @@
+export function spa(){const{redirect:e}=sessionStorage;delete sessionStorage.redirect,e&&e!==location.href&&history.replaceState(null,null,e)}spa();
