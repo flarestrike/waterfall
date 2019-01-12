@@ -5,3 +5,5 @@ export function spa() {
     history.replaceState(null, null, redirect);
   }
 }
+
+spa();
