@@ -18,8 +18,8 @@
         "span": "1 25%", "type": "Intro",
         "text": "About me", "name": "may flower",
         "gender": "male", "birth": "1980s",
-        "email": "abc@defg.xzysj.test", "ig": "someone_not_exist",
-        "location": "taipei", "relocations": ["shanghai", "singapore", "sanjose"]
+        "email": "abc@testtest.test", "ig": "someone_not_exist",
+        "location": { "text": "taipei" }, "relocations": ["shanghai", "singapore", "sanjose"]
       }, {
         "span": "1 25%", "type": "List",
         "text": "Professions", "style": "split",
@@ -56,39 +56,49 @@
         }]
       }]
     }, {
-      "text": "Experiences",
-      "layout": "flex",
+      "text": "Experiences", "layout": "flex",
       "views": [{
-        "span": "1 100%", "type": "position",
-        "text": "Senior SWD", "location": { "text": "taipei" },
-        "duration": { "since": 123456789, "until": 123356789 },
-        "kind": "engineer", "org": { "text": "tulip co.", "logo": "url" },
-        "remarkables": [
-          "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
-          "vestigator of the laboratory in setting up a virtual platform fo",
-          "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-        ],
+        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
+        "text": "tulip co.", "locations": [{ "text": "taipei" }, { "text": "sj" }],
+        "roles": [{
+          "text": "Senior RD", "kind": "engineer",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
+            "vestigator of the laboratory in setting up a virtual platform fo",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }, {
+          "text": "RD", "kind": "engineer",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }],
         "projects": [{
-          "logo": "", "duration": { "since": 123, "until": 456 },
+          "text": "paradise 2", "teamsize": "18",
+          "imgs": ["", ""], "duration": { "since": 123, "until": 456 },
           "techstacks": [{
             "text": "angular", "versions": ["5"]
           }, {
             "text": "ruby on rails", "versions": ["5"]
           }],
-          "text": "paradise 2", "teamsize": "18", "achievements": [
+          "achievements": [
             "designing the architecture and technology stack for the MVP",
             "and current version of the platform that is built on Ruby on Rails, ",
             "Javascript, MongoDB, WebRTC, and utilizes Amazon EC2/S3 for staging and",
             " production deployments"
           ]
         }, {
-          "logo": "", "duration": { "since": 123, "until": 456 },
+          "text": "paradise", "teamsize": "20",
+          "imgs": [""], "duration": { "since": 123, "until": 456 },
           "techstacks": [{
             "text": "angular", "versions": ["4"]
           }, {
             "text": "ruby on rails", "versions": ["5"]
           }],
-          "text": "paradise", "teamsize": "20", "achievements": [
+          "achievements": [
             "designing the architecture and technology stack for the MVP",
             "and current version of the platform that is built on Ruby on Rails, ",
             "Javascript, MongoDB, WebRTC, and utilizes Amazon EC2/S3 for staging and",
@@ -96,22 +106,44 @@
           ]
         }]
       }, {
-        "span": "1 100%", "type": "position",
-        "text": "SWD", "location": { "text": "taipei" },
-        "duration": { "since": 123456789, "until": 123356789 },
-        "kind": "engineer", "org": { "text": "tulip co.", "logo": "url" },
-        "remarkables": [
-          "vestigator of the lain settina virtual platform fo",
-          "system, Provided after-sales customer support and servic",
-          "and airport informate out efficient solutions for their problems, ",
-          "system, Provided after-sales customer support and servic"
-        ],
+        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
+        "text": "wow", "locations": [{ "text": "Manchester, UK" }, { "text": "London, UK" }],
+        "roles": [{
+          "text": "Lead developer", "kind": "engineer",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "vestigator of the lain settina virtual platform fo",
+            "system, Provided after-sales customer support and servic",
+            "and airport informate out efficient solutions for their problems, ",
+            "system, Provided after-sales customer support and servic",
+            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
+            "vestigator of the laboratory in setting up a virtual platform fo",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }, {
+          "text": "Senior fullstack developer", "kind": "engineer",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }, {
+          "text": "Fullstack developer", "kind": "engineer",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }],
         "projects": [{
-          "logo": "", "duration": { "since": 123, "until": 456 },
+          "text": "wow-kk", "teamsize": "20",
+          "imgs": [""], "duration": { "since": 123, "until": 456 },
           "techstacks": [{
-            "text": "angular", "versions": ["5"]
+            "text": "angular", "versions": ["4"]
+          }, {
+            "text": "ruby on rails", "versions": ["5"]
           }],
-          "text": "paradise 2", "teamsize": "15", "achievements": [
+          "achievements": [
             "designing the architecture and technology stack for the MVP",
             " production deployments"
           ]
@@ -127,20 +159,43 @@
           ]
         }]
       }, {
-        "span": "1 100%", "type": "position",
-        "text": "Tech lead", "location": { "text": "uk" },
-        "duration": { "since": 123456789, "until": 123356789 },
-        "kind": "engineer", "org": { "text": "wow co.", "logo": "url" },
-        "remarkables": [
-          "vestigator of the lain settina virtual platform fo",
-          "and airport informate out efficient solutions for their problems, ",
-          "Provided after-sales customer support and servic",
-          "airport informate out efficient solutions for their problems, "
-        ],
+        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
+        "text": "yoooo", "locations": [{ "text": "Taipei" }],
+        "roles": [{
+          "text": "Research developer", "kind": "engineer",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "vestigator of the lain settina virtual platform fo",
+            "system, Provided after-sales customer support and servic",
+            "and airport informate out efficient solutions for their problems, ",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }, {
+          "text": "Researcher", "kind": "engineer",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }, {
+          "text": "Fullstack developer", "kind": "engineer",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }],
         "projects": [{
-          "logo": "", "duration": { "since": 123, "until": 456 },
-          "text": "paradise", "teamsize": "10", "achievements": [
-            "designing the architecture and technology stack for the MVP"
+          "text": "mugo", "teamsize": "20",
+          "imgs": [""], "duration": { "since": 123, "until": 456 },
+          "techstacks": [{
+            "text": "angular", "versions": ["4"]
+          }, {
+            "text": "ruby on rails", "versions": ["5"]
+          }],
+          "achievements": [
+            "designing the architecture and technology stack for the MVP",
+            " production deployments"
           ]
         }, {
           "logo": "", "duration": { "since": 123, "until": 456 },
@@ -158,59 +213,62 @@
       "text": "Educations",
       "layout": "flex",
       "views": [{
-        "span": "1 100%", "type": "position",
-        "text": "Senior SWD", "location": { "text": "taipei" },
-        "duration": { "since": 123456789, "until": 123356789 },
-        "kind": "engineer", "org": { "text": "tulip co.", "logo": "url" },
-        "remarkables": [
-          "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
-          "vestigator of the laboratory in setting up a virtual platform fo",
-          "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-        ],
-        "projects": [{
-          "logo": "", "duration": { "since": 123, "until": 456 },
-          "techstacks": [{
-            "text": "angular", "versions": ["5"]
-          }, {
-            "text": "ruby on rails", "versions": ["5"]
-          }],
-          "text": "paradise 2", "teamsize": "18", "achievements": [
-            "designing the architecture and technology stack for the MVP",
-            "and current version of the platform that is built on Ruby on Rails, ",
-            "Javascript, MongoDB, WebRTC, and utilizes Amazon EC2/S3 for staging and",
-            " production deployments"
+        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
+        "text": "NYYYYU", "locations": [{ "text": "Taipei" }],
+        "roles": [{
+          "text": "Master of CSIE", "kind": "Collage of science",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "vestigator of the lain settina virtual platform fo",
+            "system, Provided after-sales customer support and servic",
+            "and airport informate out efficient solutions for their problems, ",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
           ]
-        }, {
-          "logo": "", "duration": { "since": 123, "until": 456 },
+        }],
+        "projects": [{
+          "text": "mugo", "teamsize": "20",
+          "imgs": [""], "duration": { "since": 123, "until": 456 },
           "techstacks": [{
             "text": "angular", "versions": ["4"]
           }, {
             "text": "ruby on rails", "versions": ["5"]
           }],
-          "text": "paradise", "teamsize": "20", "achievements": [
+          "achievements": [
             "designing the architecture and technology stack for the MVP",
-            "and current version of the platform that is built on Ruby on Rails, ",
-            "Javascript, MongoDB, WebRTC, and utilizes Amazon EC2/S3 for staging and",
             " production deployments"
+          ]
+        }, {
+          "logo": "", "duration": { "since": 123, "until": 456 },
+          "text": "paradise", "teamsize": "10", "achievements": [
+            "designing the architecture and technology stack for the MVP"
+          ]
+        }, {
+          "logo": "", "duration": { "since": 123, "until": 456 },
+          "text": "paradise", "teamsize": "10", "achievements": [
+            "designing the architecture and technology stack for the MVP"
           ]
         }]
       }, {
-        "span": "1 100%", "type": "position",
-        "text": "SWD", "location": { "text": "taipei" },
-        "duration": { "since": 123456789, "until": 123356789 },
-        "kind": "engineer", "org": { "text": "tulip co.", "logo": "url" },
-        "remarkables": [
-          "vestigator of the lain settina virtual platform fo",
-          "system, Provided after-sales customer support and servic",
-          "and airport informate out efficient solutions for their problems, ",
-          "system, Provided after-sales customer support and servic"
-        ],
+        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
+        "text": "NNNUUU", "locations": [{ "text": "Kao-xiong" }],
+        "roles": [{
+          "text": "Bechelor of Eletronical Engineering", "kind": "Colleage of Engineering",
+          "duration": { "since": 123456789, "until": 123356789 },
+          "remarkables": [
+            "vestigator of the lain settina virtual platform fo",
+            "system, Provided after-sales customer support and servic",
+            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+          ]
+        }],
         "projects": [{
-          "logo": "", "duration": { "since": 123, "until": 456 },
+          "text": "mugo", "teamsize": "20",
+          "imgs": [""], "duration": { "since": 123, "until": 456 },
           "techstacks": [{
-            "text": "angular", "versions": ["5"]
+            "text": "angular", "versions": ["4"]
+          }, {
+            "text": "ruby on rails", "versions": ["5"]
           }],
-          "text": "paradise 2", "teamsize": "15", "achievements": [
+          "achievements": [
             "designing the architecture and technology stack for the MVP",
             " production deployments"
           ]

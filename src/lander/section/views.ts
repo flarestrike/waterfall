@@ -1,3 +1,4 @@
+import { WlStageView } from './stage/stage.view';
 import { WlListView } from './list/list.view';
 import { WlIntroView } from './intro/intro.view';
 import { WlUnknownView } from './unknown/unknown.view';
@@ -5,10 +6,10 @@ import { WlUnknownView } from './unknown/unknown.view';
 const unknown = WlUnknownView;
 
 export const viewList = [
-  WlIntroView,
+  WlStageView, WlIntroView,
   WlListView, unknown
 ];
 export const views = {
-  WlIntroView,
+  WlStageView, WlIntroView,
   WlListView, unknown
 };

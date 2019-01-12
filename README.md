@@ -2,13 +2,13 @@
 
 - [x] ci/cd
 - [x] layout
-  - [-] nav
+  - [x] nav
     - avatar
     - title
     - subtitle
     - links
   - [-] lander
-    - summary
+    - [x] summary
       - gender, birth in 1980s
       - email/ig/phone
       - location, relocation places
@@ -24,16 +24,16 @@
       - orgs | projects
     - travels
 - mods
-  - layout
-  - nav
-  - summary
-  - exp
-  - edu
-  - better
+  - [x] layout
+  - [x] nav
+  - [x] summary
+  - [-] exp
+  - [-] edu
+  - [-] better
     - img
     - icon
     - anchor
-  - common
+  - [-] common
     - skill
     - positions
     - orgs
