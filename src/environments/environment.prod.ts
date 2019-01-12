@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  dataUrl: '/waterfall/assets/mock/data.json'
+  dataUrl: '/waterfall/assets/mock/gh-data.json'
 };

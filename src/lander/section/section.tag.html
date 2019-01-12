@@ -1,1 +1,4 @@
-: {{ text }}
+<div class='title'> {{ text }} </div>
+<div [class]='"layout " + layout'>
+    <wl-view *ngFor='let v of views' [data]='v'></wl-view>
+</div>
