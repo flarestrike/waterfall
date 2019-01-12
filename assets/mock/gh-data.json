@@ -1,0 +1,66 @@
+{
+  "top": {
+    "avatar": "/waterfall/assets/img/avatar.png",
+    "title": "bmVsc29u",
+    "subtitle": "lorem ipsum",
+    "links": [
+      { "text": "link1", "hash": "link1" },
+      { "text": "link -2", "hash": "link2" },
+      { "text": "long Link 333", "hash": "link3" },
+      { "text": "ohaiyo", "hash": "link-4" }
+    ]
+  },
+  "lander": {
+    "sections": [{
+      "text": "Summary",
+      "layout": "flex",
+      "views": [{
+        "span": "1 25%", "type": "Intro",
+        "text": "About me", "name": "may flower",
+        "gender": "male", "birth": "1980s",
+        "email": "abc@defg.xzysj.test", "ig": "someone_not_exist",
+        "location": "taipei", "relocations": ["shanghai", "singapore", "sanjose"]
+      }, {
+        "span": "1 25%", "type": "List",
+        "text": "Professions", "style": "split",
+        "list": [{
+          "text": "Web dev", "years": 7, "link": "web"
+        }, {
+          "text": "Cloud/Backend dev", "years": 5, "link": "cloud"
+        }, {
+          "text": "UI/UX design/implement", "years": 4, "link": "uix"
+        }, {
+          "text": "Project management", "years": 3.5, "link": "proj_mgt"
+        }, {
+          "text": "Image processing", "years": 3, "link": "vip"
+        }, {
+          "text": "Native app dev", "years": 2.5, "link": "app"
+        }, {
+          "text": "Data analytics", "years": 2.5, "link": "data"
+        }]
+      }, {
+        "span": "1 100%", "type": "List",
+        "text": "Skillset", "style": "concat",
+        "list": [{
+          "text": "Frameworks", "sublist": ["angular", "ruby on rails", "imagemagick", "nativescript", "pandas"]
+        }, {
+          "text": "Languages", "sublist": ["typescript", "es6", "ruby", "python", "bash"]
+        }, {
+          "text": "Databases", "sublist": ["postgressql", "redis", "cassandra", "elasticsearch", "druid"]
+        }, {
+          "text": "Testing", "sublist": ["rspec", "jasmine", "karma", "unittests", "coverage"]
+        }, {
+          "text": "CI/CD", "sublist": ["tslint", "rubocop", "travis-ci", "jenkins", "ansible", "chef"]
+        }, {
+          "text": "Others", "sublist": ["kafka", "docker", "serverless", "oauth"]
+        }]
+      }]
+    }, {
+      "text": "Experiences"
+    }, {
+      "text": "Educations"
+    }, {
+      "text": "Travels"
+    }]
+  }
+}
