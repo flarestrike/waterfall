@@ -30,7 +30,7 @@
               "src/styles.sass"
             ],
             "scripts": [
-              "src/utils/gh-spa.ts"
+              "src/utils/gh-spa.js"
             ]
           },
           "configurations": {
