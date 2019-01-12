@@ -8,6 +8,7 @@ script:
   - npx ng lint
   - npx ng test --watch=false
   - npx ng build --prod --deploy-url /waterfall/ --base-href /waterfall/
+  - cp src/404.html dist/waterfall
 cache:
     directories:
       - node_modules

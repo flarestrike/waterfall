@@ -9,7 +9,7 @@ class TopNav {
 
 @Component({
   selector: 'wn-top-nav',
-  template: 'top nav'
+  template: 'top nav - a'
 })
 export class WnTopNav {
   @Input() set data(v) {

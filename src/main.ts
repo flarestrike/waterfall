@@ -3,8 +3,11 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import { spa } from './utils/gh-spa';
+
 
 if (environment.production) {
+  spa();
   enableProdMode();
 }
 
