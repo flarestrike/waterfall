@@ -12,6 +12,7 @@ export class CustomHttp implements HttpInterceptor {
       if (e.status === 200 && !e.ok) {
         const body = { error: 'server respond with unprocessible response' };
         // https://github.com/angular/angular/issues/24669
+        console.error(body);
         return of(new HttpResponse({ body }));
       }
       return throwError(e);

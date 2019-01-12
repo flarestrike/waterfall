@@ -9,5 +9,54 @@
       { "text": "long Link 333", "hash": "link3" },
       { "text": "ohaiyo", "hash": "link-4" }
     ]
+  },
+  "lander": {
+    "sections": [{
+      "text": "Summary",
+      "layout": "grids",
+      "grids": [{
+        "width": "50", "type": "intro",
+        "text": "About me", "name": "may flower",
+        "gender": "male", "birth": "1980s",
+        "email": "abc@defg.xzysj.test", "ig": "someone_not_exist",
+        "location": "taipei", "relocations": ["shanghai", "singapore", "sanjose"]
+      }, {
+        "width": "50", "type": "list",
+        "text": "Professions", "style": "split",
+        "list": [{
+          "text": "Web dev", "rate": 5, "link": "web"
+        }, {
+          "text": "Cloud/Backend dev", "rate": 4, "link": "cloud"
+        }, {
+          "text": "UI/UX design/implement", "rate": 4, "link": "uix"
+        }, {
+          "text": "Project management", "rate": 3.5, "link": "proj_mgt"
+        }, {
+          "text": "Native app dev", "rate": 2.5, "link": "app"
+        }]
+      }, {
+        "width": "100", "type": "list",
+        "text": "Skillset", "style": "concat",
+        "list": [{
+          "text": "Frameworks", "sublist": ["angular", "ruby on rails", "imagemagick", "nativescript", "pandas"]
+        }, {
+          "text": "Languages", "sublist": ["typescript", "es6", "ruby", "python", "bash"]
+        }, {
+          "text": "Databases", "sublist": ["postgressql", "redis", "cassandra", "elasticsearch", "druid"]
+        }, {
+          "text": "Testing", "sublist": ["rspec", "jasmine", "karma", "unittests", "coverage"]
+        }, {
+          "text": "CI/CD", "sublist": ["tslint", "rubocop", "travis-ci", "jenkins", "ansible", "chef"]
+        }, {
+          "text": "Others", "sublist": ["kafka", "docker", "serverless", "oauth"]
+        }]
+      }]
+    }, {
+      "text": "Experiences"
+    }, {
+      "text": "Educations"
+    }, {
+      "text": "Travels"
+    }]
   }
 }

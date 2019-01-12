@@ -9,15 +9,20 @@
     - links
   - [-] lander
     - summary
-      - about me
-      - top 10 skill set
+      - gender, birth in 1980s
+      - email/ig/phone
+      - location, relocation places
+      |
+      - professionals
+      |
+      - main skill set
     - exp
       - skill set
       - positions | projects
     - educations
       - skill set
       - orgs | projects
-    - contacts
+    - travels
 - mods
   - layout
   - nav
