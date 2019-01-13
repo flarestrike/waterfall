@@ -1,3 +1,13 @@
+undefined
+
+date-fns
+MIT
+# License
+
+date-fns is licensed under the [MIT license](http://kossnocorp.mit-license.org).
+Read more about MIT at [TLDRLegal](https://tldrlegal.com/license/mit-license).
+
+
 tslib
 Apache-2.0
 Apache License
