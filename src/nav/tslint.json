@@ -2,6 +2,6 @@
     "extends": "../../tslint.json",
     "rules": {
         "component-selector": [true, "element", ["wn"], "kebab-case"],
-        "component-class-suffix": [true, "Nav"]
+        "component-class-suffix": [true, "Nav", "Tag"]
     }
 }
