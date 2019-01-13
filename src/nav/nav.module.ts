@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { BetterModule } from '@mod/better';
-import { WnTopNav } from './top.nav';
+import { WnCommonModule } from './common/common.module';
 
-const tags = [WnTopNav];
+import { WnTopNav } from './top/top.nav';
+import { WnSideNav } from './side/side.nav';
+
+const tags = [WnTopNav, WnSideNav];
 @NgModule({
   imports: [
-    CommonModule,
-    BetterModule
+    WnCommonModule
   ],
   declarations: [ ...tags ],
   exports: [ ...tags ]

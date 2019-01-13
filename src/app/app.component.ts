@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Data } from '@mod/utils';
+import { Model as Nav } from '@mod/nav';
+import { Model as Lander } from '@mod/lander/lander.tag';
 
 class App {
-  top: object;
-  lander: object;
+  nav: Nav;
+  lander: Lander;
 }
 
 @Component({
@@ -13,13 +15,12 @@ class App {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
+export class AppComponent extends App {
   title = 'waterfall';
-  top;
-  lander;
   constructor(private data: Data) {
-    data.app<App>().subscribe(({ top, lander }) => {
-      this.top = top;
+    super();
+    data.app<App>().subscribe(({ nav, lander }) => {
+      this.nav = nav;
       this.lander = lander;
     });
   }

@@ -1,12 +1,13 @@
 import { EventEmitter, Injector, Input, Component } from '@angular/core';
-import { WlViewOptions } from './view.options';
+import { Model as View } from './view/view.tag';
 
+import { WlViewOptions } from './view.options';
 import { views } from './views';
 
-class Model {
+export class Model {
   text = [];
   layout: string;
-  views = [];
+  views: View[] = [];
 }
 
 @Component({
@@ -20,7 +21,8 @@ export class WlSectionTag extends Model {
     Object.assign(this, v || new Model());
   }
   set views(vs) {
-    this._vs = vs.map(({ span, text, type, ...v }) => <any>{ text, span,
+    this._vs = vs.map(({ span, icon, text, type, ...v }) => <any>{
+      text, span, icon,
       type: views[`Wl${type}View`] || views.unknown,
       injector: Injector.create({
         parent: this.inj, providers: [

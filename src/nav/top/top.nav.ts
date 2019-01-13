@@ -1,10 +1,10 @@
 import { Input, Component } from '@angular/core';
 
-class TopNav {
+export class Model {
   avatar = '';
   title = '';
-  subtitle = '';
   links = [];
+  langs = [];
 }
 
 @Component({
@@ -12,10 +12,10 @@ class TopNav {
   templateUrl: './top.nav.html',
   styleUrls: ['./top.nav.sass']
 })
-export class WnTopNav extends TopNav {
+export class WnTopNav extends Model {
   @Input() set data(v) {
     if (!v) { return; }
-    Object.assign(this, v || new TopNav());
+    Object.assign(this, v || new Model());
     this.ready = true;
   }
   ready = false;

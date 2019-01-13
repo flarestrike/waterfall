@@ -1,7 +1,9 @@
 import { Input, Component } from '@angular/core';
 
-class Model {
-  sections = [];
+import { Model as Section } from './section/section.tag';
+
+export class Model {
+  sections: Section[] = [];
 }
 
 @Component({

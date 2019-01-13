@@ -1,2 +1,4 @@
-<div class='title'> {{ text }} </div>
+<div class='title'>
+  <wb-icon x='co' [name]='icon' *ngIf='icon'></wb-icon>
+  {{ text }} </div>
 <ng-container *ngComponentOutlet='type; injector: injector'></ng-container>

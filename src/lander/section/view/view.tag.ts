@@ -1,11 +1,12 @@
 import { HostBinding, Input, Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-class Model {
+export class Model {
   type: string;
   injector: any;
   span: string;
   text: string;
+  icon: string;
 }
 
 @Component({

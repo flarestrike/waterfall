@@ -1,8 +1,13 @@
 {
-  "top": {
+  "nav": {
     "avatar": "/waterfall/assets/img/avatar.png",
     "title": "bmVsc29u",
     "subtitle": "lorem ipsum",
+    "langs": [{
+      "text": "简", "url": "/data.hans.json"
+    }, {
+      "text": "繁", "url": "/data.hant.json"
+    }],
     "links": [
       { "text": "link1", "hash": "link1" },
       { "text": "link -2", "hash": "link2" },
