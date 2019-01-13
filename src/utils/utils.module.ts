@@ -3,6 +3,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { CustomHttp } from './custom-http';
 import { Preference } from './preference';
+import { Lang } from './lang';
 import { Data } from './data';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { Data } from './data';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CustomHttp, multi: true },
     Preference,
+    Lang,
     Data
   ]
 })

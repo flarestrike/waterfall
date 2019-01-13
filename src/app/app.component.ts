@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import { Data } from '@mod/utils';
+import { Data, Lang } from '@mod/utils';
 import { Model as Nav } from '@mod/nav';
 import { Model as Lander } from '@mod/lander/lander.tag';
 
@@ -17,13 +18,19 @@ class App {
 })
 export class AppComponent extends App {
   title = 'waterfall';
-  constructor(private data: Data) {
+  constructor(
+    private router: Router,
+    private lang: Lang,
+    private data: Data) {
     super();
-    this.load('en');
+    lang.event.subscribe(e => {
+      this.load(e.key);
+    });
   }
   navEvent(e) {
     if (e.type === 'lang') {
-      this.load(e.key);
+      this.router.navigate([e.key]);
+      // this.lang.use(e.key);
     }
   }
 

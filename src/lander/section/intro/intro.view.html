@@ -4,12 +4,15 @@
 </div>
 <div>
   <wb-icon x='co' name='clock'></wb-icon>
-  Birth in {{ birth }} </div>
+  {{ loc.birth }} {{ birth }} </div>
 <div>
   <wb-icon x='co' name='mail'></wb-icon>
-  E-mail
+  {{ loc.email }}
   <a class='email' [href]='"mailto:" + email'>{{ email }}</a> </div>
-<div> Now in <wl-location [data]='location'></wl-location> </div>
-<div> Consider to
+<div>
+  {{ loc.now }}
+  <wl-location [data]='location'></wl-location> </div>
+<div>
+  {{ loc.relocat }}
   <wl-location *ngFor='let l of relocations' [data]='l'></wl-location>
 </div>
