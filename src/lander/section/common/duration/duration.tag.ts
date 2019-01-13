@@ -1,4 +1,4 @@
-import { OnInit, Input, Component } from '@angular/core';
+import { Input, Component } from '@angular/core';
 import { parse, format, subYears } from 'date-fns';
 import * as en from 'date-fns/locale/en';
 import * as hans from 'date-fns/locale/zh_cn';
@@ -54,7 +54,7 @@ function ifmt(i, loc) {
     {{ ss }} ~ {{ su }} ({{ ds }})`,
   styleUrls: ['duration.tag.sass']
 })
-export class WlDurationTag extends Model implements OnInit {
+export class WlDurationTag extends Model {
   lang;
   ss: string;
   su: string;

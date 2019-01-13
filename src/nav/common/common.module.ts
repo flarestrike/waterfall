@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BetterModule } from '@mod/better';
 
@@ -15,7 +16,9 @@ const tags = [
   WnTitleTag,
   WnLinksTag];
 @NgModule({
-  imports: [...mods],
+  imports: [
+    RouterModule,
+    ...mods],
   declarations: [...tags],
   exports: [...tags, ...mods]
 })

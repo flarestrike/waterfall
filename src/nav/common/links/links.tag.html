@@ -1,1 +1,2 @@
-<a *ngFor='let i of links' [href]='"#" + i.hash'> {{ i.text }} </a>
+<a *ngFor='let i of links' [routerLink]='[]'
+  [fragment]='i.hash'> {{ i.text }} </a>

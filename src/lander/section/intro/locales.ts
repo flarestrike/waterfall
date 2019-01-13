@@ -19,4 +19,4 @@ export const locales = {
     now: '目前在',
     relocat: '可能工作地点'
   }
-}
+};
