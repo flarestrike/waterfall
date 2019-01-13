@@ -1,7 +1,12 @@
 import { Input, Component } from '@angular/core';
+import { Model as Duration } from '../duration/duration.tag';
 
 export class Model {
   text: string;
+  duration: Duration;
+  imgs = [];
+  techstacks: [];
+  achievements: [];
 }
 
 @Component({
@@ -14,4 +19,11 @@ export class WlProjectTag extends Model {
     if (!v) { return; }
     Object.assign(this, v || new Model());
   }
+  set imgs(v) {
+    this._imgs = v.splice(0, 6);
+  }
+  get imgs() {
+    return this._imgs;
+  }
+  _imgs = [];
 }
