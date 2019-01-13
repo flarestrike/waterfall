@@ -8,9 +8,9 @@
       { "text": "long Link 333", "hash": "link3" }
     ],
     "langs": [{
-      "text": "En", "url": "/data.json"
+      "text": "En", "key": "en"
     }, {
-      "text": "简", "url": "/data.hans.json"
+      "text": "简", "key": "hans"
     }]
   },
   "lander": {
