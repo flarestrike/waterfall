@@ -7,7 +7,7 @@
             "app",
             "camelCase"
         ],
-        "component-class-suffix": [true, "Tag"],
+        "component-class-suffix": [true, "Tag", "Component"],
         "component-selector": [
             true,
             "element",
