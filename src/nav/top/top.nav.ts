@@ -1,4 +1,4 @@
-import { Input, Component } from '@angular/core';
+import { Output, EventEmitter, Input, Component } from '@angular/core';
 
 export class Model {
   avatar = '';
@@ -18,5 +18,9 @@ export class WnTopNav extends Model {
     Object.assign(this, v || new Model());
     this.ready = true;
   }
+  @Output() event = new EventEmitter();
   ready = false;
+  emit(e) {
+    this.event.emit(e);
+  }
 }

@@ -19,7 +19,16 @@ export class AppComponent extends App {
   title = 'waterfall';
   constructor(private data: Data) {
     super();
-    data.app<App>().subscribe(({ nav, lander }) => {
+    this.load('en');
+  }
+  navEvent(e) {
+    if (e.type === 'lang') {
+      this.load(e.key);
+    }
+  }
+
+  private load(key) {
+    this.data.app<App>(key).subscribe(({ nav, lander }) => {
       this.nav = nav;
       this.lander = lander;
     });

@@ -7,7 +7,9 @@ export class Data {
   constructor(
     private http: HttpClient,
     private pref: Preference) { }
-  app<T>() {
-    return this.http.get<T>(this.pref.all.dataUrl || '');
+  app<T>(key) {
+    const { dataUrl = '' } = this.pref.all;
+    const url = dataUrl.replace('lang', `${key}`);
+    return this.http.get<T>(url);
   }
 }

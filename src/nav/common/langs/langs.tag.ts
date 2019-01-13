@@ -1,4 +1,4 @@
-import { Input, Component } from '@angular/core';
+import { Output, EventEmitter, Input, Component } from '@angular/core';
 
 class Lang {
   text: string;
@@ -16,4 +16,8 @@ export class Model {
 })
 export class WnLangsTag extends Model {
   @Input() langs: Lang[] = [];
+  @Output() event = new EventEmitter();
+  use({ key }) {
+    this.event.emit({ type: 'lang', key });
+  }
 }

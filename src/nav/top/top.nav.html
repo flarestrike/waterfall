@@ -1,4 +1,4 @@
 <wb-img *ngIf='ready' [src]='avatar'></wb-img>
 <wn-title [text]='title'></wn-title>
-<wn-langs [langs]='langs'></wn-langs>
+<wn-langs [langs]='langs' (event)='emit($event)'></wn-langs>
 <wn-links [links]='links'></wn-links>

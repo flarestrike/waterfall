@@ -1,9 +1,9 @@
 <wl-app-layout>
   <ng-container class='top'>
-    <wn-top-nav [data]='nav'></wn-top-nav>
+    <wn-top-nav [data]='nav' (event)='navEvent($event)'></wn-top-nav>
   </ng-container>
   <wl-paper-layout>
-    <wn-side-nav [data]='nav'></wn-side-nav>
+    <wn-side-nav [data]='nav' (event)='navEvent($event)'></wn-side-nav>
     <wl-lander [data]='lander'></wl-lander>
     <router-outlet></router-outlet>
   </wl-paper-layout>

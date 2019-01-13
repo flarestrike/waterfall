@@ -1,4 +1,6 @@
-import { HostBinding, Inject, HostListener, Input, Component } from '@angular/core';
+import {
+  Output, EventEmitter,
+  HostBinding, Inject, HostListener, Input, Component } from '@angular/core';
 import { platformWindow } from '@mod/utils/platform';
 
 export class Model {
@@ -19,6 +21,7 @@ export class WnSideNav extends Model {
     Object.assign(this, v || new Model());
     this.ready = true;
   }
+  @Output() event = new EventEmitter();
   ready = false;
   @HostBinding('class.on') show = false;
   constructor(@Inject(platformWindow) private wnd: Window) {
@@ -26,5 +29,8 @@ export class WnSideNav extends Model {
   }
   @HostListener('window:scroll', ['$event']) wscroll(e) {
     this.show = this.wnd.scrollY > 70;
+  }
+  emit(e) {
+    this.event.emit(e);
   }
 }
