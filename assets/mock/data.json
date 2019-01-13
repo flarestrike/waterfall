@@ -71,7 +71,8 @@
           ],
           "projects": [{
             "text": "paradise 2", "teamsize": "18",
-            "imgs": ["", ""], "duration": { "since": "20040502", "until": "20111102" },
+            "imgs": [{ "src": "/assets/img/site.png", "text": "ohya" }, { "src": "", "text": "okkk k kk" }, { "src": "", "text": "magic" }],
+            "duration": { "since": "20040502", "until": "20111102" },
             "techstacks": [{
               "text": "angular", "versions": ["5"]
             }, {
@@ -85,7 +86,7 @@
             ]
           }, {
             "text": "paradise", "teamsize": "20",
-            "imgs": [""], "duration": { "since": "20160205", "until": "20180910" },
+            "imgs": [{ "src": "", "text": "fine" }, { "src": "", "text": "noook kk" }], "duration": { "since": "20160205", "until": "20180910" },
             "techstacks": [{
               "text": "angular", "versions": ["4"]
             }, {
@@ -107,7 +108,7 @@
           ],
           "projects": [{
             "text": "para", "teamsize": "10",
-            "imgs": [""], "duration": { "since": "20160205", "until": "20180910" },
+            "imgs": [{ "src": "", "text": "still" }], "duration": { "since": "20160205", "until": "20180910" },
             "techstacks": [{
               "text": "angular", "versions": ["4"]
             }],
@@ -242,7 +243,7 @@
           ],
           "projects": [{
             "text": "mugo", "teamsize": "20",
-            "imgs": [""], "duration": { "since": "20140106", "until": "20171006" },
+            "imgs": [{ "src": "", "text": "fancy work" }], "duration": { "since": "20140106", "until": "20171006" },
             "techstacks": [{
               "text": "angular", "versions": ["4"]
             }, {
