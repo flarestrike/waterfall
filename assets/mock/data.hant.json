@@ -1,30 +1,30 @@
 {
   "nav": {
     "avatar": "/assets/img/avatar.png",
-    "title": "bmVsc29u",
+    "title": "bmVsc29u - 繁",
     "links": [
       { "text": "link1", "hash": "link1" },
       { "text": "link -2", "hash": "link2" },
       { "text": "long Link 333", "hash": "link3" }
     ],
     "langs": [{
-      "text": "简", "key": "hans"
+      "text": "En", "url": "/data.json"
     }, {
-      "text": "繁", "key": "hant"
+      "text": "简", "url": "/data.hans.json"
     }]
   },
   "lander": {
     "sections": [{
       "text": "Summary", "layout": "flex", "hash": "link1",
       "views": [{
-        "span": "1 25%", "type": "Intro", "icon": "world",
+        "span": "1 25%", "type": "Intro",
         "text": "About me", "name": "may flower",
         "gender": "male", "birth": "1980s",
         "email": "abc@testtest.test", "ig": "someone_not_exist",
         "location": { "text": "Taipei" },
         "relocations": [ { "text": "Shanghai" }, { "text": "Singapore" }, { "text": "SanJose" }]
       }, {
-        "span": "1 25%", "type": "List", "icon": "folder_shared",
+        "span": "1 25%", "type": "List",
         "text": "Professions", "style": "split",
         "list": [{
           "text": "Web dev", "years": 7, "link": "web"
@@ -42,7 +42,7 @@
           "text": "Data analytics", "years": 2.5, "link": "data"
         }]
       }, {
-        "span": "1 100%", "type": "List", "icon": "suitcase",
+        "span": "1 100%", "type": "List",
         "text": "Skillset", "style": "concat",
         "list": [{
           "text": "Frameworks", "sublist": ["angular", "ruby on rails", "imagemagick", "nativescript", "pandas"]
@@ -62,7 +62,6 @@
       "text": "Experiences", "layout": "flex", "hash": "link2",
       "views": [{
         "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
-        "icon": "building",
         "text": "tulip co.", "locations": [{ "text": "taipei" }, { "text": "sj" }],
         "roles": [{
           "text": "Senior RD", "kind": "engineer",
@@ -233,7 +232,6 @@
       "text": "Educations", "layout": "flex", "hash": "link3",
       "views": [{
         "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
-        "icon": "hat",
         "text": "NYYYYU", "locations": [{ "text": "Taipei" }],
         "roles": [{
           "text": "Master of CSIE", "kind": "Collage of science",
@@ -270,7 +268,6 @@
         }]
       }, {
         "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
-        "icon": "hat",
         "text": "NNNUUU", "locations": [{ "text": "Kao-xiong" }],
         "roles": [{
           "text": "Bechelor of Eletronical Engineering", "kind": "Colleage of Engineering",
