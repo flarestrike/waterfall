@@ -1,8 +1,15 @@
-<div class='title'>
-  <wb-icon x='co' name='user'></wb-icon>
-  {{ text }}
+<div>
+  <div class='title'>
+    <wb-icon x='co' name='user'></wb-icon>
+    {{ text }}
+  </div>
+  <wl-duration [data]='duration'></wl-duration>
+  <label> Remarkables </label>
+  <ul class='remarkables'>
+    <li *ngFor='let r of remarkables'>{{ r }}</li>
+  </ul>
 </div>
-<wl-duration [data]='duration'></wl-duration>
-<ul class='remarkables'>
-  <li *ngFor='let r of remarkables'>{{ r }}</li>
-</ul>
+<div>
+  <label> Projects </label>
+  <wl-project *ngFor='let r of projects' [data]='p'></wl-project>
+</div>

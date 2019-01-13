@@ -8,7 +8,6 @@ class Model {
   text: string;
   locations: Location[];
   roles: Role[];
-  projects: Project[];
 }
 
 @Component({

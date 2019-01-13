@@ -1,11 +1,13 @@
 import { Input, Component } from '@angular/core';
 import { Model as Duration } from '../duration/duration.tag';
+import { Model as Project } from '../project/project.tag';
 
 export class Model {
   text: string;
   kind: number;
   duration: Duration;
-  remarkables: string[];
+  remarkables: string[] = [];
+  projects: Project[] = [];
 }
 
 @Component({

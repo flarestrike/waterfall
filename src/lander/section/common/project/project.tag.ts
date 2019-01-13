@@ -6,8 +6,8 @@ export class Model {
 
 @Component({
   selector: 'wl-project',
-  template: 'project.tag.html'
-  // styleUrls: ['project.tag.sass']
+  templateUrl: 'project.tag.html',
+  styleUrls: ['project.tag.sass']
 })
 export class WlProjectTag extends Model {
   @Input() set data(v) {

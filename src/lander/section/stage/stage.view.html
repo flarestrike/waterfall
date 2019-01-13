@@ -1,14 +1,7 @@
-<div class='flex'>
-  <div>
-    <div class='header'>
-      <wb-img [src]='logo'></wb-img>
-      <div class='locs'>
-        <wl-location *ngFor='let l of locations' [data]='l'></wl-location>
-      </div>
-    </div>
-    <wl-role *ngFor='let r of roles' [data]='r'></wl-role>
-  </div>
-  <div>
-    <wl-project *ngFor='let r of projects' [data]='p'></wl-project>
+<div class='header'>
+  <wb-img [src]='logo'></wb-img>
+  <div class='locs'>
+    <wl-location *ngFor='let l of locations' [data]='l'></wl-location>
   </div>
 </div>
+<wl-role *ngFor='let r of roles' [data]='r'></wl-role>
