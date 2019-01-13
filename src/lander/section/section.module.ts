@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 
-import { BetterModule } from '@mod/better';
 import { WlCommonModule } from './common/common.module';
 
 import { WlSectionTag } from './section.tag';
@@ -15,7 +14,6 @@ const tags = [
 
 @NgModule({
   imports: [
-    BetterModule,
     WlCommonModule
   ],
   entryComponents: [...viewList],

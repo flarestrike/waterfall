@@ -19,7 +19,8 @@
         "text": "About me", "name": "may flower",
         "gender": "male", "birth": "1980s",
         "email": "abc@testtest.test", "ig": "someone_not_exist",
-        "location": { "text": "taipei" }, "relocations": ["shanghai", "singapore", "sanjose"]
+        "location": { "text": "Taipei" },
+        "relocations": [ { "text": "Shanghai" }, { "text": "Singapore" }, { "text": "SanJose" }]
       }, {
         "span": "1 25%", "type": "List",
         "text": "Professions", "style": "split",

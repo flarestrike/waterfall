@@ -1,0 +1,9 @@
+{
+    "extends": "../../../tslint.json",
+    "rules": {
+        "directive-selector": [true, "attribute", ["bi"], "camelCase"],
+        "component-selector": [true, "element", ["bi"], "kebab-case"],
+        "component-class-suffix": [true, "Tag"],
+        "pipe-naming": [true, "camelCase", "bi"]
+    }
+}

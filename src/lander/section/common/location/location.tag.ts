@@ -8,8 +8,8 @@ export class Model {
 
 @Component({
   selector: 'wl-location',
-  template: 'location.tag.html'
-  // styleUrls: ['location.tag.sass']
+  template: `<wb-icon x='co' name='pin'></wb-icon> {{ text }}`,
+  styleUrls: ['location.tag.sass']
 })
 export class WlLocationTag extends Model {
   @Input() set data(v) {

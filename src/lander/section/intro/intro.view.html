@@ -1,5 +1,15 @@
-<div> {{ name }} {{ gender }} </div>
-<div> Birth in {{ birth }} </div>
-<div> <a [href]='"mailto:" + email'>{{ email }}</a> </div>
-<div> From {{ location }} </div>
-<div> Consider relocating: {{ relocations }} </div>
+<div>
+  <wb-icon x='co' [name]='gender'></wb-icon>
+  {{ name }}
+</div>
+<div>
+  <wb-icon x='co' name='clock'></wb-icon>
+  Birth in {{ birth }} </div>
+<div>
+  <wb-icon x='co' name='mail'></wb-icon>
+  E-mail
+  <a class='email' [href]='"mailto:" + email'>{{ email }}</a> </div>
+<div> Now in <wl-location [data]='location'></wl-location> </div>
+<div> Consider relocating to
+  <wl-location *ngFor='let l of relocations' [data]='l'></wl-location>
+</div>

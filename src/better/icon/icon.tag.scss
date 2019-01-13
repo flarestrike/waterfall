@@ -1,0 +1,20 @@
+:host {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    &.visible {
+        &:before {
+            content: attr(data-before);
+        }
+        font-size: inherit;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
