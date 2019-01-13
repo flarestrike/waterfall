@@ -10,7 +10,7 @@ const ys = 31536000;
 const ms = 2592000;
 
 function idur(i, j) {
-  const d = (Number(parse(j)) - Number(parse(i)))/1000;
+  const d = (Number(parse(j)) - Number(parse(i))) / 1000;
   const r = d % ys;
   return `~ ${Math.floor(d / ys)}y, ${Math.ceil(r / ms)}m`;
 }
