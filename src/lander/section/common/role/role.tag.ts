@@ -1,15 +1,17 @@
 import { Input, Component } from '@angular/core';
+import { Model as Duration } from '../duration/duration.tag';
 
 export class Model {
   text: string;
-  lat: number;
-  lng: number;
+  kind: number;
+  duration: Duration;
+  remarkables: string[];
 }
 
 @Component({
   selector: 'wl-role',
-  template: 'role.tag.html'
-  // styleUrls: ['role.tag.sass']
+  templateUrl: 'role.tag.html',
+  styleUrls: ['role.tag.sass']
 })
 export class WlRoleTag extends Model {
   @Input() set data(v) {
