@@ -6,7 +6,7 @@ export interface Locale {
 export const locales = {
   en: {
     remark: 'Remarkables',
-    project: 'Achievements'
+    project: 'Projects'
   },
   hant: {
     remark: '職責',
