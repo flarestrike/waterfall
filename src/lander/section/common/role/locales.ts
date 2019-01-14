@@ -9,11 +9,11 @@ export const locales = {
     project: 'Projects'
   },
   hant: {
-    remark: '職責',
+    remark: '主要事蹟',
     project: '參與專案'
   },
   hans: {
-    remark: '职责',
+    remark: '主要事迹',
     project: '项目经验'
   },
 };
