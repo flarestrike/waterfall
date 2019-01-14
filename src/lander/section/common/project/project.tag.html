@@ -4,7 +4,7 @@
   <wb-img *ngFor='let i of imgs' [src]='i.src' [attr.text]='i.text'></wb-img>
 </div>
 <div class='techs' *ngIf='techstacks && techstacks.length > 0'>
-  Tech-stacks:
+  {{ loc.tech }}:
   <span *ngFor='let i of techstacks'> {{ i.text }}({{ i.versions }}) </span>
 </div>
 <ul class='achievements'>

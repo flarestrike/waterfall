@@ -1,4 +1,7 @@
 import { Input, Component } from '@angular/core';
+import { Lang } from '@mod/utils';
+
+import { Locale, locales } from './locale';
 import { Model as Duration } from '../duration/duration.tag';
 
 export class Model {
@@ -26,4 +29,15 @@ export class WlProjectTag extends Model {
     return this._imgs;
   }
   _imgs = [];
+  loc = new Locale();
+  constructor(private ln: Lang) {
+    super();
+    this.updateLoc(ln.key);
+    ln.event.subscribe(e => {
+      this.updateLoc(e.key);
+    });
+  }
+  private updateLoc(k) {
+    this.loc = locales[k];
+  }
 }
