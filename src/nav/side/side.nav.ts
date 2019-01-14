@@ -24,7 +24,8 @@ export class WnSideNav extends Model {
   @Output() event = new EventEmitter();
   ready = false;
   @HostBinding('class.on') show = false;
-  constructor(@Inject(platformWindow) private wnd: Window) {
+  constructor(
+    @Inject(platformWindow) private wnd: Window) {
     super();
   }
   @HostListener('window:scroll', ['$event']) wscroll(e) {

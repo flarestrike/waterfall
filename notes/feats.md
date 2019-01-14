@@ -2,12 +2,13 @@
 
 ## UI
 
-- [x] nav
-  - avatar
+- [x] infra
+  - anchor/fragments
   - title
-  - subtitle
-  - links
-- [x] sidenav
+  - langs
+- [x] nav
+  - top
+  - side
 - [x] lander
   - [x] summary
     - gender, birth in 1980s

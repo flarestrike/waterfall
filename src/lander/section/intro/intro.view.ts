@@ -7,6 +7,7 @@ import { WlViewOptions } from '../view.options';
 class Location { text: string; lat: number; lng: number; }
 
 class Model {
+  me: string;
   name: string;
   gender: 'male|female';
   birth: string;

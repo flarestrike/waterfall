@@ -1,18 +1,22 @@
+<wb-img [src]='me'></wb-img>
 <div>
-  <wb-icon x='co' [name]='gender'></wb-icon>
-  {{ name }}
-</div>
-<div>
-  <wb-icon x='co' name='clock'></wb-icon>
-  {{ loc.birth }} {{ birth }} </div>
-<div>
-  <wb-icon x='co' name='mail'></wb-icon>
-  {{ loc.email }}
-  <a class='email' [href]='"mailto:" + email'>{{ email }}</a> </div>
-<div>
-  {{ loc.now }}
-  <wl-location [data]='location'></wl-location> </div>
-<div>
-  {{ loc.relocat }}
-  <wl-location *ngFor='let l of relocations' [data]='l'></wl-location>
+  <div>
+    <wb-icon x='co' [name]='gender'></wb-icon>
+    {{ name }} </div>
+  <div>
+    <wb-icon x='co' name='clock'></wb-icon>
+    {{ loc.birth }} {{ birth }} </div>
+  <div>
+    <wb-icon x='co' name='mail'></wb-icon>
+    {{ loc.email }}
+    <a class='email' [href]='"mailto:" + email'>{{ email }}</a> </div>
+  <div>
+    <wb-icon x='co' name='pin'></wb-icon>
+    {{ loc.now }}
+    <wl-location [data]='location'></wl-location> </div>
+  <div>
+    <wb-icon x='co' name='pin'></wb-icon>
+    {{ loc.relocat }}
+    <wl-location *ngFor='let l of relocations' [data]='l'></wl-location>
+  </div>
 </div>

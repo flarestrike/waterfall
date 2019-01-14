@@ -5,6 +5,7 @@ import { CustomHttp } from './custom-http';
 import { Preference } from './preference';
 import { Lang } from './lang';
 import { Data } from './data';
+import { Title } from './title';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { Data } from './data';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CustomHttp, multi: true },
     Preference,
+    Title,
     Lang,
     Data
   ]

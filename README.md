@@ -7,14 +7,10 @@
   - core
     - [x] data
     - [x] config
-      - lang
       - theme
-    - title changer
     - favicon loader
     - ga
     - service worker
-  - utils
-    - anchor
 - [ ] 12-factor app
   - immutable app
 

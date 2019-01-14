@@ -1,4 +1,5 @@
 import { Input, Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 class Link {
   text: string;
@@ -16,4 +17,14 @@ export class Model {
 })
 export class WnLinksTag extends Model {
   @Input() links: Link[] = [];
+  fragment;
+  constructor(private route: ActivatedRoute) {
+    super();
+    route.fragment.subscribe(f => {
+      this.fragment = f;
+    });
+  }
+  isFrag(f) {
+    return this.fragment === f;
+  }
 }
