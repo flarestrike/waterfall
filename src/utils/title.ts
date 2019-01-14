@@ -13,7 +13,7 @@ export class Title {
     this.title.setTitle(base);
   }
   inPageNav(e) {
-    const f = this.fragments.find(f => f.hash === e) || {};
-    this.title.setTitle(`${this.base} - ${f.text}`);
+    const fn = this.fragments.find(f => f.hash === e) || {};
+    this.title.setTitle(`${this.base} - ${fn.text}`);
   }
 }
