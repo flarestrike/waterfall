@@ -1,11 +1,11 @@
 <div class='title'> {{ text }} </div>
 <wl-duration [data]='duration'></wl-duration>
-<div class='imgs' *ngIf='imgs && imgs.length > 0'>
-  <wb-img *ngFor='let i of imgs' [src]='i.src' [attr.text]='i.text'></wb-img>
-</div>
 <div class='techs' *ngIf='vue.techs && techstacks && techstacks.length > 0'>
   {{ loc.tech }}:
   <span *ngFor='let i of techstacks'> {{ i.text }}({{ i.versions }}) </span>
+</div>
+<div class='imgs' *ngIf='imgs && imgs.length > 0'>
+  <wb-img *ngFor='let i of imgs' [src]='i.src' [attr.text]='i.text'></wb-img>
 </div>
 <ul class='achievements' *ngIf='vue.detail'>
   <li *ngFor='let i of achievements'> {{ i }} </li>

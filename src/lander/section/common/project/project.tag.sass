@@ -1,14 +1,21 @@
 \:host
   display: block
   .title
+    vertical-align: middle
     display: inline-block
-    margin: 10px 0
+    margin: 10px 20px 10px 0
     color: var(--c-nav)
     border-bottom: 2px solid var(--c-nav)
   wl-duration
-    display: flex
-    margin: 0 0 10px
+    vertical-align: middle
+    display: inline-flex
     color: var(--c-gs-l20)
+  .techs
+    margin: 10px 0
+    text-transform: capitalize
+    color: var(--c-gs-l20)
+    span:not(:last-child):after
+      content: ', '
   .imgs
     display: flex
     padding-bottom: 20px
@@ -23,11 +30,6 @@
       text-align: right
       width: 100%
       display: block
-  .techs
-    text-transform: capitalize
-    color: var(--c-gs-l20)
-    span:not(:last-child):after
-      content: ', '
   .achievements
     li
       margin-bottom: 5px

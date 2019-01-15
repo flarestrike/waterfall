@@ -13,9 +13,9 @@ export class Model {
 
 const locales = { en, hans, hant };
 const dlocales = {
-  en: 'around Yy, Mm',
-  hant: '約 Y年, M個月',
-  hans: '约 Y年, M个月'
+  en: '~ Yy, Mm',
+  hant: '共 Y年, M個月',
+  hans: '共 Y年, M个月'
 };
 
 const ys = 31536000;
