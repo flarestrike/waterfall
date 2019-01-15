@@ -12,9 +12,9 @@ export const viewerLocale = {
     rough: '概覽'
   },
   hans: {
-    detailed: '詳',
-    complete: '整',
-    compact: '簡',
-    rough: '概'
+    detailed: '详尽',
+    complete: '完整',
+    compact: '简约',
+    rough: '概览'
   }
 };
