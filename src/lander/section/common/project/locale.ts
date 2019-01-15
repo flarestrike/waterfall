@@ -5,7 +5,7 @@ export class Locale {
 export const locales = {
   en: new Locale(),
   hant: <Locale>{
-    tech: '使用技術',
+    tech: '技術棧',
   },
   hans: <Locale>{
     tech: '技术栈'

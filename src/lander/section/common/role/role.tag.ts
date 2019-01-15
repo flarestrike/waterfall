@@ -24,18 +24,20 @@ export class WlRoleTag extends Model {
     Object.assign(this, v || new Model());
   }
   loc: Locale;
-  get showRemarks() {
-    return !['compact', 'rough'].includes(this.vw.mod);
-  }
-  get showProjects() {
-    return this.vw.mod !== 'rough';
-  }
+  vue = { remarks: false, projects: false, wide: false };
   constructor(private vw: Viewer, private ln: Lang) {
     super();
     this.updateLoc(ln.key);
+    this.updateVue(vw.mod);
+    vw.event.subscribe(v => {
+      this.updateVue(v);
+    });
     ln.event.subscribe(e => {
       this.updateLoc(e.key);
     });
+  }
+  private updateVue({ level }) {
+    this.vue = { remarks: level > 1, projects: level > 0, wide: level < 2 };
   }
   private updateLoc(k) {
     this.loc = locales[k];

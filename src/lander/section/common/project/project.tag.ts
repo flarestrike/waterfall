@@ -23,24 +23,29 @@ export class WlProjectTag extends Model {
     Object.assign(this, v || new Model());
   }
   set imgs(v) {
-    this._imgs = v.splice(0, 6);
+    this._imgs = v.slice(0, 6);
   }
   get imgs() {
     return this._imgs;
   }
-  get showDetail() {
-    return !['compact', 'rough'].includes(this.vw.mod);
-  }
   _imgs = [];
   loc = new Locale();
+  vue = { detail: false, techs: false };
   constructor(
     private vw: Viewer,
     private ln: Lang) {
     super();
     this.updateLoc(ln.key);
+    this.updateVue(vw.mod);
+    vw.event.subscribe(e => {
+      this.updateVue(e);
+    });
     ln.event.subscribe(e => {
       this.updateLoc(e.key);
     });
+  }
+  private updateVue({ level }) {
+    this.vue = { detail: level > 2, techs: level >= 1 };
   }
   private updateLoc(k) {
     this.loc = locales[k];

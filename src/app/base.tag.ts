@@ -26,7 +26,6 @@ export class BaseTag implements AfterViewInit {
         this.title.inPageNav(f);
         this.vps.scrollToAnchor(f);
       }, 200);
-      console.log(f);
     });
   }
 }

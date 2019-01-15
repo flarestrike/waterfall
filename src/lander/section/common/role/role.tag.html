@@ -1,15 +1,19 @@
-<div>
+<div [class.wide]='vue.wide'>
   <div class='title'>
     <wb-icon x='co' name='user'></wb-icon>
     {{ text }}
   </div>
   <wl-duration [data]='duration'></wl-duration>
-  <label *ngIf='showRemarks'> {{ loc.remark }} </label>
-  <ul class='remarkables' *ngIf='showRemarks'>
+  <label *ngIf='vue.remarks'> {{ loc.remark }} </label>
+  <ul class='remarkables' *ngIf='vue.remarks'>
     <li *ngFor='let r of remarkables'>{{ r }}</li>
   </ul>
 </div>
-<div *ngIf='showProjects'>
+<div *ngIf='vue.projects'>
   <label> {{ loc.project }} </label>
   <wl-project *ngFor='let p of projects' [data]='p'></wl-project>
+</div>
+<div *ngIf='!vue.projects' class='pjcnt'>
+  <wb-icon x='co' name='folder_star'></wb-icon>
+  Projects: {{ projects.length }}
 </div>
