@@ -19,7 +19,14 @@ export class WlStageView extends Model {
   @Input() set data(v) {
     if (!v) { return; }
     Object.assign(this, v || new Model());
+    const rs = this.roles;
+    if (rs.length > 0) {
+      const { until } = rs[0].duration;
+      const { since } = rs[rs.length - 1].duration;
+      this.overall = { since, until };
+    }
   }
+  overall;
   constructor(private opts: WlViewOptions) {
     super();
     this.data = opts;
