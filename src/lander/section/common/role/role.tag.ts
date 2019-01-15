@@ -1,5 +1,5 @@
 import { Input, Component } from '@angular/core';
-import { Lang } from '@mod/utils';
+import { Lang, Viewer } from '@mod/utils';
 
 import { Model as Duration } from '../duration/duration.tag';
 import { Model as Project } from '../project/project.tag';
@@ -24,7 +24,13 @@ export class WlRoleTag extends Model {
     Object.assign(this, v || new Model());
   }
   loc: Locale;
-  constructor(private ln: Lang) {
+  get showRemarks() {
+    return !['compact', 'rough'].includes(this.vw.mod);
+  }
+  get showProjects() {
+    return this.vw.mod !== 'rough';
+  }
+  constructor(private vw: Viewer, private ln: Lang) {
     super();
     this.updateLoc(ln.key);
     ln.event.subscribe(e => {

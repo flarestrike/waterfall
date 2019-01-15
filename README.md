@@ -1,5 +1,15 @@
 # TODO
 
+- display
+  - detailed
+    - all included
+  - complete
+    - projects without achievements
+  - compact
+    - projects without achievements, tech-stacks
+  - rough
+    - no projects
+    - no remarkables
 - mods
   - [x] better
     - anchor

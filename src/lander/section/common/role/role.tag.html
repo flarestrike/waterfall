@@ -4,12 +4,12 @@
     {{ text }}
   </div>
   <wl-duration [data]='duration'></wl-duration>
-  <label> {{ loc.remark }} </label>
-  <ul class='remarkables'>
+  <label *ngIf='showRemarks'> {{ loc.remark }} </label>
+  <ul class='remarkables' *ngIf='showRemarks'>
     <li *ngFor='let r of remarkables'>{{ r }}</li>
   </ul>
 </div>
-<div>
+<div *ngIf='showProjects'>
   <label> {{ loc.project }} </label>
   <wl-project *ngFor='let p of projects' [data]='p'></wl-project>
 </div>

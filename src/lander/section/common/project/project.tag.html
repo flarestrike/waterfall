@@ -7,7 +7,7 @@
   {{ loc.tech }}:
   <span *ngFor='let i of techstacks'> {{ i.text }}({{ i.versions }}) </span>
 </div>
-<ul class='achievements'>
+<ul class='achievements' *ngIf='showDetail'>
   <li *ngFor='let i of achievements'> {{ i }} </li>
 </ul>
 

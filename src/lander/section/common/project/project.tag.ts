@@ -1,5 +1,5 @@
 import { Input, Component } from '@angular/core';
-import { Lang } from '@mod/utils';
+import { Lang, Viewer } from '@mod/utils';
 
 import { Locale, locales } from './locale';
 import { Model as Duration } from '../duration/duration.tag';
@@ -28,9 +28,14 @@ export class WlProjectTag extends Model {
   get imgs() {
     return this._imgs;
   }
+  get showDetail() {
+    return !['compact', 'rough'].includes(this.vw.mod);
+  }
   _imgs = [];
   loc = new Locale();
-  constructor(private ln: Lang) {
+  constructor(
+    private vw: Viewer,
+    private ln: Lang) {
     super();
     this.updateLoc(ln.key);
     ln.event.subscribe(e => {

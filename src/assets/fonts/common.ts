@@ -17,6 +17,7 @@ export const common = {
     pin: '\e90d',
     suitcase: '\e90e',
     user: '\e90f',
-    folder_images: '\e910',
+    eye: '\e910',
+    folder_images: '\e911',
   }
 };
