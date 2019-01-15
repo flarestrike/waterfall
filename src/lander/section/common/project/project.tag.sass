@@ -19,12 +19,13 @@
   .imgs
     display: flex
     padding-bottom: 20px
-    height: 90px
     wb-img
       flex: 0 auto
       border: 2px solid transparent
       margin-right: 10px
+      height: 90px
       /deep/ img
+        display: block
         box-shadow: 0 0 3px black
         width: unset
         min-width: 80px
@@ -35,7 +36,7 @@
       content: attr(text)
       color: var(--c-gs-l40)
       font-size: 12px
-      display: block
+      display: inline-block
   .achievements
     li
       margin-bottom: 5px

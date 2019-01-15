@@ -23,7 +23,7 @@ export class WlProjectTag extends Model {
     Object.assign(this, v || new Model());
   }
   set imgs(v) {
-    this._imgs = v.slice(0, 6);
+    this._imgs = (v || []).slice(0, 6);
   }
   get imgs() {
     return this._imgs;
