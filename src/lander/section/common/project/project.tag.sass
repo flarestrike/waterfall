@@ -21,14 +21,20 @@
     padding-bottom: 20px
     height: 90px
     wb-img
-      flex: 1 33%
+      flex: 0 auto
       border: 2px solid transparent
+      margin-right: 10px
+      /deep/ img
+        box-shadow: 0 0 3px black
+        width: unset
+        min-width: 80px
+        min-height: 100%
+        max-height: 100%
+        background: lightgrey
     wb-img:after
       content: attr(text)
       color: var(--c-gs-l40)
       font-size: 12px
-      text-align: right
-      width: 100%
       display: block
   .achievements
     li
