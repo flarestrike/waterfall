@@ -14,7 +14,6 @@ export class Viewer {
   constructor(private ln: Lang) {
     ln.event.subscribe(e => {
       this.loc = locale[e.key];
-      console.log('viewer', i)
       this.useInx(i);
     });
   }
@@ -22,10 +21,10 @@ export class Viewer {
     i = (i + 1) % views.length;
     this.useInx(i);
   }
-  useInx(i) {
-    const mod = views[i % views.length];
+  useInx(x) {
+    const mod = views[x % views.length];
     const text = this.loc[mod];
-    const m = { text, mod, level: i };
+    const m = { text, mod, level: x };
     this.mod = m;
     this.event.emit(m);
   }

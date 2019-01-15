@@ -11,7 +11,7 @@ export class Model {
   styleUrls: ['./view.tag.sass']
 })
 export class WnViewTag extends Model {
-  text: string = 'aa';
+  text = 'aa';
   constructor(private v: Viewer) {
     super();
     v.event.subscribe(m => {
