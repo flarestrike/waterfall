@@ -9,7 +9,7 @@
     <li *ngFor='let r of remarkables'>{{ r }}</li>
   </ul>
 </div>
-<div *ngIf='vue.projects' [class.wide]='vue.wide'>
+<div *ngIf='vue.projects && projects && projects.length > 0' [class.wide]='vue.wide'>
   <label> {{ loc.project }} </label>
   <wl-project *ngFor='let p of projects' [data]='p'></wl-project>
 </div>
