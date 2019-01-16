@@ -1,6 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Lang } from './lang';
-import { viewerLocale as locale } from './locales';
 
 type ViewMode = 'rough' | 'compact' | 'complete' | 'detailed';
 const views: ViewMode[] = ['rough', 'compact', 'complete', 'detailed'];
@@ -13,7 +12,7 @@ export class Viewer {
   loc;
   constructor(private ln: Lang) {
     ln.event.subscribe(e => {
-      this.loc = locale[e.key];
+      this.loc = e.locales;
       this.useInx(i);
     });
   }

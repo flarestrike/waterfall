@@ -1,20 +1,6 @@
-export const viewerLocale = {
-  en: {
-    detailed: 'Detailed',
-    complete: 'Complete',
-    compact: 'Compact',
-    rough: 'Rough'
-  },
-  hant: {
-    detailed: '詳盡',
-    complete: '完整',
-    compact: '簡約',
-    rough: '概覽'
-  },
-  hans: {
-    detailed: '详尽',
-    complete: '完整',
-    compact: '简约',
-    rough: '概览'
-  }
-};
+declare var require: any;
+const keys = ['en', 'hant', 'hans'];
+export const locales = keys.reduce((r, k) =>{
+  r[k] = require(`../assets/locale/${k}.json`);
+  return r;
+}, {});

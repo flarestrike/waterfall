@@ -1,9 +1,8 @@
 import { Input, Component } from '@angular/core';
 import { Lang } from '@mod/utils';
-
-import { Locale, locales } from './locales';
 import { WlViewOptions } from '../view.options';
 
+// TODO replace by loc-tag
 class Location { text: string; lat: number; lng: number; }
 
 class Model {
@@ -26,18 +25,18 @@ export class WlIntroView extends Model {
     if (!v) { return; }
     Object.assign(this, v || new Model());
   }
-  loc = new Locale();
+  loc;
   constructor(
     private ln: Lang,
     private opts: WlViewOptions) {
     super();
     this.data = opts;
-    this.update(ln.key);
+    this.update(ln);
     ln.event.subscribe(e => {
-      this.update(e.key);
+      this.update(e);
     });
   }
-  private update(k) {
-    this.loc = locales[k];
+  private update({ locales: l }) {
+    this.loc = l;
   }
 }
