@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  dataUrl: '/assets/mock/data.lang.json'
+  dataUrl: '/assets/mock/lang.json'
 };
 
 /*

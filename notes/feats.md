@@ -6,6 +6,7 @@
   - anchor/fragments
   - title
   - langs
+  - viewer
 - [x] nav
   - top
   - side
@@ -23,6 +24,19 @@
   - [x] educations
     - tech stacks
     - orgs | projects
+
+## Detail
+
+- display
+  - detailed
+    - all included
+  - complete
+    - projects without achievements
+  - compact
+    - projects without achievements, tech-stacks
+  - rough
+    - no projects
+    - no remarkables
 
 ## Dev
 

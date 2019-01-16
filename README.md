@@ -1,24 +1,18 @@
 # TODO
 
-- display
-  - detailed
-    - all included
-  - complete
-    - projects without achievements
-  - compact
-    - projects without achievements, tech-stacks
-  - rough
-    - no projects
-    - no remarkables
 - mods
   - [x] better
     - anchor
 - services
+  - printable view
+  - reusable build with config only
+  - redux
+  - locale
+    - centeralize
   - core
     - [x] data
     - [x] config
       - theme
-    - favicon loader
     - ga
     - service worker
 - [ ] 12-factor app
