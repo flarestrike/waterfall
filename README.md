@@ -3,6 +3,7 @@
 - mods
   - [x] better
     - anchor
+  - enlarge imgs
 - services
   - search box
   - printable view

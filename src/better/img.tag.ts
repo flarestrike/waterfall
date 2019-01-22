@@ -2,8 +2,7 @@ import { HostBinding, ViewChild, ElementRef, Input, Component, AfterViewInit } f
 
 @Component({
   selector: 'wb-img',
-  template: `<img #img (loadstart)='loadstart($event)'
-    (load)='loaded($event)'/>`,
+  template: `<img #img (load)='loaded($event)'/>`,
   styleUrls: ['img.tag.sass']
 })
 export class WbImgTag implements AfterViewInit {
