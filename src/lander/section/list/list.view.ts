@@ -1,4 +1,5 @@
 import { Input, Component } from '@angular/core';
+// TODO use langs for years
 import { WlViewOptions } from '../view.options';
 
 class Model {
