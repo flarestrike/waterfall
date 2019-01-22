@@ -38,6 +38,12 @@
     - no projects
     - no remarkables
 
+## Common
+
+- wb-img
+  - no need to have `assets/imgs` prefix
+  - full path for absolute url
+
 ## Dev
 
 - [x] basic ci
