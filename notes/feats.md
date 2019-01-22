@@ -43,6 +43,7 @@
 - wb-img
   - no need to have `assets/imgs` prefix
   - full path for absolute url
+  - lazy load
 
 ## Dev
 

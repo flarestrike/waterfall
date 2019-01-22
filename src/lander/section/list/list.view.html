@@ -1,7 +1,7 @@
 <div class='item' *ngFor='let i of list'>
   <span> {{ i.text }} </span>
   <span class='cap' *ngIf='i.years'>
-    ({{ i.years }} years)
+    ({{ i.years }} {{ loc.years }})
   </span>
   <div class='cap' *ngIf='i.sublist'>
     {{ i.sublist.join(', ') }}

@@ -4,6 +4,7 @@
   - [x] better
     - anchor
 - services
+  - search box
   - printable view
   - reusable build with config only
   - redux

@@ -1,5 +1,5 @@
 import { Input, Component } from '@angular/core';
-// TODO use langs for years
+import { Lang } from '@mod/utils';
 import { WlViewOptions } from '../view.options';
 
 class Model {
@@ -17,8 +17,18 @@ export class WlListView extends Model {
     if (!v) { return; }
     Object.assign(this, v || new Model());
   }
-  constructor(private opts: WlViewOptions) {
+  loc;
+  constructor(
+    private ln: Lang,
+    private opts: WlViewOptions) {
     super();
     this.data = opts;
+    this.update(ln);
+    ln.event.subscribe(e => {
+      this.update(e);
+    });
+  }
+  private update({ locales: l }) {
+    this.loc = l;
   }
 }
