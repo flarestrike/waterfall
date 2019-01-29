@@ -1,25 +1,3 @@
-# TODO
-
-- mods
-  - [x] better
-    - anchor
-  - enlarge imgs
-- services
-  - search box
-  - printable view
-  - reusable build with config only
-  - redux
-  - locale
-    - centeralize
-  - core
-    - [x] data
-    - [x] config
-      - theme
-    - ga
-    - service worker
-- [ ] 12-factor app
-  - immutable app
-
 # Waterfall
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
