@@ -20,6 +20,7 @@ class Model {
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent extends Model {
+  gtagLib = '';
   constructor(
     private pf: Preference,
     private gt: Gtag,
@@ -30,6 +31,7 @@ export class AppComponent extends Model {
     super();
     pf.all.subscribe(({ gtag }) => {
       gt.init(gtag);
+      this.gtagLib = gt.url;
     });
     lang.event.subscribe(e => {
       this.load(e.key);
