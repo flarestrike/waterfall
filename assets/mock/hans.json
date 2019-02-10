@@ -4,16 +4,16 @@
   },
   "nav": {
     "avatar": "https://placebear.com/640/360",
-    "title": "入旅失平分",
+    "title": "入分",
     "links": [
-      { "text": "請木條境政外", "hash": "aaa" },
-      { "text": "沒國喜一營", "hash": "bbb" },
-      { "text": "因題蘭而", "hash": "ccc" }
+      { "text": "請外", "hash": "aaa" },
+      { "text": "沒營", "hash": "bbb" },
+      { "text": "因而", "hash": "ccc" }
     ],
     "langs": [{
       "text": "En", "key": "en"
     }, {
-      "text": "簡", "key": "hans"
+      "text": "繁", "key": "hant"
     }]
   },
   "lander": {

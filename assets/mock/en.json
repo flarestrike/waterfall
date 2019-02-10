@@ -1,11 +1,14 @@
 {
+  "cfg": {
+    "gtag": "UA-134197616-3"
+  },
   "nav": {
-    "avatar": "/assets/img/avatar.png",
-    "title": "bmVsc29u",
+    "avatar": "https://placebear.com/640/360",
+    "title": "Lorem Ipsum",
     "links": [
-      { "text": "link1", "hash": "link1" },
-      { "text": "link -2", "hash": "link2" },
-      { "text": "long Link 333", "hash": "link3" }
+      { "text": "dolor sit amet", "hash": "aaa" },
+      { "text": "neque et", "hash": "bbb" },
+      { "text": "antecongue", "hash": "ccc" }
     ],
     "langs": [{
       "text": "简", "key": "hans"
@@ -15,292 +18,67 @@
   },
   "lander": {
     "sections": [{
-      "text": "Summary", "layout": "flex", "hash": "link1",
+      "text": "Morbi eleifend", "layout": "flex", "hash": "aaa",
       "views": [{
         "span": "1 25%", "type": "Intro", "icon": "world",
-        "text": "About me", "name": "may flower",
-        "gender": "male", "birth": "1980s",
-        "email": "abc@testtest.test", "ig": "someone_not_exist",
-        "location": { "text": "Taipei" },
-        "relocations": [ { "text": "Shanghai" }, { "text": "Singapore" }, { "text": "SanJose" }]
+        "text": "facilisis molestie", "name": "Nulla ut risus",
+        "me": "https://placebear.com/450/560", "gender": "male", "birth": "00as9df",
+        "email": "sadf@adf.ajsidfa.adsf", "location": { "text": "jfisajfdoa" },
+        "relocations": [ { "text": "semper lectus" }, { "text": "asdfji" }, { "text": "aijasdf" }]
       }, {
-        "span": "1 25%", "type": "List", "icon": "folder_shared",
-        "text": "Professions", "style": "split",
+        "span": "1 25%", "type": "List", "icon": "world",
+        "text": "aisdfai jasdfi", "style": "split",
         "list": [{
-          "text": "Web dev", "years": 7, "link": "web"
+          "text": "asdjfiaasj fkaj", "years": 4, "link": "aaa"
         }, {
-          "text": "Cloud/Backend dev", "years": 5, "link": "cloud"
+          "text": "asjdfia jaisd", "years": 3, "link": "bbb"
         }, {
-          "text": "UI/UX design/implement", "years": 4, "link": "uix"
-        }, {
-          "text": "Project management", "years": 3.5, "link": "proj_mgt"
-        }, {
-          "text": "Image processing", "years": 3, "link": "vip"
-        }, {
-          "text": "Native app dev", "years": 2.5, "link": "app"
-        }, {
-          "text": "Data analytics", "years": 2.5, "link": "data"
+          "text": "asdji oajfo", "years": 3, "link": "ccc"
         }]
       }, {
-        "span": "1 100%", "type": "List", "icon": "suitcase",
-        "text": "Skillset", "style": "concat",
+        "span": "1 100%", "type": "List", "icon": "world",
+        "text": "asdjfi", "style": "concat",
         "list": [{
-          "text": "Frameworks", "sublist": ["angular", "ruby on rails", "imagemagick", "nativescript", "pandas"]
+          "text": "asdfjiasjdf", "sublist": ["sdafji", "asdjfi", "Donec", "quis", "nulla", "vehicula,", "blandit", "purus", "finibus"]
         }, {
-          "text": "Languages", "sublist": ["typescript", "es6", "ruby", "python", "bash"]
-        }, {
-          "text": "Databases", "sublist": ["postgressql", "redis", "cassandra", "elasticsearch", "druid"]
-        }, {
-          "text": "Testing", "sublist": ["rspec", "jasmine", "karma", "unittests", "coverage"]
-        }, {
-          "text": "CI/CD", "sublist": ["tslint", "rubocop", "travis-ci", "jenkins", "ansible", "chef"]
-        }, {
-          "text": "Others", "sublist": ["kafka", "docker", "serverless", "oauth"]
+          "text": "aaidsjf", "sublist": ["semper", "felis", "ac", "lobortis", "tempor"]
         }]
       }]
     }, {
-      "text": "Experiences", "layout": "flex", "hash": "link2",
+      "text": "aisdjfais adfsij", "layout": "flex", "hash": "bbb",
       "views": [{
-        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
-        "icon": "building",
-        "text": "tulip co.", "locations": [{ "text": "taipei" }, { "text": "sj" }],
+        "span": "1 100%", "type": "Stage",
+        "icon": "building", "logo": "https://placebear.com/250/260",
+        "text": "asidfjai fja idsiafj", "locations": [{ "text": "asjid dakfsj" }, { "text": "ajsfida df" }],
         "roles": [{
-          "text": "Senior RD", "kind": "engineer",
-          "duration": { "since": "20151011", "until": "20161210"},
+          "text": "asjifdaf jias ias",
+          "duration": { "since": "20171111", "until": "20191111"},
           "remarkables": [
-            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
-            "vestigator of the laboratory in setting up a virtual platform fo",
-            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
+            "Duis rhoncus arcu eu nulla ultrices semper.",
+            "Morbi eleifend massa a sapien porttitor, et congue lacus commodo.",
+            "Nulla ut risus nec enim facilisis molestie."
           ],
           "projects": [{
-            "text": "paradise 2", "teamsize": "18",
-            "imgs": [{ "src": "/assets/img/site.png", "text": "ohya" }, { "src": "", "text": "okkk k kk" }, { "src": "", "text": "magic" }],
-            "duration": { "since": "20040502", "until": "20111102" },
+            "text": "asdjfias fia",
+            "imgs": [
+              { "text": "bear", "src": "https://placebear.com/150/260" },
+              { "text": "bear", "src": "https://placebear.com/250/260" },
+              { "text": "bear", "src": "https://placebear.com/350/260" },
+              { "text": "bear", "src": "https://placebear.com/450/260" },
+              { "text": "bear", "src": "https://placebear.com/550/260" }],
+            "duration": { "since": "20180322", "until": "20181222" },
             "techstacks": [{
-              "text": "angular", "versions": ["5"]
+              "text": "jaisdfjia", "versions": ["a", "b"]
             }, {
-              "text": "ruby on rails", "versions": ["5"]
-            }],
-            "achievements": [
-              "designing the architecture and technology stack for the MVP",
-              "and current version of the platform that is built on Ruby on Rails, ",
-              "Javascript, MongoDB, WebRTC, and utilizes Amazon EC2/S3 for staging and",
-              " production deployments"
-            ]
-          }, {
-            "text": "paradise", "teamsize": "20",
-            "imgs": [{ "src": "", "text": "fine" }, { "src": "", "text": "noook kk" }], "duration": { "since": "20160205", "until": "20180910" },
-            "techstacks": [{
-              "text": "angular", "versions": ["4"]
+              "text": "asdjfias asfi", "versions": ["ajsi"]
             }, {
-              "text": "ruby on rails", "versions": ["5"]
+              "text": "ajafdija", "versions": ["dsajfiasf aji"]
             }],
             "achievements": [
-              "designing the architecture and technology stack for the MVP",
-              "and current version of the platform that is built on Ruby on Rails, ",
-              "Javascript, MongoDB, WebRTC, and utilizes Amazon EC2/S3 for staging and",
-              " production deployments"
-            ]
-          }]
-        }, {
-          "text": "RD", "kind": "engineer",
-          "duration": { "since": "20111230", "until": "20120501" },
-          "remarkables": [
-            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
-            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-          ],
-          "projects": [{
-            "text": "para", "teamsize": "10",
-            "imgs": [{ "src": "", "text": "still" }], "duration": { "since": "20160205", "until": "20180910" },
-            "techstacks": [{
-              "text": "angular", "versions": ["4"]
-            }],
-            "achievements": [
-              "designing the architecture and technology stack for the MVP",
-              "MongoDB, WebRTC, and utilizes Amazon EC2/S3 for staging and",
-              " production deployments"
-            ]
-          }]
-        }]
-      }, {
-        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
-        "text": "wow", "locations": [{ "text": "Manchester, UK" }, { "text": "London, UK" }],
-        "roles": [{
-          "text": "Lead developer", "kind": "engineer",
-          "duration": { "since": "20150302", "until": "20160204" },
-          "remarkables": [
-            "vestigator of the lain settina virtual platform fo",
-            "system, Provided after-sales customer support and servic",
-            "and airport informate out efficient solutions for their problems, ",
-            "system, Provided after-sales customer support and servic",
-            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
-            "vestigator of the laboratory in setting up a virtual platform fo",
-            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-          ],
-          "projects": [{
-            "text": "wow-kk", "teamsize": "20",
-            "imgs": [""], "duration": { "since": "20180201", "until": "20190305" },
-            "techstacks": [{
-              "text": "angular", "versions": ["4"]
-            }, {
-              "text": "ruby on rails", "versions": ["5"]
-            }],
-            "achievements": [
-              "designing the architecture and technology stack for the MVP",
-              " production deployments"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20121203", "until": "20151109" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20111102", "until": "20150604" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }]
-        }, {
-          "text": "Senior fullstack developer", "kind": "engineer",
-          "duration": { "since": "20160503", "until": "20170602" },
-          "remarkables": [
-            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
-            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-          ],
-          "projects": [{
-            "logo": "", "duration": { "since": "20111102", "until": "20150604" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }]
-        }, {
-          "text": "Fullstack developer", "kind": "engineer",
-          "duration": { "since": "20101204", "until": "20111229" },
-          "remarkables": [
-            "and airport information, Handled customers' complaints and figure out efficient solutions for their problems, ",
-            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-          ],
-          "projects": [{
-            "logo": "", "duration": { "since": "20121203", "until": "20151109" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20111102", "until": "20150604" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }]
-        }]
-      }, {
-        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
-        "text": "yoooo", "locations": [{ "text": "Taipei" }],
-        "roles": [{
-          "text": "Research developer", "kind": "engineer",
-          "duration": { "since": "20120506", "until": "20130506" },
-          "remarkables": [
-            "vestigator of the lain settina virtual platform fo",
-            "system, Provided after-sales customer support and servic",
-            "and airport informate out efficient solutions for their problems, ",
-            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-          ],
-          "projects": [{
-            "text": "mugo", "teamsize": "20",
-            "imgs": [""], "duration": { "since": "20100226", "until": "20120811" },
-            "techstacks": [{
-              "text": "angular", "versions": ["4"]
-            }, {
-              "text": "ruby on rails", "versions": ["5"]
-            }],
-            "achievements": [
-              "designing the architecture and technology stack for the MVP",
-              " production deployments"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20150226", "until": "20150826" },
-            "text": "pise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20150226", "until": "20170226" },
-            "text": "adise", "teamsize": "10", "achievements": [
-              "the architecture and technology stack for the MVP"
-            ]
-          }]
-        }]
-      }]
-    }, {
-      "text": "Educations", "layout": "flex", "hash": "link3",
-      "views": [{
-        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
-        "icon": "hat",
-        "text": "NYYYYU", "locations": [{ "text": "Taipei" }],
-        "roles": [{
-          "text": "Master of CSIE", "kind": "Collage of science",
-          "duration": { "since": "20120226", "until": "20170226" },
-          "remarkables": [
-            "vestigator of the lain settina virtual platform fo",
-            "system, Provided after-sales customer support and servic",
-            "and airport informate out efficient solutions for their problems, ",
-            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-          ],
-          "projects": [{
-            "text": "mugo", "teamsize": "20",
-            "imgs": [{ "src": "", "text": "fancy work" }], "duration": { "since": "20140106", "until": "20171006" },
-            "techstacks": [{
-              "text": "angular", "versions": ["4"]
-            }, {
-              "text": "ruby on rails", "versions": ["5"]
-            }],
-            "achievements": [
-              "designing the architecture and technology stack for the MVP",
-              " production deployments"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20140906", "until": "20181006" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20141111", "until": "20150206" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }]
-        }]
-      }, {
-        "span": "1 100%", "type": "Stage", "logo": "/assets/img/avatar.png",
-        "icon": "hat",
-        "text": "NNNUUU", "locations": [{ "text": "Kao-xiong" }],
-        "roles": [{
-          "text": "Bechelor of Eletronical Engineering", "kind": "Colleage of Engineering",
-          "duration": { "since": "20121201", "until": "20140111" },
-          "remarkables": [
-            "vestigator of the lain settina virtual platform fo",
-            "system, Provided after-sales customer support and servic",
-            "ed the customers how to use English learning system, Provided after-sales customer support and servic"
-          ],
-          "projects": [{
-            "text": "mugo", "teamsize": "20",
-            "imgs": [""], "duration": { "since": "20140111", "until": "20160111" },
-            "techstacks": [{
-              "text": "angular", "versions": ["4"]
-            }, {
-              "text": "ruby on rails", "versions": ["5"]
-            }],
-            "achievements": [
-              "designing the architecture and technology stack for the MVP",
-              " production deployments"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20160111", "until": "20180111" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
-            ]
-          }, {
-            "logo": "", "duration": { "since": "20160111", "until": "20180111" },
-            "text": "paradise", "teamsize": "10", "achievements": [
-              "designing the architecture and technology stack for the MVP"
+              "Praesent vitae sem sit amet arcu ullamcorper pretium vitae non magna.",
+              "Morbi nec diam et erat venenatis facilisis sed id massa.",
+              "Etiam accumsan sem in ipsum pretium dictum.",
+              "Quisque convallis risus aliquet nisi semper, at dignissim nibh rutrum."
             ]
           }]
         }]
