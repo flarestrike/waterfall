@@ -12,9 +12,13 @@ export class Gtag {
     this.cmd('js', new Date());
   }
 
+  init(id) {
+    this.config(id);
+    this.url = libUrl.replace('ID', id);
+  }
+
   config(id) {
     this.cmd('config', id);
-    this.url = libUrl.replace('ID', id);
   }
 
   cmd(...any) {
