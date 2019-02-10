@@ -1,5 +1,5 @@
 import { Input, Renderer2, Inject, Component } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'wu-script',
