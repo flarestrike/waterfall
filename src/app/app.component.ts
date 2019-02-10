@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Data, Lang, Title } from '@mod/utils';
+import { Data, Lang, Title, Gtag } from '@mod/utils';
 import { Model as Nav } from '@mod/nav';
 import { Model as Lander } from '@mod/lander/lander.tag';
 
@@ -16,6 +16,7 @@ class Model {
 })
 export class AppComponent extends Model {
   constructor(
+    private gt: Gtag,
     private router: Router,
     private title: Title,
     private lang: Lang,
@@ -23,6 +24,7 @@ export class AppComponent extends Model {
     super();
     lang.event.subscribe(e => {
       this.load(e.key);
+      gt.config('XX-XXXXXXXXX-1');
     });
   }
   navEvent(e) {
