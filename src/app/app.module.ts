@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 
 import { iconConfig } from '@mod/better';
-import { UtilsModule } from '@mod/utils';
+import { UtilsModule, ErrorKeeper } from '@mod/utils';
 import { LayoutModule } from '@mod/layout';
 import { NavModule } from '@mod/nav';
 import { LanderModule } from '@mod/lander';
@@ -28,6 +28,7 @@ import { environment as env } from '@mod/environments/environment';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: env.production })
   ],
   providers: [
+    { provide: ErrorHandler, useClass: ErrorKeeper },
     { provide: iconConfig, useValue: { co: common } }
   ],
   bootstrap: [AppComponent]

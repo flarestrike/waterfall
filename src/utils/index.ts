@@ -6,3 +6,4 @@ export * from './lang';
 export * from './preference';
 export * from './platform';
 export * from './gtag';
+export * from './error.keeper';
