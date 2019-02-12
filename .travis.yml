@@ -8,6 +8,7 @@ script:
   - npx ng lint
   - rm -rf ./src/assets/{imgs,data}
   - npx ng test --watch=false
+  - BUILD=`date +%s`; sed -ie "s/BUILD/$BUILD/g" ./src/environments/environment.prod.ts
   - npx ng build --prod --deploy-url /waterfall/ --base-href /waterfall/
   - cp src/404.html dist/waterfall
 cache:
@@ -19,4 +20,3 @@ deploy:
     github-token: $github
     skip-cleanup: true
     keep-history: true
-

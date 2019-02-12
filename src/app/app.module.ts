@@ -14,6 +14,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { environment as env } from '@mod/environments/environment';
 
+// todo: move to near window provider
+(window || {})['appinfo'] = () => {
+  // tslint:disable-next-line:no-console
+  console.info(env);
+};
+
 @NgModule({
   declarations: [
     AppComponent
