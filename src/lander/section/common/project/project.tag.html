@@ -5,9 +5,14 @@
   <span *ngFor='let i of techstacks'> {{ i.text }}({{ i.versions }}) </span>
 </div>
 <div class='imgs' *ngIf='imgs.length > 0'>
-  <wb-img *ngFor='let i of imgs' [src]='i.src' [attr.text]='i.text'></wb-img>
+  <wb-img *ngFor='let i of imgs' [src]='i.src'
+      (click)='pop(i)'
+      [attr.text]='i.text'></wb-img>
 </div>
 <ul class='achievements' *ngIf='vue.detail'>
   <li *ngFor='let i of achievements'> {{ i }} </li>
 </ul>
-
+<div class='popup' *ngIf='fimg' (click)='xPop()'>
+  <wb-img [src]='fimg.src'></wb-img>
+  <div> {{ fimg.text }} </div>
+</div>

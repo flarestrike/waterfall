@@ -29,6 +29,7 @@ export class WlProjectTag extends Model {
   _imgs = [];
   loc;
   vue = { detail: false, techs: false };
+  fimg;
   constructor(
     private vw: Viewer,
     private ln: Lang) {
@@ -41,6 +42,12 @@ export class WlProjectTag extends Model {
     ln.event.subscribe(e => {
       this.updateLoc(e);
     });
+  }
+  pop(i) {
+    this.fimg = i;
+  }
+  xPop() {
+    this.fimg = null;
   }
   private updateVue({ level }) {
     this.vue = { detail: level > 2, techs: level >= 1 };
