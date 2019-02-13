@@ -18,6 +18,9 @@ export class AppComponent extends App {
       this.lander = lander;
     });
   }
+  get gtagLib() {
+    return this.lnd.gtagLib;
+  }
   navEvent(e) {
     if (e.type === 'lang') {
       this.router.navigate([e.key]);
