@@ -7,7 +7,6 @@ import { Preference } from './preference';
 import { Viewer } from './viewer';
 import { Lang } from './lang';
 import { Data } from './data';
-import { Title } from './title';
 
 import { Gtag } from './gtag';
 import { WuScriptTag } from './script.tag';
@@ -23,7 +22,7 @@ import { WuScriptTag } from './script.tag';
     Wnd, Gtag,
     { provide: HTTP_INTERCEPTORS, useClass: CustomHttp, multi: true },
     Preference,
-    Viewer, Title, Lang, Data
+    Viewer, Lang, Data
   ],
   exports: [
     WuScriptTag

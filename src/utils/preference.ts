@@ -2,6 +2,7 @@ import { Inject, Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment as env } from '@mod/environments/environment';
 
 const runtimeCfgUrl = 'assets/rt.json';
 // settings definition explains
@@ -22,6 +23,7 @@ class ConfigEvent {
 @Injectable({ providedIn: 'root' })
 export class Preference {
   loaded = false;
+  env = env;
   cfg = new Config();
   event = new EventEmitter<ConfigEvent>();
   constructor(private http: HttpClient) {

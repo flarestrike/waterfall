@@ -1,53 +1,26 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Preference, Data, Lang, Title, Gtag } from '@mod/utils';
-import { Model as Nav } from '@mod/nav';
-import { Model as Lander } from '@mod/lander/lander.tag';
-
-class UserConfig {
-  gtag: string;
-}
-
-class Model {
-  cfg: UserConfig;
-  nav: Nav;
-  lander: Lander;
-}
+import { Lander } from './lander';
+import { App } from './app';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent extends Model {
-  gtagLib = '';
+export class AppComponent extends App {
   constructor(
-    private pf: Preference,
-    private gt: Gtag,
     private router: Router,
-    private title: Title,
-    private lang: Lang,
-    private data: Data) {
+    private lnd: Lander) {
     super();
-    pf.all.subscribe(({ gtag }) => {
-      gt.init(gtag);
-      this.gtagLib = gt.url;
-    });
-    lang.event.subscribe(e => {
-      this.load(e.key);
+    lnd.event.subscribe(({ nav, lander }) => {
+      this.nav = nav;
+      this.lander = lander;
     });
   }
   navEvent(e) {
     if (e.type === 'lang') {
       this.router.navigate([e.key]);
     }
-  }
-  private load(key) {
-    this.data.app<Model>(key).subscribe(({ cfg, nav, lander }) => {
-      this.title.setup(nav.title, nav.links);
-      this.nav = nav;
-      this.lander = lander;
-      this.gt.config(cfg.gtag);
-    });
   }
 }

@@ -75,10 +75,56 @@
               "text": "ajafdija", "versions": ["dsajfiasf aji"]
             }],
             "achievements": [
+              "der (or filler) text. It's a convenient tool",
+              "for mock-ups. It helps to outline the visual elements of a document or",
+              "Morbi nec diam et erat venenatis facilisis sed id massa.",
+              "Praesent vitae sem sit amet arcu ullamcorper pretium vitae non magna.",
+              "presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin",
+              "text by the classical author and philosopher"
+            ]
+          }]
+        }, {
+          "text": "a aksfjaia iadjfiasdfji asjdfi asdif",
+          "duration": { "since": "20150221", "until": "20171001"},
+          "remarkables": [
+            "o be made and presented with the actual content still not being ready.",
+            "Think of a news blog that's filled with content hourly on the",
+            "day of going live. However, reviewers tend to be distracted by comprehensible content",
+            "say, a random text copied from a newspaper or the internet. The are likely to"
+          ],
+          "projects": [{
+            "text": "adjfia asjid 2",
+            "imgs": [
+              { "text": "bear", "src": "https://placebear.com/240/160" },
+              { "text": "bear", "src": "https://placebear.com/260/160" },
+              { "text": "bear", "src": "https://placebear.com/280/180" },
+              { "text": "bear", "src": "https://placebear.com/320/180" }],
+            "duration": { "since": "20150506", "until": "20170222" },
+            "techstacks": [{
+              "text": "aiasdjfi", "versions": ["a", "b"]
+            }, {
+              "text": "asfi", "versions": ["ajsi"]
+            }, {
+              "text": "mmmmmmmm", "versions": ["asdj"]
+            }],
+            "achievements": [
               "Praesent vitae sem sit amet arcu ullamcorper pretium vitae non magna.",
               "Morbi nec diam et erat venenatis facilisis sed id massa.",
               "Etiam accumsan sem in ipsum pretium dictum.",
               "Quisque convallis risus aliquet nisi semper, at dignissim nibh rutrum."
+            ]
+          }, {
+            "text": "asidjfisd fjiafia",
+            "imgs": [],
+            "duration": { "since": "20150122", "until": "20150222" },
+            "techstacks": [{
+              "text": "ajafdija", "versions": ["dsajfiasf aji"]
+            }],
+            "achievements": [
+              "up from sections 1.10.32–3 of Cicero's",
+              "De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also ",
+              "be translated as purposes). Neque porro quisquam est",
+              "qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit is the first"
             ]
           }]
         }]
