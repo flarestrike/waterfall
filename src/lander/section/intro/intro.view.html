@@ -17,6 +17,8 @@
   <div>
     <wb-icon x='co' name='pin'></wb-icon>
     {{ loc.relocat }}
-    <wl-location *ngFor='let l of relocations' [data]='l'></wl-location>
+    <div classs='locs'>
+      <wl-location *ngFor='let l of relocations' [data]='l'></wl-location>
+    </div>
   </div>
 </div>
