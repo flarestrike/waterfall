@@ -1,5 +1,9 @@
-<wb-img *ngIf='ready' [src]='avatar'></wb-img>
-<wn-title [text]='title'></wn-title>
-<wn-links [links]='links'></wn-links>
-<wn-langs [langs]='langs' (event)='emit($event)'></wn-langs>
-<wn-view></wn-view>
+<div class='title'>
+  <wb-img *ngIf='ready' [src]='avatar'></wb-img>
+  <wn-title [text]='title'></wn-title>
+</div>
+<div class='ctrls'>
+  <!-- <wn-links [links]='links'></wn-links> -->
+  <wn-langs [langs]='langs' (event)='emit($event)'></wn-langs>
+  <wn-view></wn-view>
+</div>

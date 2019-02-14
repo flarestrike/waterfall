@@ -1,6 +1,6 @@
-<div class='top'>
+<div class='top' [style.height.px]='toph' [class.glassy]='gtop'>
   <ng-content select='.top'></ng-content>
 </div>
-<div class='main'>
+<div class='main' (scroll)='wscroll($event)'>
   <ng-content></ng-content>
 </div>
