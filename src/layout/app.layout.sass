@@ -5,18 +5,25 @@
   overflow: hidden
   box-sizing: border-box
   .top
+    position: fixed
+    top: 0
+    width: 100%
     display: flex
     z-index: 1
+    font-size: 24px
     /deep/ > *
       flex: 1 0
     &.glassy /deep/ > *
-      opacity: 0.6
-      transition: opacity .3s ease-in-out
+      font-size: 18px
+      opacity: 0.7
+      transition: all .3s ease-in-out
       &:hover
         opacity: 1
-        transition: opacity .3s ease-in-out
+        transition: all .3s ease-in-out
   .main
     flex: 1 0
     background: lighten(black, 96%)
-    padding: 30px 100px 100px
+    padding: 20px 100px 100px
     overflow: auto
+    // fix for ios
+    // -webkit-overflow-scrolling: touch

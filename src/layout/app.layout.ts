@@ -1,20 +1,29 @@
-import { HostBinding, Inject, HostListener, Component } from '@angular/core';
+import { ViewChild, ElementRef, AfterViewInit,
+  HostBinding, Inject, HostListener, Component } from '@angular/core';
+import { platformWindow } from '@mod/utils';
 
+const dmin = 40;
 @Component({
   selector: 'wl-app-layout',
   templateUrl: 'app.layout.html',
   styleUrls: ['app.layout.sass']
 })
-export class WlAppLayout {
-  tophMax: number;
+export class WlAppLayout implements AfterViewInit {
+  @HostBinding('style.padding-top.px') dmax: number;
   toph: number;
   gtop = false;
-  wscroll(e) {
-    const t = e.target.scrollTop;
-    if (!this.tophMax) {
-      this.tophMax = e.target.offsetTop;
-    }
-    this.toph = Math.max(this.tophMax - t, 40);
-    this.gtop = this.toph < 41;
+  @ViewChild('top', { read: ElementRef }) top: ElementRef;
+  constructor(@Inject(platformWindow) private wnd: Window) {}
+  @HostListener('window:scroll', ['$event']) scroll(e) {
+    this.update(this.wnd.scrollY);
+  }
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.dmax = this.top.nativeElement.clientHeight;
+    });
+  }
+  private update(y) {
+    this.toph = Math.max(this.dmax - y, dmin);
+    this.gtop = this.toph <= dmin;
   }
 }
