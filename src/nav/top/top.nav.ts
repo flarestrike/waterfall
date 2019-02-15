@@ -20,6 +20,9 @@ export class WnTopNav extends Model {
   }
   @Output() event = new EventEmitter();
   ready = false;
+  ping() {
+    console.log('hyo')
+  }
   emit(e) {
     this.event.emit(e);
   }

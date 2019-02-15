@@ -10,9 +10,10 @@ const dmin = 40;
 })
 export class WlAppLayout implements AfterViewInit {
   @HostBinding('style.padding-top.px') dmax: number;
+  @ViewChild('top', { read: ElementRef }) top: ElementRef;
+  @ViewChild('topc', { read: Component }) topc: Component;
   toph: number;
   gtop = false;
-  @ViewChild('top', { read: ElementRef }) top: ElementRef;
   constructor(@Inject(platformWindow) private wnd: Window) {}
   @HostListener('window:scroll', ['$event']) scroll(e) {
     this.update(this.wnd.scrollY);
@@ -25,5 +26,13 @@ export class WlAppLayout implements AfterViewInit {
   private update(y) {
     this.toph = Math.max(this.dmax - y, dmin);
     this.gtop = this.toph <= dmin;
+    this.top.nativeElement.childNodes.forEach(c => {
+      if (!c.classList) { return; }
+      if (this.gtop) {
+        c.classList.add('min');
+      } else {
+        c.classList.remove('min');
+      }
+    });
   }
 }
