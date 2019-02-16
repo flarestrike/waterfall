@@ -46,8 +46,20 @@ export class WlProjectTag extends Model {
   pop(i) {
     this.fimg = i;
   }
-  xPop() {
-    this.fimg = null;
+  popEvent({ action }) {
+    if (action === 'next') {
+      this.shiftImg(1);
+    } else if (action === 'prev') {
+      this.shiftImg(-1);
+    } else if (action === 'close') {
+      this.fimg = null;
+    }
+  }
+  private shiftImg(d) {
+    const list = this.imgs;
+    const len = list.length;
+    const i = (list.indexOf(this.fimg) + d + len) % len;
+    this.fimg = list[i];
   }
   private updateVue({ level }) {
     this.vue = { detail: level > 2, techs: level >= 1 };

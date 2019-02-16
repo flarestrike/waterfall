@@ -12,7 +12,5 @@
 <ul class='achievements' *ngIf='vue.detail'>
   <li *ngFor='let i of achievements'> {{ i }} </li>
 </ul>
-<div class='popup' *ngIf='fimg' (click)='xPop()'>
-  <wb-img [src]='fimg.src'></wb-img>
-  <div> {{ fimg.text }} </div>
-</div>
+<wl-img-pop *ngIf='fimg' [title]='text'
+  [img]='fimg' (event)='popEvent($event)'></wl-img-pop>

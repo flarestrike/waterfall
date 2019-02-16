@@ -1,27 +1,6 @@
 \:host
   display: block
-  .popup
-    position: fixed
-    top: 0
-    left: 0
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%
-    height: 100%
-    background: rgba(0,0,0,0.6)
-    z-index: 100
-    flex-flow: column
-    > div
-      padding: 15px
-      color: white
-    wb-img
-      border-radius: 3px
-      background: white
-      padding: 15px
-      max-width: 400px
-      box-shadow: 0 0 10px black
-  .title
+  > .title
     vertical-align: middle
     display: inline-block
     margin: 10px 20px 10px 0
@@ -58,9 +37,10 @@
         background: lightgrey
     wb-img:after
       content: attr(text)
+      display: inline-block
+      padding-top: 5px
       color: var(--c-gs-l40)
       font-size: 12px
-      display: inline-block
   .achievements
     li
       margin-bottom: 5px

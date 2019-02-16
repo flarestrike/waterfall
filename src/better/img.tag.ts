@@ -10,6 +10,9 @@ export class WbImgTag implements AfterViewInit {
   @Input() set src(v: string) {
     v = v.startsWith('/') ? `assets/imgs${v}` : v;
     this._src = v || '/assets/mock/empty.png';
+    if (!this.loading) {
+      this.load();
+    }
   }
   get src() {
     return this._src;

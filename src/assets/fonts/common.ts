@@ -23,5 +23,7 @@ export const common = {
     user: '\e913',
     eye: '\e914',
     folder_images: '\e915',
+    prev: '\e916',
+    next: '\e917'
   }
 };
