@@ -11,6 +11,7 @@ const runtimeCfgUrl = 'assets/rt.json';
 // options - user level memorable settings
 // preference - runtime settings
 export class Config {
+  team: string;
   dataUrl: string;
   gtag: string;
 }

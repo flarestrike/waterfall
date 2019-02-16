@@ -26,7 +26,8 @@ export class Lander {
       const { title = 'Unknown', links = [] } = nav;
       this.title.setTitle(`${title} - ${this.pf.env.appName}`);
       this.gt.config(cfg.gtag);
-      this.event.emit({ nav, lander });
+      const footer = { team: this.pf.cfg.team };
+      this.event.emit({ nav, lander, footer });
     });
   }
 }

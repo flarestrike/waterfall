@@ -13,9 +13,8 @@ export class AppComponent extends App {
     private router: Router,
     private lnd: Lander) {
     super();
-    lnd.event.subscribe(({ nav, lander }) => {
-      this.nav = nav;
-      this.lander = lander;
+    lnd.event.subscribe(e => {
+      Object.assign(this, e);
     });
   }
   get gtagLib() {
