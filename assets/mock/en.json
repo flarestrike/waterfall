@@ -62,10 +62,10 @@
             "text": "asdjfias fia",
             "imgs": [
               { "text": "bear", "src": "https://placebear.com/150/260" },
-              { "text": "bear", "src": "https://placebear.com/250/260" },
-              { "text": "bear", "src": "https://placebear.com/350/260" },
-              { "text": "bear", "src": "https://placebear.com/450/260" },
-              { "text": "bear", "src": "https://placebear.com/550/260" }],
+              { "text": "bear - 2", "src": "https://placebear.com/250/260" },
+              { "text": "bear - 3", "src": "https://placebear.com/350/260" },
+              { "text": "bear - 4", "src": "https://placebear.com/450/260" },
+              { "text": "bear - 5", "src": "https://placebear.com/550/260" }],
             "duration": { "since": "20180322", "until": "20181222" },
             "techstacks": [{
               "text": "jaisdfjia", "versions": ["a", "b"]
