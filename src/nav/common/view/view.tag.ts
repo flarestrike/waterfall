@@ -7,7 +7,7 @@ export class Model {
 
 @Component({
   selector: 'wn-view',
-  template: `<wb-icon x='co' name='eye'></wb-icon> <div> {{ text }} </div>`,
+  template: `<wb-icon x='co' name='eye'></wb-icon> <div class='text'> {{ text }} </div>`,
   styleUrls: ['./view.tag.sass']
 })
 export class WnViewTag extends Model {

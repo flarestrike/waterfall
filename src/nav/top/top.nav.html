@@ -1,9 +1,8 @@
-<div class='title'>
+<div class='brand'>
   <wb-img *ngIf='ready' [src]='avatar'></wb-img>
   <wn-title [text]='title'></wn-title>
 </div>
 <div class='ctrls'>
-  <!-- <wn-links [links]='links'></wn-links> -->
-  <wn-langs [langs]='langs' (event)='emit($event)'></wn-langs>
   <wn-view></wn-view>
+  <wc-config [data]='config'></wc-config>
 </div>
