@@ -27,7 +27,7 @@ export class WuUpdateTag {
     private sw: SwUpdate) {
     sw.available.subscribe(e => {
       this.on = true;
-      console.log(e)
+      console.log(e);
       console.log('current version is', e.current);
       console.log('available version is', e.available);
     });
