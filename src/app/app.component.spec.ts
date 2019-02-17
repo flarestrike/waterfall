@@ -1,6 +1,7 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { UtilsModule } from '@mod/utils';
 import { LayoutModule } from '@mod/layout';
@@ -11,6 +12,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       schemas: [NO_ERRORS_SCHEMA],
       imports: [
+        ServiceWorkerModule.register('', { enabled: false }),
         UtilsModule,
         LayoutModule,
         RouterTestingModule
