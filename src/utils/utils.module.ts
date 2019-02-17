@@ -7,25 +7,27 @@ import { Preference } from './preference';
 import { Viewer } from './viewer';
 import { Lang } from './lang';
 import { Data } from './data';
-
 import { Gtag } from './gtag';
+
+import { WuUpdateTag } from './update.tag';
 import { WuScriptTag } from './script.tag';
+
+const tags = [
+  WuUpdateTag,
+  WuScriptTag
+];
 
 @NgModule({
   imports: [
     HttpClientModule
   ],
-  declarations: [
-    WuScriptTag
-  ],
+  declarations: [ ...tags ],
   providers: [
     Wnd, Gtag,
     { provide: HTTP_INTERCEPTORS, useClass: CustomHttp, multi: true },
     Preference,
     Viewer, Lang, Data
   ],
-  exports: [
-    WuScriptTag
-  ]
+  exports: [ ...tags ]
 })
 export class UtilsModule {}
