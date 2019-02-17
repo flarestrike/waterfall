@@ -5,6 +5,7 @@ import { iconConfig } from '@mod/better';
 import { UtilsModule, ErrorKeeper } from '@mod/utils';
 import { LayoutModule } from '@mod/layout';
 import { NavModule } from '@mod/nav';
+// import { WpPopModule } from '@mod/pop';
 import { LanderModule } from '@mod/lander';
 
 import { common } from '../assets/fonts/common';
@@ -27,6 +28,7 @@ import { environment as env } from '@mod/environments/environment';
   imports: [
     UtilsModule,
     NavModule,
+    // WpPopModule,
     LanderModule,
     LayoutModule,
     BrowserModule,

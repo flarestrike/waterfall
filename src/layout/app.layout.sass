@@ -10,13 +10,14 @@
     width: 100%
     display: flex
     z-index: 1
-    /deep/ > *
+    ::ng-deep > *
       flex: 1 0
-    &.glassy
-      opacity: 0.7
+    &.glassy::ng-deep > *
+      /* todo: consider to add back after pop is moved to app level */
+      // opacity: 0.7
       transition: all .3s ease-in-out
       &:hover
-        opacity: 1
+        // opacity: 1
         transition: all .3s ease-in-out
   .main
     flex: 1 0

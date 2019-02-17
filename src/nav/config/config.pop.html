@@ -1,0 +1,14 @@
+<div class='backdrop'> </div>
+<div class='wrap'>
+  <div class='items'>
+    <div *ngFor='let i of items' class='item' (click)='itemClick(i)'>
+      <wb-icon x='co' [name]='i.icon'></wb-icon>
+      {{ i.text }}
+    </div>
+    <div class='item' (click)='close()'> Done </div>
+  </div>
+  <div class='detail'>
+    detail for {{ view }}
+  </div>
+</div>
+
