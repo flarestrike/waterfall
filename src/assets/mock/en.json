@@ -3,8 +3,8 @@
     "gtag": "UA-134197616-3"
   },
   "nav": {
-    "avatar": "https://placebear.com/320/220",
-    "title": "Lorem Ipsum",
+    "logo": "https://placebear.com/320/220",
+    "text": "Lorem Ipsum",
     "links": [
       { "text": "dolor sit amet", "hash": "aaa" },
       { "text": "neque et", "hash": "bbb" },

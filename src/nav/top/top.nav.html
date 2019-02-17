@@ -1,7 +1,4 @@
-<div class='brand'>
-  <wb-img *ngIf='ready' [src]='avatar'></wb-img>
-  <wn-title [text]='title'></wn-title>
-</div>
+<wn-title *ngIf='ready' [logo]='logo' [text]='text'></wn-title>
 <div class='ctrls'>
   <wn-view></wn-view>
   <wc-config [data]='config'></wc-config>

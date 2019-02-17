@@ -10,5 +10,6 @@ export class Model {
   styleUrls: ['./title.tag.sass']
 })
 export class WnTitleTag extends Model {
+  @Input() logo = '';
   @Input() text = '';
 }

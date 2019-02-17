@@ -2,8 +2,8 @@ import { Output, EventEmitter, Input, Component } from '@angular/core';
 import { Config } from '../config';
 
 export class Model {
-  avatar = '';
-  title = '';
+  logo = '';
+  text = '';
   config = new Config();
 }
 

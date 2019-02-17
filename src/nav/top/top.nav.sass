@@ -6,33 +6,23 @@
   box-shadow: 0 0 4px 1px transparentize(black, 0.682)
   padding: 0 100px
   font-size: 24px
-  .ctrls
-    display: flex
-    wn-view, wc-config
-      padding: 15px
-      font-size: 80%
   &.min
     font-size: 18px
   &.min .ctrls
     wn-view, wc-config
       font-size: 130%
       padding: 10px
-      &::ng-deep .text
+      ::ng-deep .text
         display: none
-  .brand
+  .ctrls
     display: flex
-    align-items: center
-    overflow: hidden
+    wn-view, wc-config
+      padding: 15px
+      font-size: 80%
+      ::ng-deep .text
+        font-size: 60%
+  wn-title
     height: 80%
     max-height: 70px
-    font-size: 100%
     flex: 1
-    wb-img
-      display: flex
-      align-items: center
-      flex: 0 auto
-      margin-right: 20px
-      height: 100%
-      max-width: 100px
-    wn-title
-      flex: 0 auto
+    font-size: 100%

@@ -3,8 +3,8 @@
     "gtag": "UA-134197616-3"
   },
   "nav": {
-    "avatar": "https://placebear.com/640/360",
-    "title": "入旅失平分",
+    "logo": "https://placebear.com/640/360",
+    "text": "入旅失平分",
     "links": [
       { "text": "請木條境政外", "hash": "aaa" },
       { "text": "沒國喜一營", "hash": "bbb" },
