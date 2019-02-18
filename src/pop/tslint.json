@@ -1,0 +1,7 @@
+{
+    "extends": "../../tslint.json",
+    "rules": {
+        "component-selector": [true, "element", ["wp"], "kebab-case"],
+        "component-class-suffix": [true, "Pop", "Tag"]
+    }
+}
