@@ -7,17 +7,35 @@
   position: fixed
   top: 0
   left: 0
-  font-size: 20px
+  font-size: 16px
   opacity: 1
   .backdrop
     @extend %fill
     position: absolute
     background: rgba(0,0,0,0.6)
     z-index: 1
+  .item
+    padding: 10px
+    border-bottom: 1px solid silver
+    cursor: pointer
+    user-select: none
+    text-transform: capitalize
+    &.on
+      background: #ddd
+    > *:first-child
+      padding-right: 10px
+    &:hover
+      background: #bbb
+    &:last-child
+      border: none
+  &.on
+    display: flex
+    justify-content: center
+    align-items: flex-start
   .wrap
     margin-top: 20%
     padding: 15px
-    min-width: 400px
+    min-width: 600px
     background: white
     border-radius: 4px
     box-shadow: 0 0 4px #222
@@ -27,17 +45,33 @@
       flex: 0 0 150px
     .detail
       flex: 1
-  .item
-    padding: 10px
-    border-bottom: 1px solid silver
-    cursor: pointer
-    user-select: none
-    text-transform: capitalize
-    &:hover
-      background: lightgrey
-    &:last-child
-      border: none
-  &.on
-    display: flex
-    justify-content: center
-    align-items: flex-start
+      padding-left: 10px;
+      p
+        margin: 10px 0
+        padding: 0 0 5px
+        text-transform: lowercase
+        border-bottom: 1px solid #bbb
+      p:first-letter
+        text-transform: capitalize
+      .options
+        display: flex
+      .option
+        flex: 1
+        padding: 10px
+        border: 1px solid transparent
+        border-radius: 3px
+        cursor: pointer
+        &:hover
+          background: #ddd
+          border-color: #bbb
+        &.on
+          background: #eee
+    .fontSize
+      .small
+        font-size: 14px
+      .normal
+        font-size: 18px
+      .large
+        font-size: 24px
+      .xlarge
+        font-size: 28px

@@ -1,10 +1,6 @@
 import { Output, EventEmitter, Input, Component } from '@angular/core';
 
-const icons = ['world', 'trophy', 'award', 'msg', 'share'];
-const texts = ['font size', 'details', 'language', 'theme', 'shortcuts'];
-const items = ['fontSize', 'view', 'lang', 'theme', 'shortcut'].map((k, i) => {
-  return { name: k, text: texts[i], icon: icons[i] };
-});
+import { LanderOptions, OptionItem } from './lander.options';
 
 @Component({
   selector: 'wc-config-pop',
@@ -12,16 +8,22 @@ const items = ['fontSize', 'view', 'lang', 'theme', 'shortcut'].map((k, i) => {
   styleUrls: ['./config.pop.sass']
 })
 export class WcConfigPop {
-  items = items;
-  view = '';
+  options = new LanderOptions();
+  item: OptionItem;
   @Input() set data(v) {}
   @Output() event = new EventEmitter();
+  constructor() {
+    this.item = this.options[this.options.keys[0]];
+  }
   close() {
     this.emit('close');
   }
-
+  select(i) {
+    this.item.select(i);
+    this.options.update(this.item);
+  }
   itemClick(i) {
-    this.view = i.name;
+    this.item = this.options[i];
   }
   private emit(action, data?) {
     this.event.emit({ action, data });

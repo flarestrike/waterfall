@@ -1,14 +1,24 @@
 <div class='backdrop'> </div>
 <div class='wrap'>
   <div class='items'>
-    <div *ngFor='let i of items' class='item' (click)='itemClick(i)'>
-      <wb-icon x='co' [name]='i.icon'></wb-icon>
-      {{ i.text }}
+    <div *ngFor='let i of options.keys' class='item'
+      [class.on]='i === item.key' (click)='itemClick(i)'>
+      <wb-icon x='co' [name]='options[i].icon'></wb-icon>
+      {{ options[i].text }}
     </div>
-    <div class='item' (click)='close()'> Done </div>
+    <div class='item' (click)='close()'>
+      <wb-icon x='co' name='ok'></wb-icon>
+      Done
+    </div>
   </div>
-  <div class='detail'>
-    detail for {{ view }}
+  <div class='detail' [ngClass]='item.key'>
+    <p> {{ item.desc }} </p>
+    <div class='options'>
+      <div class='option' *ngFor='let v of item.list'
+        [class.on]='v.on' [ngClass]='v.value' (click)='select(v)'>
+        {{ v.text }}
+      </div>
+    </div>
   </div>
 </div>
 
