@@ -20,7 +20,10 @@ export class WnTopNav extends Model {
   }
   @Output() event = new EventEmitter();
   ready = false;
-  emit(e) {
+  cfgEvent(e) {
+    this.emit(e);
+  }
+  private emit(e) {
     this.event.emit(e);
   }
 }

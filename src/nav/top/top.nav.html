@@ -1,5 +1,4 @@
 <wn-title *ngIf='ready' [logo]='logo' [text]='text'></wn-title>
 <div class='ctrls'>
-  <wn-view></wn-view>
-  <wc-config [data]='config'></wc-config>
+  <wc-config [data]='config' (event)='cfgEvent($event)'></wc-config>
 </div>

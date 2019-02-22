@@ -26,7 +26,8 @@ export class WlRoleTag extends Model {
   vue = { remarks: false, projects: false, wide: false };
   constructor(private vw: Viewer, private ln: Lang) {
     super();
-    this.updateVue(vw.mod);
+    // TODO check need
+    // this.updateVue(vw.mod);
     vw.event.subscribe(v => {
       this.updateVue(v);
     });

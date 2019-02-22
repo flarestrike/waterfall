@@ -1,5 +1,6 @@
 import { Output, EventEmitter, Input, Component } from '@angular/core';
 
+import { Config } from './config';
 import { LanderOptions, OptionItem } from './lander.options';
 
 @Component({
@@ -10,7 +11,9 @@ import { LanderOptions, OptionItem } from './lander.options';
 export class WcConfigPop {
   options = new LanderOptions();
   item: OptionItem;
-  @Input() set data(v) {}
+  @Input() set data(v) {
+    this.options.load(v || new Config());
+  }
   @Output() event = new EventEmitter();
   constructor() {
     this.item = this.options[this.options.keys[0]];
@@ -19,8 +22,10 @@ export class WcConfigPop {
     this.emit('close');
   }
   select(i) {
-    this.item.select(i);
+    this.item.enable(i);
     this.options.update(this.item);
+    const e = { key: this.item.key, config: this.options.config };
+    this.emit('update', e);
   }
   itemClick(i) {
     this.item = this.options[i];

@@ -5,6 +5,7 @@ export class Model {
   mod: string;
 }
 
+// TODO consider deprecated, since use in config
 @Component({
   selector: 'wn-view',
   template: `<wb-icon x='co' name='eye'></wb-icon> <div class='text'> {{ text }} </div>`,

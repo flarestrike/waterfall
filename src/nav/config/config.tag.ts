@@ -1,4 +1,5 @@
-import { Input, Component } from '@angular/core';
+import { Input, Component, Output, EventEmitter } from '@angular/core';
+import { Config } from './config';
 
 @Component({
   selector: 'wc-config',
@@ -7,20 +8,33 @@ import { Input, Component } from '@angular/core';
       <wb-icon x='co' name='cog'></wb-icon>
       <div class='text'> settings </div>
     </div>
-    <wc-config-pop [class.on]='popup' (event)='popEvent($event)'></wc-config-pop>
+    <wc-config-pop [data]='data'
+      [class.on]='popup' (event)='popEvent($event)'></wc-config-pop>
   `,
   styleUrls: ['./config.tag.sass']
 })
 export class WcConfigTag {
   popup = false;
   @Input() set data(v) {
+    this._data = v;
   }
+  @Output() event = new EventEmitter();
+  get data() {
+    return this._data;
+  }
+  _data = new Config();
   pop() {
     this.popup = true;
   }
-  popEvent(e) {
-    if (e.action === 'close') {
+  popEvent({ action, data }) {
+    if (action === 'update') {
+      this.emit(action, data);
+    }
+    if (action === 'close') {
       this.popup = false;
     }
+  }
+  private emit(action, data?) {
+    this.event.emit({ action, data });
   }
 }

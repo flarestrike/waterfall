@@ -21,8 +21,11 @@ export class AppComponent extends App {
     return this.lnd.gtagLib;
   }
   navEvent(e) {
-    if (e.type === 'lang') {
-      this.router.navigate([e.key]);
-    }
+    const { type, action, data } = e;
+    // TODO emit nav event
+    console.log(data);
+    // if (key === 'lang') {
+    //   this.router.navigate([data[key]]);
+    // }
   }
 }
