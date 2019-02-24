@@ -1,4 +1,4 @@
-import { Config } from './config';
+import { LanderConfig } from '@mod/utils/config';
 
 // TODO load from locales
 const options = {
@@ -14,10 +14,10 @@ const options = {
     key: 'view', icon: 'eye', text: 'view mode',
     desc: 'choose how detailed you want to see:',
     list: [
-      { level: 0, value: 'rough', text: 'Rough' },
-      { level: 10, value: 'succinct', text: 'Succinct' },
-      { level: 20, value: 'detailed', text: 'Detailed' },
-      { level: 30, value: 'verbose', text: 'Verbose' }]
+      { value: 0,  text: 'Rough' },
+      { value: 10, text: 'Succinct' },
+      { value: 20, text: 'Detailed' },
+      { value: 30, text: 'Verbose' }]
   },
   lang: {
     key: 'lang', icon: 'language', text: 'language',
@@ -36,7 +36,15 @@ const options = {
 };
 
 class OptionValue {
-  value: any;
+  klass: string;
+  set value(v) {
+    this.v = v;
+    this.klass = v + '';
+  }
+  get value() {
+    return this.v;
+  }
+  private v: any;
   on = false;
   constructor(cfg) {
     Object.assign(this, cfg);
@@ -81,7 +89,7 @@ export class LanderOptions {
   view: OptionItem;
   lang: OptionItem;
   theme: OptionItem;
-  config = new Config();
+  config = new LanderConfig();
   constructor() {
     Object.keys(options).forEach(k => {
       this[k] = new OptionItem(options[k]);

@@ -3,32 +3,24 @@ import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment as env } from '@mod/environments/environment';
+import { BaseConfig, LanderConfig } from './config';
 
 const runtimeCfgUrl = 'assets/rt.json';
-// settings definition explains
-// env - development time settings
-// config - build time released settings
-// options - user level memorable settings
-// preference - runtime settings
-export class Config {
-  team: string;
-  dataUrl: string;
-  gtag: string;
-}
 
 class ConfigEvent {
   loaded: boolean;
-  cfg: Config;
+  cfg: BaseConfig;
 }
 
 @Injectable({ providedIn: 'root' })
 export class Preference {
   loaded = false;
   env = env;
-  cfg = new Config();
+  cfg = new BaseConfig();
+  lander = new LanderConfig();
   event = new EventEmitter<ConfigEvent>();
   constructor(private http: HttpClient) {
-    http.get(runtimeCfgUrl).subscribe((c: Config) => {
+    http.get(runtimeCfgUrl).subscribe((c: BaseConfig) => {
       this.cfg = c;
       this.loaded = true;
       this.event.emit({ loaded: true, cfg: c });

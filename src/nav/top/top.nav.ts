@@ -1,10 +1,10 @@
 import { Output, EventEmitter, Input, Component } from '@angular/core';
-import { Config } from '../config';
+import { LanderConfig } from '@mod/utils/config';
 
 export class Model {
   logo = '';
   text = '';
-  config = new Config();
+  config = new LanderConfig();
 }
 
 @Component({

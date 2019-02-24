@@ -15,7 +15,7 @@
     <p> {{ item.desc }} </p>
     <div class='options'>
       <div class='option' *ngFor='let v of item.list'
-        [class.on]='v.on' [ngClass]='v.value' (click)='select(v)'>
+        [class.on]='v.on' [ngClass]='v.klass' (click)='select(v)'>
         {{ v.text }}
       </div>
     </div>

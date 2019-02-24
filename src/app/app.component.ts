@@ -22,10 +22,11 @@ export class AppComponent extends App {
   }
   navEvent(e) {
     const { type, action, data } = e;
-    // TODO emit nav event
-    console.log(data);
-    // if (key === 'lang') {
-    //   this.router.navigate([data[key]]);
-    // }
+    if (action === 'update') {
+      this.lnd.update(data.config);
+      if (data.key === 'lang') {
+        this.router.navigate([data.lang]);
+      }
+    }
   }
 }

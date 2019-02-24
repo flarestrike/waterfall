@@ -3,9 +3,11 @@ import { Title } from '@angular/platform-browser';
 import { Preference, Data, Lang, Gtag } from '@mod/utils';
 import { App } from './app';
 
+import { LanderConfig } from '@mod/utils/config';
+
 const config = {
   fontSize: 'large',
-  view: 'detailed',
+  view: 20,
   lang: '',
   theme: 'dark'
 };
@@ -28,8 +30,8 @@ export class Lander {
       this.load(e.key);
     });
   }
-  config(cfg) {
-    // TODO update config
+  update(cfg) {
+    Object.assign(this.pf.lander, cfg);
     // TODO apply/notify changes
   }
   private load(key) {
@@ -40,6 +42,7 @@ export class Lander {
       const footer = { team: this.pf.cfg.team };
       // TODO load user config
       nav.config = config;
+      this.update(cfg);
       this.event.emit({ nav, lander, footer });
     });
   }

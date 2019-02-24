@@ -1,5 +1,5 @@
 import { Input, Component, Output, EventEmitter } from '@angular/core';
-import { Config } from './config';
+import { LanderConfig } from '@mod/utils/config';
 
 @Component({
   selector: 'wc-config',
@@ -22,7 +22,7 @@ export class WcConfigTag {
   get data() {
     return this._data;
   }
-  _data = new Config();
+  _data = new LanderConfig();
   pop() {
     this.popup = true;
   }

@@ -1,5 +1,5 @@
 import { Input, Component } from '@angular/core';
-import { Lang, Viewer } from '@mod/utils';
+import { Lang, Preference } from '@mod/utils';
 import { Model as Duration } from '../duration/duration.tag';
 
 export class Model {
@@ -26,18 +26,20 @@ export class WlProjectTag extends Model {
   get imgs() {
     return this._imgs;
   }
+  get vue() {
+    const { view } = this.pf.lander;
+    return {
+      detail: view > 10,
+      techs: view > 5
+    };
+  }
   _imgs = [];
   loc;
-  vue = { detail: false, techs: false };
   fimg;
   constructor(
-    private vw: Viewer,
+    private pf: Preference,
     private ln: Lang) {
     super();
-    this.updateVue(vw.mod);
-    vw.event.subscribe(e => {
-      this.updateVue(e);
-    });
     this.updateLoc(ln);
     ln.event.subscribe(e => {
       this.updateLoc(e);
@@ -60,9 +62,6 @@ export class WlProjectTag extends Model {
     const len = list.length;
     const i = (list.indexOf(this.fimg) + d + len) % len;
     this.fimg = list[i];
-  }
-  private updateVue({ level }) {
-    this.vue = { detail: level > 2, techs: level >= 1 };
   }
   private updateLoc({ locales: l }) {
     this.loc = l;
