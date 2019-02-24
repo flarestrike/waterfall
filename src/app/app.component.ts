@@ -22,10 +22,11 @@ export class AppComponent extends App {
   }
   navEvent(e) {
     const { type, action, data } = e;
-    if (action === 'update') {
-      this.lnd.update(data.config);
-      if (data.key === 'lang') {
-        this.router.navigate([data.lang]);
+    if (action === 'update' && data) {
+      const { key, config: cfg } = data || <any>{};
+      this.lnd.update(cfg);
+      if (key === 'lang') {
+        this.router.navigate([cfg.lang]);
       }
     }
   }

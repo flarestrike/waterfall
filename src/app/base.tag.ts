@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Lang } from '@mod/utils';
 
@@ -10,7 +9,6 @@ const langs = ['en', 'hant', 'hans'];
 })
 export class BaseTag {
   constructor(
-    private vps: ViewportScroller,
     private lang: Lang,
     private route: ActivatedRoute) {
     route.params.subscribe(p => {

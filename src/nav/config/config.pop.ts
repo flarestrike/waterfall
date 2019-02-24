@@ -1,7 +1,8 @@
 import { Output, EventEmitter, Input, Component } from '@angular/core';
 
-import { LanderConfig } from '@mod/utils/config';
+import { Lang, LanderConfig } from '@mod/utils';
 import { LanderOptions, OptionItem } from './lander.options';
+import { options } from './base.options';
 
 @Component({
   selector: 'wc-config-pop',
@@ -9,13 +10,13 @@ import { LanderOptions, OptionItem } from './lander.options';
   styleUrls: ['./config.pop.sass']
 })
 export class WcConfigPop {
-  options = new LanderOptions();
+  options = new LanderOptions(options);
   item: OptionItem;
   @Input() set data(v) {
     this.options.load(v || new LanderConfig());
   }
   @Output() event = new EventEmitter();
-  constructor() {
+  constructor(private lang: Lang) {
     this.item = this.options[this.options.keys[0]];
   }
   close() {

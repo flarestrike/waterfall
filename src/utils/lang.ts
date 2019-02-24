@@ -1,5 +1,9 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { locales } from './locales';
+import { localeKeys as lks, locales } from './locales';
+
+function loc(k) {
+  return locales[k] || locales[lks[0]];
+}
 
 @Injectable({ providedIn: 'root' })
 export class Lang {
@@ -9,7 +13,8 @@ export class Lang {
   constructor() { }
   use(key) {
     this.key = key;
-    this.locales = locales[key];
-    this.event.emit({ key, locales: this.locales });
+    const locales = loc(key);
+    this.locales = locales;
+    this.event.emit({ key, locales });
   }
 }

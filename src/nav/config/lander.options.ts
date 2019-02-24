@@ -1,40 +1,5 @@
 import { LanderConfig } from '@mod/utils/config';
 
-// TODO load from locales
-const options = {
-  fontSize: {
-    key: 'fontSize', icon: 'fontsize', text: 'font size',
-    desc: 'adjust font size to fit your screen:',
-    list: [{ value: 'small', text: 'Small' },
-      { value: 'normal', text: 'Normal' },
-      { value: 'large', text: 'Large' },
-      { value: 'xlarge', text: 'Extra Large' }]
-  },
-  view: {
-    key: 'view', icon: 'eye', text: 'view mode',
-    desc: 'choose how detailed you want to see:',
-    list: [
-      { value: 0,  text: 'Rough' },
-      { value: 10, text: 'Succinct' },
-      { value: 20, text: 'Detailed' },
-      { value: 30, text: 'Verbose' }]
-  },
-  lang: {
-    key: 'lang', icon: 'language', text: 'language',
-    desc: 'multiple languages provided by the author',
-    list: []
-  },
-  theme: {
-    key: 'theme', icon: 'colours', text: 'theme',
-    desc: 'pick the right theme for you',
-    list: [{ value: 'light', text: 'Light' },
-      { value: 'dark', text: 'Dark' },
-      { value: 'gentle', text: 'Gentle' },
-      { value: 'techy', text: 'Techy' },
-      { value: 'artist', text: 'Artist' }]
-  }
-};
-
 class OptionValue {
   klass: string;
   set value(v) {
@@ -81,6 +46,14 @@ export class OptionItem {
     v.on = true;
     this.was = v;
   }
+  relocale(loc) {
+    ['text', 'desc'].forEach(k => this[k] = loc[k]);
+    loc.list.forEach(i => {
+      const r: any = this.list.find(j => j.value === i.value);
+      if (!r) { return ;}
+      r.text = i.text;
+    });
+  }
 }
 
 export class LanderOptions {
@@ -90,9 +63,14 @@ export class LanderOptions {
   lang: OptionItem;
   theme: OptionItem;
   config = new LanderConfig();
-  constructor() {
-    Object.keys(options).forEach(k => {
-      this[k] = new OptionItem(options[k]);
+  constructor(opts) {
+    this.keys.forEach(k => {
+      this[k] = new OptionItem(opts[k]);
+    });
+  }
+  relocale(loc) {
+    this.keys.forEach(k => {
+      this[k].relocale();
     });
   }
   load(cfg) {
