@@ -7,6 +7,3 @@ export * from './error.keeper';
 
 export * from './preference';
 export * from './config';
-
-// TODO deprecate
-export * from './viewer';

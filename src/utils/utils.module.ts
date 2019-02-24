@@ -4,7 +4,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { Wnd } from './wnd';
 import { CustomHttp } from './custom-http';
 import { Preference } from './preference';
-import { Viewer } from './viewer';
 import { Lang } from './lang';
 import { Data } from './data';
 import { Gtag } from './gtag';
@@ -26,7 +25,7 @@ const tags = [
     Wnd, Gtag,
     { provide: HTTP_INTERCEPTORS, useClass: CustomHttp, multi: true },
     Preference,
-    Viewer, Lang, Data
+    Lang, Data
   ],
   exports: [ ...tags ]
 })
