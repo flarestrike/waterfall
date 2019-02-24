@@ -10,5 +10,34 @@
   "relocat": "可能工作地點",
   "remark": "主要事蹟",
   "rough": "概覽",
-  "tech": "技術棧"
+  "tech": "技術棧",
+  "settings": "設定",
+  "config": {
+    "fontSize": {
+      "text": "字體",
+      "desc": "調整適合螢幕的字體大小:",
+      "list": [
+        { "value": "small", "text": "較小" },
+        { "value": "normal", "text": "適中" },
+        { "value": "large", "text": "較大" },
+        { "value": "xlarge", "text": "特大" }]
+    },
+    "view": {
+      "text": "顯示模式",
+      "desc": "選擇頁面顯示的細節程度:",
+      "list": [
+        { "value": 0, "text": "簡略" },
+        { "value": 10, "text": "精要" },
+        { "value": 20, "text": "詳盡" },
+        { "value": 30, "text": "完整" }]
+    },
+    "lang": {
+      "text": "語言",
+      "desc": "選擇主要語言:"
+    },
+    "theme": {
+      "text": "配色:",
+      "desc": "選擇一個令你感到舒適的配色"
+    }
+  }
 }

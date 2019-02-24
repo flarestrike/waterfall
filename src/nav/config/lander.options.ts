@@ -1,4 +1,5 @@
 import { LanderConfig } from '@mod/utils/config';
+import { locales, localeKeys as lks } from '@mod/utils/locales';
 
 class OptionValue {
   klass: string;
@@ -46,13 +47,16 @@ export class OptionItem {
     v.on = true;
     this.was = v;
   }
-  relocale(loc) {
-    ['text', 'desc'].forEach(k => this[k] = loc[k]);
-    loc.list.forEach(i => {
-      const r: any = this.list.find(j => j.value === i.value);
+  relocale({ list = [], ...loc } = <any>{}, preset) {
+    ['text', 'desc'].forEach(k => this[k] = loc[k] || preset[k]);
+    list.forEach(i => {
+      const r: any = this.findValue(this.list, i.value);
       if (!r) { return ;}
-      r.text = i.text;
+      r.text = i.text || this.findValue(preset.list, i.value).text;
     });
+  }
+  private findValue(list, v) {
+    return list.find(i => i.value === v);
   }
 }
 
@@ -70,7 +74,7 @@ export class LanderOptions {
   }
   relocale(loc) {
     this.keys.forEach(k => {
-      this[k].relocale();
+      this[k].relocale(loc[k], locales[lks[0]]);
     });
   }
   load(cfg) {

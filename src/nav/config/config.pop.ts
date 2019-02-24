@@ -16,8 +16,11 @@ export class WcConfigPop {
     this.options.load(v || new LanderConfig());
   }
   @Output() event = new EventEmitter();
-  constructor(private lang: Lang) {
+  constructor(private ln: Lang) {
     this.item = this.options[this.options.keys[0]];
+    ln.event.subscribe(e => {
+      this.options.relocale(e.locales.config);
+    });
   }
   close() {
     this.emit('close');

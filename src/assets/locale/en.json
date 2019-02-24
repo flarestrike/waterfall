@@ -10,5 +10,34 @@
   "relocat": "Will relocate to",
   "remark": "Remarkables",
   "rough": "Rough",
-  "tech": "Tech-stacks"
+  "tech": "Tech-stacks",
+  "settings": "Settings",
+  "config": {
+    "fontSize": {
+      "text": "Font size",
+      "desc": "Adjust font size to fit your screen:",
+      "list": [
+        { "value": "small", "text": "Small" },
+        { "value": "normal", "text": "Normal" },
+        { "value": "large", "text": "Large" },
+        { "value": "xlarge", "text": "Extra Large" }]
+    },
+    "view": {
+      "text": "View Mode",
+      "desc": "Choose how detailed you want to see:",
+      "list": [
+        { "value": 0, "text": "Rough" },
+        { "value": 10, "text": "Succinct" },
+        { "value": 20, "text": "Detailed" },
+        { "value": 30, "text": "Verbose" }]
+    },
+    "lang": {
+      "text": "Language",
+      "desc": "Languages provided by the app:"
+    },
+    "theme": {
+      "text": "Theme",
+      "desc": "Pick the right theme for you:"
+    }
+  }
 }

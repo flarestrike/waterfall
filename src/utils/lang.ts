@@ -1,8 +1,8 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { localeKeys as lks, locales } from './locales';
+import { localeKeys as lks, locales as locs } from './locales';
 
 function loc(k) {
-  return locales[k] || locales[lks[0]];
+  return locs[k] || locs[lks[0]];
 }
 
 @Injectable({ providedIn: 'root' })

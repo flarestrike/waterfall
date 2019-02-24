@@ -1,12 +1,12 @@
 import { Input, Component, Output, EventEmitter } from '@angular/core';
-import { LanderConfig } from '@mod/utils/config';
+import { LanderConfig, Lang } from '@mod/utils';
 
 @Component({
   selector: 'wc-config',
   template: `
     <div class='button' (click)='pop()'>
       <wb-icon x='co' name='cog'></wb-icon>
-      <div class='text'> settings </div>
+      <div class='text'> {{ text }} </div>
     </div>
     <wc-config-pop [data]='data'
       [class.on]='popup' (event)='popEvent($event)'></wc-config-pop>
@@ -22,7 +22,13 @@ export class WcConfigTag {
   get data() {
     return this._data;
   }
+  text = '';
   _data = new LanderConfig();
+  constructor(private ln: Lang) {
+    ln.event.subscribe(e => {
+      this.text = e.locales.settings || 'settings';
+    });
+  }
   pop() {
     this.popup = true;
   }
