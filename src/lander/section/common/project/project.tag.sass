@@ -1,21 +1,27 @@
+$gap: 10px
+$gap-td: 10px 0
+$gaps: 10px 20px 10px 0
+$cnt_sep: ', '
+$cnt_text: attr(text)
+
 \:host
   display: block
   > .title
-    vertical-align: middle
     display: inline-block
-    margin: 10px 20px 10px 0
+    margin: $gaps
+    vertical-align: middle
     color: var(--c-nav)
     border-bottom: 2px solid var(--c-nav)
   wl-duration
-    vertical-align: middle
     display: inline-flex
+    vertical-align: middle
     color: var(--c-gs-l20)
   .techs
-    margin: 10px 0
+    margin: $gap-td
     text-transform: capitalize
     color: var(--c-gs-l20)
     span:not(:last-child):after
-      content: ', '
+      content: $cnt_sep
   .imgs
     display: flex
     flex-wrap: wrap;
@@ -36,8 +42,8 @@
         max-height: 100%
         background: lightgrey
     wb-img:after
-      content: attr(text)
       display: inline-block
+      content: $cnt_text
       padding-top: 5px
       color: var(--c-gs-l40)
       font-size: 12px

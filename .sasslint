@@ -35,17 +35,51 @@ rules:
   hex-notation:
     - 2
     -
-      style: uppercase
+      style: lowercase
   indentation:
     - 2
     -
-      size: 4
+      size: 2
+  # https://github.com/sasstools/sass-lint/blob/develop/lib/config/property-sort-orders/concentric.yml
   property-sort-order:
     - 1
     -
       order:
+        - position
+        - top
+        - left
+        # right
+        # bottom
+        # box-sizing
         - display
+        - justify-content
+        - align-items
+        - flex
+        # grid
+        # visibility
+        # opacity
+        # z-index
+        # cursor
         - margin
+        # margin-top
+        # margin-left
+        # margin-right
+        # margin-bottom
+        # outline
+        # border
+        # border-radius
+        # border-color
+        # box-shadow
+        # background
+        # background-image
+        # padding
+        # padding-top
+        # padding-left
+        # padding-right
+        # padding-bottom
+        # width
+        # height
+        # overflow
       ignore-custom-properties: true
   variable-for-property:
     - 2

@@ -1,3 +1,6 @@
+$cnt_space: ' '
+$gap: -2px 20px 0 0
+
 \:host
   margin-bottom: 20px
   .title
@@ -8,12 +11,12 @@
     color: var(--c-base-d40)
     &:after
       display: block
-      content: ' '
+      content: $cnt_space
       width: 100%
       height: 8px
       margin-left: 10px
       background: var(--c-sup)
   ::ng-deep wl-view-dyn
-    border-top: 6px solid var(--c-base-d40)
+    margin: $gap
     padding-top: 10px
-    margin: -2px 20px 0 0
+    border-top: 6px solid var(--c-base-d40)

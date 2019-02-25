@@ -1,12 +1,15 @@
+$gap: 5px
+$gap_desc: 10px 0
+
 %fill
   width: 100%
   height: 100%
 \:host
   @extend %fill
-  display: none
   position: fixed
   top: 0
   left: 0
+  display: none
   font-size: 16px
   opacity: 1
   .backdrop
@@ -33,6 +36,7 @@
     justify-content: center
     align-items: flex-start
   .wrap
+    display: flex
     margin-top: 20%
     padding: 15px
     min-width: 600px
@@ -40,14 +44,13 @@
     border-radius: 4px
     box-shadow: 0 0 4px #222
     z-index: 100
-    display: flex
     .items
       flex: 0 0 150px
     .detail
       flex: 1
       padding-left: 10px;
       p
-        margin: 10px 0
+        margin: $gap_desc
         padding: 0 0 5px
         text-transform: lowercase
         border-bottom: 1px solid #bbb
@@ -58,12 +61,12 @@
         display: flex
       .option
         flex: 1
+        margin: $gap
         padding: 10px
         border: 1px solid transparent
         border-radius: 3px
         cursor: pointer
         background: whitesmoke
-        margin: 5px
         &:hover
           background: #ddd
           border-color: #bbb

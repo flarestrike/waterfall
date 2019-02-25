@@ -1,7 +1,10 @@
+$gap_li: 0 0 10px
+$gap_dur: 10px 0 0
+
 \:host
   > div
-    width: 50%
     display: inline-block
+    width: 50%
     vertical-align: top
     box-sizing: border-box
     &:first-child
@@ -11,9 +14,9 @@
     &.wide
       width: 100%
   .pjcnt
-    margin-top: 10px
     display: flex
     align-items: center
+    margin-top: 10px
     wb-icon
       margin-right: 5px
       padding: 2px
@@ -26,12 +29,12 @@
     color: var(--c-sup-d40)
     background: var(--c-sup-l20)
   li
-    margin: 0 0 10px
+    margin: $gap_li
     font-weight: 200
     font-style: italic
     word-break: break-all
   wl-duration
-    margin: 10px 0 0
+    margin: $gap_dur
     padding: 2px
     color: var(--c-gs-l20)
   label
