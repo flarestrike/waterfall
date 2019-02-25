@@ -5,7 +5,7 @@ node_js:
 install:
   - npm i
 script:
-  - npx ng lint
+  - npm run lint
   - rm -rf ./src/assets/{imgs,data}
   - npx ng test --watch=false
   - BUILD=`date +%s`; sed -ie "s/BUILD/$BUILD/g" ./src/environments/environment.prod.ts
