@@ -18,15 +18,16 @@ $gap_desc: 10px 0
     background: rgba(0,0,0,0.6)
     z-index: 1
   .item
-    padding: 10px
     border-bottom: 1px solid silver
+    padding: 10px 20px 10px 10px
     cursor: pointer
     user-select: none
     text-transform: capitalize
+    &.exit wb-icon
+      display: inline-block
+      transform: scaleX(-1)
     &.on
       background: #ddd
-    > *:first-child
-      padding-right: 10px
     &:hover
       background: #bbb
     &:last-child

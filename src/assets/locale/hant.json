@@ -13,6 +13,7 @@
   "tech": "技術棧",
   "settings": "設定",
   "config": {
+    "exit": "完成",
     "fontSize": {
       "text": "字體",
       "desc": "調整適合螢幕的字體大小:",

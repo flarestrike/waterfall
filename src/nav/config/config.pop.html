@@ -6,10 +6,10 @@
       <wb-icon x='co' [name]='options[i].icon'></wb-icon>
       {{ options[i].text }}
     </div>
-    <div class='item' (click)='close()'>
+    <div class='item exit' (click)='close()'>
       <!-- TODO use leave icon instead -->
-      <wb-icon x='co' name='ok'></wb-icon>
-      Done
+      <wb-icon x='co' name='exit'></wb-icon>
+      {{ options.exit }}
     </div>
   </div>
   <div class='detail' [ngClass]='item.key'>

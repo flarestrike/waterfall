@@ -67,12 +67,14 @@ export class LanderOptions {
   lang: OptionItem;
   theme: OptionItem;
   config = new LanderConfig();
+  exit = 'Done';
   constructor(opts) {
     this.keys.forEach(k => {
       this[k] = new OptionItem(opts[k]);
     });
   }
   relocale(loc) {
+    this.exit = loc.exit || 'Done';
     this.keys.forEach(k => {
       this[k].relocale(loc[k], locales[lks[0]]);
     });
