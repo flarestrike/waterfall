@@ -13,6 +13,7 @@
   "tech": "Tech-stacks",
   "settings": "Settings",
   "config": {
+    "exit": "Done",
     "fontSize": {
       "text": "Font size",
       "desc": "Adjust font size to fit your screen:",
