@@ -40,9 +40,10 @@ export class Lander {
       this.title.setTitle(`${title} - ${this.pf.env.appName}`);
       this.gt.config(cfg.gtag);
       const footer = { team: this.pf.cfg.team };
-      // TODO load user config
+      // TODO load user config.
+      config.lang = key;
       nav.config = config;
-      this.update(cfg);
+      this.update(config);
       this.event.emit({ nav, lander, footer });
     });
   }

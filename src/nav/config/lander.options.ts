@@ -51,7 +51,7 @@ export class OptionItem {
     ['text', 'desc'].forEach(k => this[k] = loc[k] || preset[k]);
     list.forEach(i => {
       const r: any = this.findValue(this.list, i.value);
-      if (!r) { return ;}
+      if (!r) { return; }
       r.text = i.text || this.findValue(preset.list, i.value).text;
     });
   }
