@@ -1,12 +1,13 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Inject, Injectable, EventEmitter } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { Preference, Data, Lang, Gtag } from '@mod/utils';
 import { App } from './app';
 
 import { LanderConfig } from '@mod/utils/config';
 
-const config = {
-  fontSize: 'large',
+const config: LanderConfig = {
+  fontSize: 'normal',
   view: 20,
   lang: '',
   theme: 'dark'
@@ -17,6 +18,7 @@ export class Lander {
   gtagLib: string;
   event = new EventEmitter();
   constructor(
+    @Inject(DOCUMENT) private doc: Document,
     private pf: Preference,
     private gt: Gtag,
     private title: Title,
@@ -31,8 +33,22 @@ export class Lander {
     });
   }
   update(cfg) {
+    this.markFont(this.pf.lander, cfg);
     Object.assign(this.pf.lander, cfg);
     // TODO apply/notify changes
+  }
+
+  private get bodyClass() {
+    return this.doc.body.classList;
+  }
+  private markFont({ fontSize: ofs }, { fontSize: nfs }) {
+    if (this.bodyClass.contains('fs-' + ofs)) {
+      this.docFs(ofs);
+    }
+    this.docFs(nfs);
+  }
+  private docFs(f) {
+    this.bodyClass.toggle('fs-' + f);
   }
   private load(key) {
     this.data.lander<App>(key).subscribe(({ cfg = <any>{}, nav = <any>{}, lander }) => {

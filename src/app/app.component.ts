@@ -25,9 +25,11 @@ export class AppComponent extends App {
     if (action === 'update' && data) {
       const { key, config: cfg } = data || <any>{};
       this.lnd.update(cfg);
-      if (key === 'lang') {
-        this.router.navigate([cfg.lang]);
-      }
+      this.navTo(key, cfg);
     }
+  }
+  private navTo(k, { lang }) {
+    if (k !== 'lang') { return; }
+    this.router.navigate([lang]);
   }
 }
