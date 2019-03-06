@@ -9,11 +9,11 @@
       "urls": [
         "/waterfall/favicon.ico",
         "/waterfall/index.html",
-        "/waterfall/main.0ab4e3141ab2e00fa07d.js",
+        "/waterfall/main.48e50a043fd8771006b8.js",
         "/waterfall/polyfills.8227af6e21d5b156317d.js",
         "/waterfall/runtime.9858ca25d9284de65feb.js",
         "/waterfall/scripts.0d754b6d13a139ba44a7.js",
-        "/waterfall/styles.4004d7cf70d29a38d7db.css"
+        "/waterfall/styles.e6fbfedd8ebd2284e24a.css"
       ],
       "patterns": []
     },
@@ -48,7 +48,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/waterfall/assets/_var.sass": "f4b0bdeb8cbf5c29eaf6e5fad5dc9fffe19f3a5e",
+    "/waterfall/assets/_var.sass": "ba69eba53c0983f3550d9ce61ab3e8fc5abe2d0b",
     "/waterfall/assets/fonts/common.svg": "8b7fb613a52a4ecc4bf3af9f98868cd2264ba15d",
     "/waterfall/assets/fonts/common.ts": "afa318c766151b22757493f2220b4fd3e787d8f2",
     "/waterfall/assets/fonts/common.ttf": "557c1f13417e2d3660c81dffa99e670d97d79b19",
@@ -69,12 +69,12 @@
     "/waterfall/assets/mock/hant.json": "abf8348b24284b14a77e248a5983e6b8a4775fab",
     "/waterfall/assets/rt.json": "04408ed7645dc508ee0ed863ea280140587c4cbe",
     "/waterfall/favicon.ico": "bf6384178f7140edfc046d8c03a0a1f3af1b0a27",
-    "/waterfall/index.html": "b56fbb06be42ec56afbc2d85ae0a1611d30059a5",
-    "/waterfall/main.0ab4e3141ab2e00fa07d.js": "f346f6b33532d11c8d1de2f08f35587f46308f60",
+    "/waterfall/index.html": "572bbb12ee5a3ec61b5b13711a783f2bf9cc7c48",
+    "/waterfall/main.48e50a043fd8771006b8.js": "30c45b221463ee98a10cb09f4c906f2cc8a06602",
     "/waterfall/polyfills.8227af6e21d5b156317d.js": "1c20c625553fd5de78ca648a0b8abcb17621e438",
     "/waterfall/runtime.9858ca25d9284de65feb.js": "6d7172c7555e77c07fe408cfdda3c2e1b12645db",
     "/waterfall/scripts.0d754b6d13a139ba44a7.js": "08f8434d6296e578c44d644b16b200ae8aaa7b74",
-    "/waterfall/styles.4004d7cf70d29a38d7db.css": "c47736c8beb8ba355e7f152f508bb617b9316e7d"
+    "/waterfall/styles.e6fbfedd8ebd2284e24a.css": "aef537b993d599655d18a36b7a27d5fee7bf43f3"
   },
   "navigationUrls": [
     {

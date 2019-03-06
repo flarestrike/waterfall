@@ -1,127 +1,49 @@
-$c-black: #222
-$c-base: #F1B94F
-$c-sup: #F1E74F
-$c-nav: #3F60A1
-$c-pulse: #F1654F
+$suffix: (lighten: b, darken: d)
+$invfix: (lighten: d, darken: b)
+// hlp: highlight positive
+// hln: highlight negative
+// hlb: highlight bg
+@mixin themer($fg, $bg, $hlp, $hln, $hlb, $rev: $suffix)
+  $sx-l: map-get($rev, lighten)
+  $sx-d: map-get($rev, darken)
+  $fgv: invert($fg, 80%)
+  $bgv: invert($bg, 80%)
+  --c-fg: #{$fg}
+  --c-fg-#{$sx-l}: #{lighten($fg, 20%)}
+  --c-fg-#{$sx-d}: #{darken($fg, 20%)}
+  --c-fgv: #{$fgv}
+  --c-fgv-#{$sx-l}: #{lighten($fgv, 20%)}
+  --c-fgv-#{$sx-d}: #{darken($fgv, 20%)}
+  --c-bg: #{$bg}
+  --c-bg-#{$sx-l}: #{lighten($bg, 20%)}
+  --c-bg-#{$sx-d}: #{darken($bg, 20%)}
+  --c-bgv: #{$bgv}
+  --c-bgv-#{$sx-l}: #{lighten($bgv, 20%)}
+  --c-bgv-#{$sx-d}: #{darken($bgv, 20%)}
+  --c-hlp: #{$hlp}
+  --c-hlp-#{$sx-l}: #{lighten($hlp, 20%)}
+  --c-hlp-#{$sx-d}: #{darken($hlp, 20%)}
+  --c-hln: #{$hln}
+  --c-hln-#{$sx-l}: #{lighten($hln, 20%)}
+  --c-hln-#{$sx-d}: #{darken($hln, 20%)}
+  --c-hlb: #{$hlb}
+  --c-hlb-#{$sx-l}: #{lighten($hlb, 20%)}
+  --c-hlb-#{$sx-d}: #{darken($hlb, 20%)}
 
-// $color-primary-0: #F1B94F;  // Main Primary color */
-// $color-primary-1: #FFF9EC;
-// $color-primary-2: #B9AC93;
-// $color-primary-3: #856934;
-// $color-primary-4: #493000;
-// $color-secondary-1-0: #F1654F;  // Main Secondary color (1) */
-// $color-secondary-1-1: #FFEFEC;
-// $color-secondary-1-2: #B99893;
-// $color-secondary-1-3: #853F34;
-// $color-secondary-1-4: #490A00;
-// $color-secondary-2-0: #F1E74F;  // Main Secondary color (2) */
-// $color-secondary-2-1: #FFFEEC;
-// $color-secondary-2-2: #B9B693;
-// $color-secondary-2-3: #858034;
-// $color-secondary-2-4: #494400;
-// $color-complement-0: #3F60A1; // Main Complement color */
-// $color-complement-1: #ABAFB7;
-// $color-complement-2: #646C7B;
-// $color-complement-3: #283959;
-// $color-complement-4: #041331;
-
-body
-  --c-base: #{$c-base}
-  --c-base-l20: #{lighten($c-base, 20%)}
-  --c-base-l30: #{lighten($c-base, 30%)}
-  --c-base-d20: #{darken($c-base, 20%)}
-  --c-base-d40: #{darken($c-base, 40%)}
-  --c-sup: #{$c-sup}
-  --c-sup-l20: #{lighten($c-sup, 20%)}
-  --c-sup-d40: #{darken($c-sup, 40%)}
-  --c-nav: #{$c-nav}
-  --c-nav-d10: #{darken($c-nav, 10%)}
-  --c-nav-l20: #{lighten($c-nav, 20%)}
-  --c-nav-l40: #{lighten($c-nav, 40%)}
-  --c-nav-l50: #{lighten($c-nav, 50%)}
-  --c-gs: #{$c-black}
-  --c-gs-l10: #{lighten($c-black, 10%)}
-  --c-gs-l20: #{lighten($c-black, 20%)}
-  --c-gs-l40: #{lighten($c-black, 40%)}
-  --c-gs-l80: #{lighten($c-black, 80%)}
-
+// +themer(fg, bg, hlp, hln, hlb)
 // https://coolors.co/584b53-8f3985-a675a1-d6e3f8-fef5ef
+// body.tm-light
+body
+  +themer(#222, #dff, #69A4D3, #BA9778, #839788)
+
 body.tm-gentle
-  --c-base: #{#584B53}
-  --c-base-l20: #{lighten(#584B53, 20%)}
-  --c-base-l30: #{lighten(#584B53, 30%)}
-  --c-base-d20: #{darken(#584B53, 20%)}
-  --c-base-d40: #{darken(#584B53, 40%)}
-  --c-sup: #{#8F3985}
-  --c-sup-l20: #{lighten(#8F3985, 20%)}
-  --c-sup-d40: #{darken(#8F3985, 40%)}
-  --c-nav: #{#A675A1}
-  --c-nav-d10: #{darken(#A675A1, 10%)}
-  --c-nav-l20: #{lighten(#A675A1, 20%)}
-  --c-nav-l40: #{lighten(#A675A1, 40%)}
-  --c-nav-l50: #{lighten(#A675A1, 50%)}
-  --c-gs: #{#D6E3F8}
-  --c-gs-l10: #{lighten(#D6E3F8, 10%)}
-  --c-gs-l20: #{lighten(#D6E3F8, 20%)}
-  --c-gs-l40: #{lighten(#D6E3F8, 40%)}
-  --c-gs-l80: #{lighten(#D6E3F8, 80%)}
+  +themer(#627B89, #a9b8c5, #aFb64D, #8BB174, #DAFF7D)
 
 body.tm-techy
-  --c-base: #{#5E787C}
-  --c-base-l20: #{lighten(#5E787C, 20%)}
-  --c-base-l30: #{lighten(#5E787C, 30%)}
-  --c-base-d20: #{darken(#5E787C, 20%)}
-  --c-base-d40: #{darken(#5E787C, 40%)}
-  --c-sup: #{#EEE0CB}
-  --c-sup-l20: #{lighten(#EEE0CB, 20%)}
-  --c-sup-d40: #{darken(#EEE0CB, 40%)}
-  --c-nav: #{#BAA898}
-  --c-nav-d10: #{darken(#BAA898, 10%)}
-  --c-nav-l20: #{lighten(#BAA898, 20%)}
-  --c-nav-l40: #{lighten(#BAA898, 40%)}
-  --c-nav-l50: #{lighten(#BAA898, 50%)}
-  --c-gs: #{#BFD7EA}
-  --c-gs-l10: #{lighten(#BFD7EA, 10%)}
-  --c-gs-l20: #{lighten(#BFD7EA, 20%)}
-  --c-gs-l40: #{lighten(#BFD7EA, 40%)}
-  --c-gs-l80: #{lighten(#BFD7EA, 80%)}
+  +themer(#BFDBF7, #1B4D6C, #B34049, #5C9EAB, #3C0A0C)
 
 body.tm-artist
-  --c-base: #{#5E787C}
-  --c-base-l20: #{lighten(#5E787C, 20%)}
-  --c-base-l30: #{lighten(#5E787C, 30%)}
-  --c-base-d20: #{darken(#5E787C, 20%)}
-  --c-base-d40: #{darken(#5E787C, 40%)}
-  --c-sup: #{#FFC}
-  --c-sup-l20: #{lighten(#FFC, 20%)}
-  --c-sup-d40: #{darken(#FFC, 40%)}
-  --c-nav: #{#494949}
-  --c-nav-d10: #{darken(#494949, 10%)}
-  --c-nav-l20: #{lighten(#494949, 20%)}
-  --c-nav-l40: #{lighten(#494949, 40%)}
-  --c-nav-l50: #{lighten(#494949, 50%)}
-  --c-gs: #{#FF5D73}
-  --c-gs-l10: #{lighten(#FF5D73, 10%)}
-  --c-gs-l20: #{lighten(#FF5D73, 20%)}
-  --c-gs-l40: #{lighten(#FF5D73, 40%)}
-  --c-gs-l80: #{lighten(#FF5D73, 80%)}
+  +themer(#56494A, #F2D5F8, #E6C0E9, #BFABCB, #8D89A6)
 
 body.tm-dark
-  --c-base: #{#6aefd2}
-  --c-base-l20: #{lighten(#6aefd2, 20%)}
-  --c-base-l30: #{lighten(#6aefd2, 30%)}
-  --c-base-d20: #{darken(#6aefd2, 20%)}
-  --c-base-d40: #{darken(#6aefd2, 40%)}
-  --c-sup: #{$c-sup}
-  --c-sup-l20: #{lighten($c-sup, 20%)}
-  --c-sup-d40: #{darken($c-sup, 40%)}
-  --c-nav: #{$c-nav}
-  --c-nav-d10: #{darken($c-nav, 10%)}
-  --c-nav-l20: #{lighten($c-nav, 20%)}
-  --c-nav-l40: #{lighten($c-nav, 40%)}
-  --c-nav-l50: #{lighten($c-nav, 50%)}
-  --c-gs: #{$c-black}
-  --c-gs-l10: #{lighten($c-black, 10%)}
-  --c-gs-l20: #{lighten($c-black, 20%)}
-  --c-gs-l40: #{lighten($c-black, 40%)}
-  --c-gs-l80: #{lighten($c-black, 80%)}
+  +themer(#7B6170, #0E0004, #FA198B, #B91372, #9B3F5A, $invfix)
