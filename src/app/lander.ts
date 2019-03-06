@@ -33,7 +33,8 @@ export class Lander {
     });
   }
   update(cfg) {
-    this.markFont(this.pf.lander, cfg);
+    this.markBody('fs', 'fontSize', this.pf.lander, cfg);
+    this.markBody('tm', 'theme', this.pf.lander, cfg);
     Object.assign(this.pf.lander, cfg);
     // TODO apply/notify changes
   }
@@ -41,14 +42,16 @@ export class Lander {
   private get bodyClass() {
     return this.doc.body.classList;
   }
-  private markFont({ fontSize: ofs }, { fontSize: nfs }) {
-    if (this.bodyClass.contains('fs-' + ofs)) {
-      this.bodyKlass(ofs);
+  private markBody(key, field, ov, nv) {
+    const nk = key + '-' + nv[field];
+    const ok = key + '-' + ov[field];
+    if (this.bodyClass.contains(ok)) {
+      this.bodyKlass(ok);
     }
-    this.bodyKlass(nfs);
+    this.bodyKlass(nk);
   }
-  private bodyKlass(f) {
-    this.bodyClass.toggle('fs-' + f);
+  private bodyKlass(k) {
+    this.bodyClass.toggle(k);
   }
   private load(key) {
     this.data.lander<App>(key).subscribe(({ cfg = <any>{}, nav = <any>{}, lander }) => {
@@ -56,12 +59,16 @@ export class Lander {
       this.title.setTitle(`${title} - ${this.pf.env.appName}`);
       this.gt.config(cfg.gtag);
       const footer = { team: this.pf.cfg.team };
-      // TODO load user config.
-      const c = this.pf.lander || config;
-      c.lang = key;
-      nav.config = c;
-      this.update(c);
+      this.loadConfig(key, nav);
+      this.update(nav.config);
       this.event.emit({ nav, lander, footer });
     });
+  }
+  private loadConfig(key, nav) {
+      // TODO load user config.
+      const { lander: lnd } = this.pf;
+      const c = lnd.lang ? lnd : config;
+      c.lang = key;
+      nav.config = c;
   }
 }
