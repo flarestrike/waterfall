@@ -25,10 +25,11 @@ export const options = {
   theme: {
     key: 'theme', icon: 'colours', text: 'theme',
     desc: 'pick the right theme for you',
-    list: [{ value: 'light', text: 'Light' },
-      { value: 'dark', text: 'Dark' },
+    list: [
+      { value: 'light',  text: 'Light' },
+      { value: 'dark',   text: 'Dark' },
       { value: 'gentle', text: 'Gentle' },
-      { value: 'techy', text: 'Techy' },
+      { value: 'techy',  text: 'Techy' },
       { value: 'artist', text: 'Artist' }]
   }
 };

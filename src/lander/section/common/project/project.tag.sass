@@ -8,18 +8,21 @@ $cnt_text: attr(text)
   display: block
   > .title
     display: inline-block
+    border-bottom: 2px solid var(--c-hlp-b)
     margin: $gaps
     vertical-align: middle
-    color: var(--c-nav)
-    border-bottom: 2px solid var(--c-nav)
+    color: var(--c-hlp-d)
+    font-size: 0.9em
   wl-duration
-    display: inline-flex
+    display: flex
     vertical-align: middle
-    color: var(--c-gs-l20)
+    color: var(--c-hlp)
+    font-size: 0.7em
   .techs
     margin: $gap-td
     text-transform: capitalize
-    color: var(--c-gs-l20)
+    color: var(--c-hln)
+    font-size: 0.7em
     span:not(:last-child):after
       content: $cnt_sep
   .imgs
@@ -45,7 +48,7 @@ $cnt_text: attr(text)
       display: inline-block
       content: $cnt_text
       padding-top: 5px
-      color: var(--c-gs-l40)
+      color: var(--c-fgv-b)
       font-size: 12px
   .achievements
     li

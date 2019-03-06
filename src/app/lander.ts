@@ -10,7 +10,7 @@ const config: LanderConfig = {
   fontSize: 'normal',
   view: 20,
   lang: '',
-  theme: 'dark'
+  theme: 'gentle'
 };
 
 @Injectable({ providedIn: 'root' })

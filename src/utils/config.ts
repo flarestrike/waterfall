@@ -13,6 +13,6 @@ export class BaseConfig {
 export class LanderConfig {
   fontSize = 'small';
   view = 30;
-  lang: string;
-  theme = 'light';
+  lang: 'en'|'hant'|'hans'|'';
+  theme: 'light'|'dark'|'techy'|'gentle'|'artist';
 }
