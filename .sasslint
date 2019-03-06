@@ -13,7 +13,8 @@ options:
   max-warnings: 50
 # File Options
 files:
-  include: 'src/settings/**/*.s+(a|c)ss'
+  include:
+    - 'src/**/*.s+(a|c)ss'
   ignore:
     - 'src/external/**/*.*'
     - 'src/assets/**/*.*'

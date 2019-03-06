@@ -6,7 +6,7 @@ import { WbIconConfig } from './icon.config';
 @Component({
     selector: 'wb-icon',
     template: '',
-    styleUrls: ['icon.tag.scss']
+    styleUrls: ['icon.tag.sass']
 })
 export class WbIconTag {
     @Input() set x(v) {
