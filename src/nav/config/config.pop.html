@@ -2,7 +2,7 @@
 <div class='wrap'>
   <div class='items'>
     <div *ngFor='let i of options.keys' class='item'
-      [class.on]='i === item.key' (click)='itemClick(i)'>
+      [class.on]='i === item.key' (click)='tab(i)'>
       <wb-icon x='co' [name]='options[i].icon'></wb-icon>
       {{ options[i].text }}
     </div>

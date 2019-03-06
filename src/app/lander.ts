@@ -43,11 +43,11 @@ export class Lander {
   }
   private markFont({ fontSize: ofs }, { fontSize: nfs }) {
     if (this.bodyClass.contains('fs-' + ofs)) {
-      this.docFs(ofs);
+      this.bodyKlass(ofs);
     }
-    this.docFs(nfs);
+    this.bodyKlass(nfs);
   }
-  private docFs(f) {
+  private bodyKlass(f) {
     this.bodyClass.toggle('fs-' + f);
   }
   private load(key) {
@@ -57,9 +57,10 @@ export class Lander {
       this.gt.config(cfg.gtag);
       const footer = { team: this.pf.cfg.team };
       // TODO load user config.
-      config.lang = key;
-      nav.config = config;
-      this.update(config);
+      const c = this.pf.lander || config;
+      c.lang = key;
+      nav.config = c;
+      this.update(c);
       this.event.emit({ nav, lander, footer });
     });
   }

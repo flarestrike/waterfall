@@ -31,7 +31,7 @@ export class WcConfigPop {
     const e = { key: this.item.key, config: this.options.config };
     this.emit('update', e);
   }
-  itemClick(i) {
+  tab(i) {
     this.item = this.options[i];
   }
   private emit(action, data?) {

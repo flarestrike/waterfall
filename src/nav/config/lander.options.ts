@@ -73,10 +73,10 @@ export class LanderOptions {
       this[k] = new OptionItem(opts[k]);
     });
   }
-  relocale(loc) {
+  relocale(loc = <any>{}) {
     this.exit = loc.exit || 'Done';
     this.keys.forEach(k => {
-      this[k].relocale(loc[k], locales[lks[0]]);
+      this[k].relocale(loc[k], locales[lks[0]].config[k]);
     });
   }
   load(cfg) {
