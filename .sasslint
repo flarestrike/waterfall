@@ -49,13 +49,14 @@ rules:
         - position
         - top
         - left
-        # right
-        # bottom
-        # box-sizing
+        - right
+        - bottom
+        - box-sizing
         - display
         - justify-content
         - align-items
         - flex
+        - flex-flow
         # grid
         # visibility
         # opacity
