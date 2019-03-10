@@ -10,46 +10,46 @@ $cnt_text: attr(text)
     display: inline-block
     margin: $gaps
     border-bottom: 2px solid var(--c-hlp-b)
-    vertical-align: middle
     color: var(--c-hlp-d)
     font-size: 0.9em
+    vertical-align: middle
   wl-duration
     display: flex
-    vertical-align: middle
     color: var(--c-hlp)
     font-size: 0.7em
+    vertical-align: middle
   .techs
     margin: $gap-td
-    text-transform: capitalize
     color: var(--c-hln)
     font-size: 0.7em
+    text-transform: capitalize
     span:not(:last-child):after
       content: $cnt_sep
   .imgs
     display: flex
-    flex-wrap: wrap;
     padding-bottom: 20px
+    flex-wrap: wrap;
     wb-img
       flex: 0 auto
-      border: 2px solid transparent
+      cursor: pointer
       margin-right: 10px
       margin-bottom: 20px
+      border: 2px solid transparent
       height: 90px
-      cursor: pointer
       ::ng-deep img
         display: block
         box-shadow: 0 0 3px black
-        width: unset
+        background: lightgrey
         min-width: 80px
+        width: unset
         min-height: 100%
         max-height: 100%
-        background: lightgrey
     wb-img:after
       display: inline-block
-      content: $cnt_text
       padding-top: 5px
       color: var(--c-fgv-b)
       font-size: 12px
+      content: $cnt_text
   .achievements
     li
       margin-bottom: 5px

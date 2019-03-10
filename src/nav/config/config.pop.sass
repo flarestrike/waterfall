@@ -1,17 +1,18 @@
 $gap: 5px
 $gap_desc: 10px 0
+$duration: .3s
 
 %fill
   width: 100%
   height: 100%
 
-@keyframes test
+@keyframes show
   from
     visibility: hidden
   to
     visibility: visible
 
-@keyframes testv
+@keyframes hide
   from
     visibility: visible
   to
@@ -26,9 +27,9 @@ $gap_desc: 10px 0
   justify-content: center
   align-items: flex-start
   font-size: 0.6em
-  animation: 1s forwards testv
+  animation: $duration forwards hide
   &.on
-    animation: 1s test
+    animation: $duration show
     .backdrop
       opacity: 1
     .wrap
@@ -37,18 +38,18 @@ $gap_desc: 10px 0
     @extend %fill
     position: absolute
     opacity: 0
-    background: rgba(0,0,0,0.3)
     z-index: 1
+    background: rgba(0,0,0,0.3)
   .wrap
     position: relative
     bottom: 230px
     display: flex
-    padding: 15px
-    background: white
-    box-shadow: 0 0 4px #222
-    width: 100%
     z-index: 100
-    transition: 1s bottom ease-in-out
+    box-shadow: 0 0 4px #222
+    background: white
+    padding: 15px
+    width: 100%
+    transition: $duration bottom ease-in-out
     .items
       flex: 0 0 160px
     .detail
@@ -56,25 +57,25 @@ $gap_desc: 10px 0
       padding-left: 10px;
       p
         margin: $gap_desc
-        padding: 0 0 5px
-        text-transform: lowercase
         border-bottom: 1px solid #bbb
+        padding: 0 0 5px
         font-weight: bold
+        text-transform: lowercase
       p:first-letter
         text-transform: capitalize
       .options
         display: flex
       .option
         flex: 1
+        cursor: pointer
         margin: $gap
-        padding: 10px
         border: 1px solid transparent
         border-radius: 3px
-        cursor: pointer
         background: whitesmoke
+        padding: 10px
         &:hover
-          background: #ddd
           border-color: #bbb
+          background: #ddd
         &.on
           border-color: #bbb
           background: #eee
@@ -88,10 +89,10 @@ $gap_desc: 10px 0
       .xlarge
         font-size: 28px
   .item
+    cursor: pointer
     border-bottom: 1px solid silver
     padding: 10px 20px 10px 10px
     font-size: 1.2em
-    cursor: pointer
     user-select: none
     text-transform: capitalize
     &.exit wb-icon

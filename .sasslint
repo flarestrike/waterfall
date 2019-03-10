@@ -57,31 +57,41 @@ rules:
         - align-items
         - flex
         - flex-flow
-        # grid
-        # visibility
-        # opacity
-        # z-index
-        # cursor
+        - grid
+        - visibility
+        - opacity
+        - z-index
+        - cursor
         - margin
-        # margin-top
-        # margin-left
-        # margin-right
-        # margin-bottom
-        # outline
-        # border
-        # border-radius
-        # border-color
-        # box-shadow
-        # background
+        - margin-top
+        - margin-left
+        - margin-right
+        - margin-bottom
+        - box-shadow
+        - outline
+        - border
+        - border-bottom
+        - border-radius
+        - border-color
+        - background
         # background-image
-        # padding
-        # padding-top
-        # padding-left
-        # padding-right
-        # padding-bottom
-        # width
-        # height
+        - padding
+        - padding-top
+        - padding-left
+        - padding-right
+        - padding-bottom
+        - min-width
+        - width
+        - max-width
+        - min-height
+        - height
+        - max-height
         # overflow
+        - color
+        - font-family
+        - font-size
+        - animation
+        - transition
       ignore-custom-properties: true
   variable-for-property:
     - 2
