@@ -16,3 +16,11 @@ $gap: 20px 0
       grid-auto-columns: calc((100% - 110px) / 12)
       grid-auto-rows: 200px
       grid-gap: 10px
+    wl-view
+      flex: 1 0 50%
+      &:first-child
+        flex: 1 0 100%
+
+@media only screen and (max-width: 600px)
+  \:host .layout wl-view
+    flex: 1 0 100%

@@ -18,9 +18,9 @@ export class WlViewTag extends Model {
   @Input() set data(v) {
     if (!v) { return; }
     Object.assign(this, v || new Model());
-    this.span = this.dom.bypassSecurityTrustStyle(this.span);
+    // this.span = this.dom.bypassSecurityTrustStyle(this.span);
   }
-  @HostBinding('style.flex') span;
+  // @HostBinding('style.flex') span;
   constructor(private dom: DomSanitizer) {
     super();
   }
