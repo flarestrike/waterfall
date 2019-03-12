@@ -34,6 +34,7 @@ $duration: .3s
       opacity: 1
     .wrap
       bottom: 0
+      overflow: auto
   .backdrop
     @extend %fill
     position: absolute
@@ -51,7 +52,7 @@ $duration: .3s
     width: 100%
     transition: $duration bottom ease-in-out
     .items
-      flex: 0 0 160px
+      flex: 0 0 auto
     .detail
       flex: 1
       padding-left: 10px;
@@ -93,8 +94,8 @@ $duration: .3s
     border-bottom: 1px solid silver
     padding: 10px 20px 10px 10px
     font-size: 1.2em
-    user-select: none
     text-transform: capitalize
+    user-select: none
     &.exit wb-icon
       display: inline-block
       transform: scaleX(-1)

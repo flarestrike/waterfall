@@ -51,11 +51,11 @@ rules:
         - left
         - right
         - bottom
+        - flex
         - box-sizing
         - display
         - justify-content
         - align-items
-        - flex
         - flex-flow
         - grid
         - visibility
@@ -86,12 +86,27 @@ rules:
         - min-height
         - height
         - max-height
-        # overflow
+        - overflow
         - color
         - font-family
         - font-size
+        - font-style
+        - font-weight
+        - font-variant
+        - white-space
+        - word-break
+        - line-height
+        - text-align
+        - text-shadow
+        - text-decoration
+        - text-transform
+        - list-style
         - animation
         - transition
+        - content
+        - src
+        - user-select
+        - speak
       ignore-custom-properties: true
   variable-for-property:
     - 2

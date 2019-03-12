@@ -6,23 +6,29 @@
   background: var(--c-hlb-b)
   padding: 0 10px
   font-size: 1.4em
+  transition: .3s font-size ease-in
   &.min
     font-size: 1em
   &.min .ctrls
     wn-view, wc-config
       padding: 10px
-      font-size: 1.2em
+      font-size: 1.4em
       ::ng-deep .text
-        display: none
+        font-size: 0
+        transition: .3s font-size ease-in
   .ctrls
     display: flex
     wn-view, wc-config
-      padding: 15px
-      font-size: .8em
+      padding: 10px
+      font-size: 1em
       ::ng-deep .text
         font-size: .6em
   wn-title
     flex: 1
-    height: 80%
-    max-height: 70px
     font-size: 1.1em
+
+@media only screen and (max-width: 600px)
+  \:host .ctrls wc-config
+    font-size: 1.4em
+  \:host .min .ctrls wc-config
+    font-size: 2.5em

@@ -1,4 +1,4 @@
-<div class='backdrop'> </div>
+<div class='backdrop' (click)='close()'> </div>
 <div class='wrap'>
   <div class='items'>
     <div *ngFor='let i of options.keys' class='item'
@@ -6,11 +6,12 @@
       <wb-icon x='co' [name]='options[i].icon'></wb-icon>
       {{ options[i].text }}
     </div>
-    <div class='item exit' (click)='close()'>
-      <!-- TODO use leave icon instead -->
+
+<!--     <div class='item exit' (click)='close()'>
       <wb-icon x='co' name='exit'></wb-icon>
       {{ options.exit }}
     </div>
+ -->
   </div>
   <div class='detail' [ngClass]='item.key'>
     <p> {{ item.desc }} </p>
