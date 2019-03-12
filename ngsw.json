@@ -9,11 +9,11 @@
       "urls": [
         "/waterfall/favicon.ico",
         "/waterfall/index.html",
-        "/waterfall/main.6caa8281059aee3bdaca.js",
+        "/waterfall/main.21ba39f2c3da9bab04f2.js",
         "/waterfall/polyfills.8227af6e21d5b156317d.js",
         "/waterfall/runtime.9858ca25d9284de65feb.js",
         "/waterfall/scripts.0d754b6d13a139ba44a7.js",
-        "/waterfall/styles.27583d450490bd07da71.css"
+        "/waterfall/styles.ec95ddc05c92ae021e70.css"
       ],
       "patterns": []
     },
@@ -69,12 +69,12 @@
     "/waterfall/assets/mock/hant.json": "abf8348b24284b14a77e248a5983e6b8a4775fab",
     "/waterfall/assets/rt.json": "04408ed7645dc508ee0ed863ea280140587c4cbe",
     "/waterfall/favicon.ico": "bf6384178f7140edfc046d8c03a0a1f3af1b0a27",
-    "/waterfall/index.html": "db4fb4712cfaf51636196b045c37d47efed1868f",
-    "/waterfall/main.6caa8281059aee3bdaca.js": "7bce1911b0fc2009c6730a44bfafc90204742c56",
+    "/waterfall/index.html": "2982f0e688a3bdd683076c95927014e2dc0e025e",
+    "/waterfall/main.21ba39f2c3da9bab04f2.js": "5052ace0c8fe3e36187c4a417dff1a589d335e59",
     "/waterfall/polyfills.8227af6e21d5b156317d.js": "1c20c625553fd5de78ca648a0b8abcb17621e438",
     "/waterfall/runtime.9858ca25d9284de65feb.js": "6d7172c7555e77c07fe408cfdda3c2e1b12645db",
     "/waterfall/scripts.0d754b6d13a139ba44a7.js": "08f8434d6296e578c44d644b16b200ae8aaa7b74",
-    "/waterfall/styles.27583d450490bd07da71.css": "da4e07edea546c0c1d0752bcf77854f2ab4bb230"
+    "/waterfall/styles.ec95ddc05c92ae021e70.css": "7b81710a9783879a62b20f69ac47d8169a4bc722"
   },
   "navigationUrls": [
     {
