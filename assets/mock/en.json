@@ -20,13 +20,13 @@
     "sections": [{
       "text": "Morbi eleifend", "layout": "flex", "hash": "aaa",
       "views": [{
-        "span": "1 25%", "type": "Intro", "icon": "world",
+        "type": "Intro", "icon": "world",
         "text": "facilisis molestie", "name": "Nulla ut risus",
         "me": "https://placebear.com/450/260", "gender": "male", "birth": "00as9df",
         "email": "sadf@adf.ajsidfa.adsf", "location": { "text": "jfisajfdoa" },
         "relocations": [ { "text": "semper lectus" }, { "text": "asdfji" }, { "text": "aijasdf" }]
       }, {
-        "span": "1 25%", "type": "List", "icon": "world",
+        "type": "List", "icon": "world",
         "text": "aisdfai jasdfi", "style": "split",
         "list": [{
           "text": "asdjfiaasj fkaj", "years": 4, "link": "aaa"
@@ -36,7 +36,7 @@
           "text": "asdji oajfo", "years": 3, "link": "ccc"
         }]
       }, {
-        "span": "1 100%", "type": "List", "icon": "world",
+        "type": "List", "icon": "world",
         "text": "asdjfi", "style": "concat",
         "list": [{
           "text": "asdfjiasjdf", "sublist": ["sdafji", "asdjfi", "Donec", "quis", "nulla", "vehicula,", "blandit", "purus", "finibus"]
