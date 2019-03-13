@@ -57,6 +57,7 @@ rules:
         - justify-content
         - align-items
         - flex-flow
+        - flex-wrap
         - grid
         - visibility
         - opacity

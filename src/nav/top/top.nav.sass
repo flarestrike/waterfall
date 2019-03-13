@@ -1,17 +1,16 @@
+$gap: 20px
 \:host
   box-sizing: border-box
   display: flex
   align-items: center
   box-shadow: 0 0 4px 1px transparentize(black, 0.682)
   background: var(--c-hlb-b)
-  padding: 0 10px
+  padding: 0 $gap
   font-size: 1.4em
   transition: .3s font-size ease-in
   &.min
     font-size: 1em
-  &.min .ctrls
-    wn-view, wc-config
-      padding: 10px
+    .ctrls wn-view, wc-config
       font-size: 1.4em
       ::ng-deep .text
         font-size: 0
@@ -28,7 +27,13 @@
     font-size: 1.1em
 
 @media only screen and (max-width: 600px)
-  \:host .ctrls wc-config
-    font-size: 1.4em
-  \:host .min .ctrls wc-config
-    font-size: 2.5em
+  \:host
+    font-size: .8em
+    .ctrls wc-config
+      font-size: 1.4em
+    &.min
+      font-size: .7em
+      .ctrls wc-config
+        font-size: 1.6em
+        ::ng-deep .text
+          font-size: 0

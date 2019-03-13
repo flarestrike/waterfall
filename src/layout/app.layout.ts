@@ -26,7 +26,7 @@ export class WlAppLayout implements AfterViewInit {
     });
   }
   private update(y) {
-    const dmin = this.wnd.innerWidth >= 600 ? 50 : 80;
+    const dmin = this.wnd.innerWidth >= 600 ? 60 : 50;
     this.toph = Math.max(this.dmax - y, dmin);
     this.gtop = this.toph <= dmin;
     this.top.nativeElement.childNodes.forEach(c => {
