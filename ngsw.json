@@ -9,11 +9,11 @@
       "urls": [
         "/waterfall/favicon.ico",
         "/waterfall/index.html",
-        "/waterfall/main.72ddc296a51476e52122.js",
+        "/waterfall/main.6b5f26257076e5bd1aed.js",
         "/waterfall/polyfills.8227af6e21d5b156317d.js",
         "/waterfall/runtime.9858ca25d9284de65feb.js",
         "/waterfall/scripts.0d754b6d13a139ba44a7.js",
-        "/waterfall/styles.10e1ab725021dce5505e.css"
+        "/waterfall/styles.8ffd6c712189421707f4.css"
       ],
       "patterns": []
     },
@@ -22,7 +22,6 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/waterfall/assets/_var.sass",
         "/waterfall/assets/fonts/common.svg",
         "/waterfall/assets/fonts/common.ts",
         "/waterfall/assets/fonts/common.ttf",
@@ -48,7 +47,6 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/waterfall/assets/_var.sass": "ba69eba53c0983f3550d9ce61ab3e8fc5abe2d0b",
     "/waterfall/assets/fonts/common.svg": "8b7fb613a52a4ecc4bf3af9f98868cd2264ba15d",
     "/waterfall/assets/fonts/common.ts": "afa318c766151b22757493f2220b4fd3e787d8f2",
     "/waterfall/assets/fonts/common.ttf": "557c1f13417e2d3660c81dffa99e670d97d79b19",
@@ -69,12 +67,12 @@
     "/waterfall/assets/mock/hant.json": "abf8348b24284b14a77e248a5983e6b8a4775fab",
     "/waterfall/assets/rt.json": "04408ed7645dc508ee0ed863ea280140587c4cbe",
     "/waterfall/favicon.ico": "bf6384178f7140edfc046d8c03a0a1f3af1b0a27",
-    "/waterfall/index.html": "4591f85bd79746636147656b90397b0bbb5035fb",
-    "/waterfall/main.72ddc296a51476e52122.js": "52abedd685819103cd6020c24772639c9725de65",
+    "/waterfall/index.html": "d9a1f4e684494284004b079afdd34cf27566639b",
+    "/waterfall/main.6b5f26257076e5bd1aed.js": "a3adc8be326b7c0853d0b03c3d9385f9a10c9f7a",
     "/waterfall/polyfills.8227af6e21d5b156317d.js": "1c20c625553fd5de78ca648a0b8abcb17621e438",
     "/waterfall/runtime.9858ca25d9284de65feb.js": "6d7172c7555e77c07fe408cfdda3c2e1b12645db",
     "/waterfall/scripts.0d754b6d13a139ba44a7.js": "08f8434d6296e578c44d644b16b200ae8aaa7b74",
-    "/waterfall/styles.10e1ab725021dce5505e.css": "9e4dcf3ddd4e9f7b095724112fd65034a0cbbfb7"
+    "/waterfall/styles.8ffd6c712189421707f4.css": "8dfcf24e4364b5764a23fb6e4789fcbf4bbf09f2"
   },
   "navigationUrls": [
     {
