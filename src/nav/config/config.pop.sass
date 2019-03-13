@@ -68,8 +68,8 @@ $duration: .3s
         display: flex
       .option
         flex: 1
-        cursor: pointer
         margin: $gap
+        cursor: pointer
         border: 1px solid transparent
         border-radius: 3px
         background: whitesmoke
@@ -92,7 +92,7 @@ $duration: .3s
   .item
     cursor: pointer
     border-bottom: 1px solid silver
-    padding: 10px 20px 10px 10px
+    padding: var(--gap-base)
     font-size: 1.2em
     text-transform: capitalize
     user-select: none
@@ -104,4 +104,4 @@ $duration: .3s
     &:hover
       background: #bbb
     &:last-child
-      border: none
+      border: 0

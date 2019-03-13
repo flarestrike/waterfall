@@ -10,7 +10,7 @@ import { SwUpdate } from '@angular/service-worker';
   styles: [
     ':host { visibility: hidden }',
     ':host { display: none }',
-    ':host { padding: 0 0 20px }',
+    ':host { padding: 0 0 var(--gap-base) }',
     ':host { width: 100% }',
     ':host { text-align: center }',
     ':host { cursor: pointer }',

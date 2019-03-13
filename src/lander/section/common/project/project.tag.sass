@@ -1,5 +1,4 @@
-$gap: 10px
-$gap-td: 10px 0
+$gap-td: var(--gap-sub) 0
 $gaps: 10px 20px 10px 0
 $cnt_sep: ', '
 $cnt_text: attr(text)
@@ -28,12 +27,12 @@ $cnt_text: attr(text)
   .imgs
     display: flex
     flex-wrap: wrap;
-    padding-bottom: 20px
+    padding-bottom: var(--gap-base)
     wb-img
       flex: 0 auto
+      margin-right: var(--gap-sub)
+      margin-bottom: var(--gap-base)
       cursor: pointer
-      margin-right: 10px
-      margin-bottom: 20px
       border: 2px solid transparent
       height: 90px
       ::ng-deep img

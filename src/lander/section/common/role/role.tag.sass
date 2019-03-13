@@ -1,5 +1,5 @@
-$gap_li: 0 0 10px
-$gap_dur: 10px 0 0
+$gap-li: 0 0 var(--gap-sub)
+$gap-dur: var(--gap-sub) 0 0
 
 \:host
   > div
@@ -16,32 +16,32 @@ $gap_dur: 10px 0 0
   .pjcnt
     display: flex
     align-items: center
-    margin-top: 10px
+    margin-top: var(--gap-sub)
     wb-icon
       margin-right: 5px
       padding: 2px
       color: var(--c-hlp)
   .title
     display: inline-block
-    margin-right: 20px
-    padding: 3px 10px 3px 0
+    margin-right: var(--gap-base)
+    padding: 3px var(--gap-sub) 3px 0
     color: var(--c-hlp-d)
     font-size: 1em
     font-weight: 800
     text-decoration: underline
   li
-    margin: $gap_li
+    margin: $gap-li
     font-style: italic
     font-weight: 200
     word-break: break-all
   wl-duration
-    margin: $gap_dur
+    margin: $gap-dur
     padding: 2px
     color: var(--c-hlp)
     font-size: 0.7em
   label
     display: block
-    margin-top: 10px
+    margin-top: var(--gap-sub)
     color: var(--c-hln)
     font-size: 0.8em
     font-weight: 600

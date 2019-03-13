@@ -17,7 +17,7 @@ files:
     - 'src/**/*.s+(a|c)ss'
   ignore:
     - 'src/external/**/*.*'
-    - 'src/assets/**/*.*'
+    - 'src/styles/**/*.*'
 # Rule Configuration
 rules:
   extends-before-mixins: 2
@@ -52,6 +52,7 @@ rules:
         - right
         - bottom
         - flex
+
         - box-sizing
         - display
         - justify-content
@@ -59,28 +60,35 @@ rules:
         - flex-flow
         - flex-wrap
         - grid
+
         - visibility
         - opacity
         - z-index
-        - cursor
+
         - margin
         - margin-top
         - margin-left
         - margin-right
         - margin-bottom
+
         - box-shadow
         - outline
+
+        - cursor
         - border
         - border-bottom
         - border-radius
         - border-color
+
         - background
-        # background-image
+        - background-image
+
         - padding
         - padding-top
         - padding-left
         - padding-right
         - padding-bottom
+
         - min-width
         - width
         - max-width
@@ -88,6 +96,7 @@ rules:
         - height
         - max-height
         - overflow
+
         - color
         - font-family
         - font-size
@@ -101,9 +110,11 @@ rules:
         - text-shadow
         - text-decoration
         - text-transform
+
         - list-style
         - animation
         - transition
+
         - content
         - src
         - user-select
@@ -115,4 +126,5 @@ rules:
       properties:
         - margin
         - content
-
+  border-zero:
+    - 2

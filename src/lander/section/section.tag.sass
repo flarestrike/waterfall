@@ -1,4 +1,4 @@
-$gap: 20px 0
+$gap: var(--gap-base) 0
 
 \:host
   // background: pink
@@ -15,7 +15,7 @@ $gap: 20px 0
       display: grid
       grid-auto-columns: calc((100% - 110px) / 12)
       grid-auto-rows: 200px
-      grid-gap: 10px
+      grid-gap: var(--gap-sub)
     wl-view
       flex: 1 0 50%
       &:first-child

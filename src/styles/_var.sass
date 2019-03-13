@@ -3,6 +3,7 @@ $invfix: (lighten: d, darken: b)
 // hlp: highlight positive
 // hln: highlight negative
 // hlb: highlight bg
+
 @mixin themer($fg, $bg, $hlp, $hln, $hlb, $rev: $suffix)
   $sx-l: map-get($rev, lighten)
   $sx-d: map-get($rev, darken)
@@ -35,6 +36,10 @@ $invfix: (lighten: d, darken: b)
 // body.tm-light
 body
   +themer(#222, #dff, #69A4D3, #BA9778, #839788)
+  --fs-base: 20px
+  --gap-base: 20px
+  --gap-sub: 10px
+  --gap-ext: 40px
 
 body.tm-gentle
   +themer(#627B89, #a9b8c5, #aFb64D, #8BB174, #DAFF7D)
