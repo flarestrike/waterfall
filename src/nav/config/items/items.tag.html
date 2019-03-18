@@ -1,0 +1,10 @@
+<div *ngFor='let i of items' class='item'
+  [class.on]='i.on' (click)='use(i)'>
+  <wb-icon x='co' [name]='i.icon'></wb-icon>
+  {{ i.text }}
+</div>
+<!--     <div class='item exit' (click)='close()'>
+      <wb-icon x='co' name='exit'></wb-icon>
+      {{ options.exit }}
+    </div>
+ -->

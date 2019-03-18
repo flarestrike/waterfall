@@ -68,6 +68,7 @@ export class LanderOptions {
   theme: OptionItem;
   config = new LanderConfig();
   exit = 'Done';
+  items = [];
   constructor(opts) {
     this.keys.forEach(k => {
       this[k] = new OptionItem(opts[k]);
@@ -77,6 +78,10 @@ export class LanderOptions {
     this.exit = loc.exit || 'Done';
     this.keys.forEach(k => {
       this[k].relocale(loc[k], locales[lks[0]].config[k]);
+    });
+    this.items = this.keys.map(key => {
+      const i = this[key];
+      return { key, icon: i.icon, text: i.text };
     });
   }
   load(cfg) {

@@ -6,8 +6,6 @@ $icon: attr(data-before)
   padding: $gap
   font-size: 0
   &.visible
-    &:before
-      content: $icon
     font-size: inherit
     font-style: normal
     font-weight: normal
@@ -18,3 +16,5 @@ $icon: attr(data-before)
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
+    &:before
+      content: $icon

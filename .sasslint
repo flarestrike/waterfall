@@ -128,3 +128,11 @@ rules:
         - content
   border-zero:
     - 2
+  class-name-format:
+    - 2
+    - ignore:
+      - fontSize
+  clean-import-paths:
+    - 2
+  declarations-before-nesting:
+    - 2

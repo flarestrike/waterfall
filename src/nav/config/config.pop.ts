@@ -11,7 +11,7 @@ import { options } from './base.options';
 })
 export class WcConfigPop {
   options = new LanderOptions(options);
-  item: OptionItem;
+  item: OptionItem = <any>{};
   @Input() set data(v) {
     this.options.load(v || new LanderConfig());
   }
@@ -31,8 +31,10 @@ export class WcConfigPop {
     const e = { key: this.item.key, config: this.options.config };
     this.emit('update', e);
   }
-  tab(i) {
-    this.item = this.options[i];
+  itemsEvent({ action, ...data }) {
+    if (action === 'useItem') {
+      this.item = this.options[data.key];
+    }
   }
   private emit(action, data?) {
     this.event.emit({ action, data });

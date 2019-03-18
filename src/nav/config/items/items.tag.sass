@@ -1,0 +1,17 @@
+\:host
+  display: flex
+  .item
+    padding: var(--gap-sub)
+    font-size: 1em
+    text-transform: capitalize
+    transition: .3s background ease-out
+    user-select: none
+    &.exit wb-icon
+      display: inline-block
+      transform: scaleX(-1)
+    &.on
+      text-decoration: underline
+    &:hover
+      cursor: pointer
+      background: var(--c-fgv-b)
+      transition: .3s background ease-in

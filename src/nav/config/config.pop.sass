@@ -45,27 +45,27 @@ $duration: .3s
     position: relative
     bottom: 230px
     display: flex
+    flex-flow: column
     z-index: 100
     box-shadow: 0 0 4px #222
     background: white
-    padding: 15px
+    padding: 0 15px 15px
     width: 100%
     transition: $duration bottom ease-in-out
     .items
       flex: 0 0 auto
     .detail
       flex: 1
-      padding-left: 10px;
       p
         margin: $gap_desc
-        border-bottom: 1px solid #bbb
-        padding: 0 0 5px
+        padding: 0 10px 5px
         font-weight: bold
         text-transform: lowercase
       p:first-letter
         text-transform: capitalize
       .options
         display: flex
+        align-items: center;
       .option
         flex: 1
         margin: $gap
@@ -74,12 +74,15 @@ $duration: .3s
         border-radius: 3px
         background: whitesmoke
         padding: 10px
+        text-align: center;
         &:hover
           border-color: #bbb
           background: #ddd
         &.on
           border-color: #bbb
           background: #eee
+        &:first-child
+          margin-left: 10px
     .fontSize
       .small
         font-size: 14px
@@ -89,19 +92,3 @@ $duration: .3s
         font-size: 24px
       .xlarge
         font-size: 28px
-  .item
-    cursor: pointer
-    border-bottom: 1px solid silver
-    padding: var(--gap-base)
-    font-size: 1.2em
-    text-transform: capitalize
-    user-select: none
-    &.exit wb-icon
-      display: inline-block
-      transform: scaleX(-1)
-    &.on
-      background: #ddd
-    &:hover
-      background: #bbb
-    &:last-child
-      border: 0
